@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agents Management</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f8ff;
+padding:20px;
+}
+
+h1{
+text-align:center;
+color:#0d6efd;
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+th,td{
+padding:12px;
+border:1px solid #ddd;
+text-align:left;
+}
+
+th{
+background:#0d6efd;
+color:white;
+}
+
+tr:nth-child(even){
+background:#f9f9f9;
+}
+
+.status-active{
+color:green;
+font-weight:bold;
+}
+
+.status-blocked{
+color:red;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>All Agents</h1>
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+<th>Membership</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="agentTable">
+</tbody>
+
+</table>
+
+<script type="module">
+
+import { db } from "../firebase/config.js";
+
+import {
+collection,
+getDocs
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const table =
+document.getElementById("agentTable");
+
+async function loadAgents(){
+
+const querySnapshot =
+await getDocs(collection(db,"users"));
+
+table.innerHTML="";
+
+querySnapshot.forEach((doc)=>{
+
+const user = doc.data();
+
+table.innerHTML += `
+<tr>
+<td>${user.name || ""}</td>
+<td>${user.mobile || ""}</td>
+<td>${user.email || ""}</td>
+<td>${user.membership || "Free"}</td>
+<td>${user.status || "Active"}</td>
+</tr>
+`;
+
+});
+
+}
+
+loadAgents();
+
+</script>
+
+</body>
+</html>
