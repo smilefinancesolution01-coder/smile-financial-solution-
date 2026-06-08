@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Lead</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f4f8ff;
+padding:20px;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+#msg{
+margin-top:15px;
+font-weight:bold;
+text-align:center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>Submit New Lead</h2>
+
+<form id="leadForm">
+
+<input type="text" id="customerName" placeholder="Customer Name" required>
+
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+<select id="service" required>
+<option value="">Select Service</option>
+<option>Business Loan</option>
+<option>Personal Loan</option>
+<option>Home Loan</option>
+<option>Credit Card</option>
+<option>Motor Insurance</option>
+<option>Health Insurance</option>
+<option>Life Insurance</option>
+<option>GST Registration</option>
+<option>MSME Registration</option>
+</select>
+
+<input type="number" id="amount" placeholder="Loan Amount">
+
+<textarea id="remarks" placeholder="Remarks"></textarea>
+
+<button type="submit">
+Submit Lead
+</button>
+
+</form>
+
+<p id="msg"></p>
+
+</div>
+
+</body>
+</html>
