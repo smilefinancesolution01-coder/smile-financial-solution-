@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Submit Lead</title>
+<title>Submit Lead - Smile Financial Solution</title>
 
 <style>
 body{
@@ -13,19 +13,25 @@ padding:20px;
 }
 
 .container{
-max-width:600px;
+max-width:700px;
 margin:auto;
-background:white;
-padding:20px;
+background:#fff;
+padding:25px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+color:#0d6efd;
 }
 
 input,select,textarea{
 width:100%;
 padding:12px;
-margin:10px 0;
-border:1px solid #ddd;
+margin-bottom:15px;
+border:1px solid #ccc;
 border-radius:5px;
 }
 
@@ -37,6 +43,7 @@ color:white;
 border:none;
 border-radius:5px;
 cursor:pointer;
+font-size:16px;
 }
 
 #msg{
@@ -46,6 +53,7 @@ text-align:center;
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -54,12 +62,20 @@ text-align:center;
 
 <form id="leadForm">
 
-<input type="text" id="customerName" placeholder="Customer Name" required>
+<input type="text"
+id="customerName"
+placeholder="Customer Name"
+required>
 
-<input type="tel" id="mobile" placeholder="Mobile Number" required>
+<input type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required>
 
 <select id="service" required>
+
 <option value="">Select Service</option>
+
 <option>Business Loan</option>
 <option>Personal Loan</option>
 <option>Home Loan</option>
@@ -69,11 +85,16 @@ text-align:center;
 <option>Life Insurance</option>
 <option>GST Registration</option>
 <option>MSME Registration</option>
+
 </select>
 
-<input type="number" id="amount" placeholder="Loan Amount">
+<input type="number"
+id="amount"
+placeholder="Required Amount">
 
-<textarea id="remarks" placeholder="Remarks"></textarea>
+<textarea
+id="remarks"
+placeholder="Remarks"></textarea>
 
 <button type="submit">
 Submit Lead
@@ -84,6 +105,90 @@ Submit Lead
 <p id="msg"></p>
 
 </div>
+
+<script type="module">
+
+import { auth, db } from "./firebase/config.js";
+
+import {
+collection,
+addDoc,
+serverTimestamp
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+import {
+onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+let currentUser = null;
+
+onAuthStateChanged(auth,(user)=>{
+
+if(user){
+currentUser = user;
+}else{
+window.location.href = "login.html";
+}
+
+});
+
+document.getElementById("leadForm")
+.addEventListener("submit", async(e)=>{
+
+e.preventDefault();
+
+if(!currentUser){
+alert("Please Login First");
+return;
+}
+
+try{
+
+await addDoc(collection(db,"leads"),{
+
+agentId: currentUser.uid,
+agentEmail: currentUser.email,
+
+customerName:
+document.getElementById("customerName").value,
+
+mobile:
+document.getElementById("mobile").value,
+
+service:
+document.getElementById("service").value,
+
+amount:
+document.getElementById("amount").value,
+
+remarks:
+document.getElementById("remarks").value,
+
+status:"Pending",
+
+createdAt:serverTimestamp()
+
+});
+
+document.getElementById("msg").innerHTML =
+"Lead Submitted Successfully ✅";
+
+document.getElementById("leadForm").reset();
+
+}catch(error){
+
+document.getElementById("msg").innerHTML =
+error.message;
+
+console.log(error);
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
