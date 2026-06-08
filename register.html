@@ -18,16 +18,17 @@ background:#f4f8ff;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+min-height:100vh;
+padding:20px;
 }
 
 .container{
 background:white;
 padding:30px;
 width:100%;
-max-width:400px;
+max-width:450px;
 border-radius:10px;
-box-shadow:0 0 15px rgba(0,0,0,0.1);
+box-shadow:0 0 15px rgba(0,0,0,.1);
 }
 
 h2{
@@ -72,7 +73,9 @@ font-weight:bold;
 
 <input type="text" id="name" placeholder="Full Name" required>
 
-<input type="email" id="email" placeholder="Email" required>
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+<input type="email" id="email" placeholder="Email Address" required>
 
 <input type="password" id="password" placeholder="Password" required>
 
@@ -86,18 +89,31 @@ font-weight:bold;
 
 <script type="module">
 
-import { auth } from "./firebase/config.js";
+import { auth, db } from "./firebase/config.js";
 
 import {
 createUserWithEmailAndPassword
 }
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-const form = document.getElementById("registerForm");
+import {
+doc,
+setDoc
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const form =
+document.getElementById("registerForm");
 
 form.addEventListener("submit", async (e)=>{
 
 e.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const mobile =
+document.getElementById("mobile").value;
 
 const email =
 document.getElementById("email").value;
@@ -110,10 +126,27 @@ document.getElementById("message");
 
 try{
 
+const userCredential =
 await createUserWithEmailAndPassword(
 auth,
 email,
 password
+);
+
+const user = userCredential.user;
+
+await setDoc(
+doc(db,"users",user.uid),
+{
+name:name,
+mobile:mobile,
+email:email,
+role:"agent",
+membership:"Free",
+walletBalance:0,
+status:"Active",
+createdAt:new Date()
+}
 );
 
 message.innerHTML =
