@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - LIVE CRM</title>
+
+<style>
+body{margin:0;font-family:Arial;background:#f4f8ff}
+header{background:#0d6efd;color:#fff;padding:15px;font-size:18px}
+.container{padding:15px}
+
+.card{
+background:#fff;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #ddd;font-size:13px}
+
+button{
+padding:5px 8px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:12px;
+}
+
+.approve{background:green;color:white}
+.reject{background:red;color:white}
+.pay{background:orange;color:white}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:10px;
+}
+
+.box{
+background:#e9f2ff;
+padding:10px;
+border-radius:8px;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+🔐 LIVE ADMIN PANEL (REAL TIME CRM)
+</header>
+
+<div class="container">
+
+<!-- STATS -->
+<div class="card">
+<h3>Live Dashboard</h3>
+<div class="grid">
+<div class="box">Agents<br><b id="tAgents">0</b></div>
+<div class="box">Pending<br><b id="pAgents">0</b></div>
+<div class="box">Leads<br><b id="tLeads">0</b></div>
+<div class="box">Withdraw<br><b id="tWithdraw">0</b></div>
+</div>
+</div>
+
+<!-- AGENTS -->
+<div class="card">
+<h3>Agents (LIVE)</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Mobile</th>
+<th>Plan</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="agentsTable"></tbody>
+</table>
+</div>
+
+<!-- LEADS -->
+<div class="card">
+<h3>Leads (LIVE)</h3>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Customer</th>
+<th>Product</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="leadsTable"></tbody>
+</table>
+</div>
+
+<!-- WITHDRAW -->
+<div class="card">
+<h3>Withdraw Requests (LIVE)</h3>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Amount</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="withdrawTable"></tbody>
+</table>
+</div>
+
+</div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import {
+getFirestore,
+collection,
+onSnapshot,
+updateDoc,
+doc
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+/* 🔥 FIREBASE CONFIG */
+const firebaseConfig = {
+apiKey: "YOUR_KEY",
+authDomain: "YOUR_DOMAIN",
+projectId: "YOUR_PROJECT_ID",
+storageBucket: "YOUR_BUCKET",
+messagingSenderId: "YOUR_ID",
+appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+/* =========================
+LIVE AGENTS
+========================= */
+onSnapshot(collection(db,"users"),(snap)=>{
+
+let html="";
+let total=0;
+let pending=0;
+
+snap.forEach(d=>{
+const data=d.data();
+total++;
+
+if(data.status==="Pending") pending++;
+
+html+=`
+<tr>
+<td>${data.name}</td>
+<td>${data.mobile}</td>
+<td>${data.membership}</td>
+<td>${data.status}</td>
+<td>
+<button class="approve" onclick="approveAgent('${d.id}')">Approve</button>
+<button class="reject" onclick="rejectAgent('${d.id}')">Reject</button>
+</td>
+</tr>
+`;
+});
+
+document.getElementById("agentsTable").innerHTML=html;
+document.getElementById("tAgents").innerText=total;
+document.getElementById("pAgents").innerText=pending;
+
+});
+
+/* =========================
+LIVE LEADS
+========================= */
+onSnapshot(collection(db,"leads"),(snap)=>{
+
+let html="";
+let total=0;
+
+snap.forEach(d=>{
+const data=d.data();
+total++;
+
+html+=`
+<tr>
+<td>${data.agentId}</td>
+<td>${data.customer}</td>
+<td>${data.product}</td>
+<td>${data.status}</td>
+<td>
+<button class="approve" onclick="approveLead('${d.id}')">Approve</button>
+</td>
+</tr>
+`;
+});
+
+document.getElementById("leadsTable").innerHTML=html;
+document.getElementById("tLeads").innerText=total;
+
+});
+
+/* =========================
+LIVE WITHDRAW
+========================= */
+onSnapshot(collection(db,"withdrawals"),(snap)=>{
+
+let html="";
+let total=0;
+
+snap.forEach(d=>{
+const data=d.data();
+total++;
+
+html+=`
+<tr>
+<td>${data.agentId}</td>
+<td>${data.amount}</td>
+<td>${data.status}</td>
+<td>
+<button class="pay" onclick="payWithdraw('${d.id}')">Pay</button>
+</td>
+</tr>
+`;
+});
+
+document.getElementById("withdrawTable").innerHTML=html;
+document.getElementById("tWithdraw").innerText=total;
+
+});
+
+/* =========================
+ACTIONS
+========================= */
+
+window.approveAgent = async(id)=>{
+await updateDoc(doc(db,"users",id),{
+status:"Active"
+});
+}
+
+window.rejectAgent = async(id)=>{
+await updateDoc(doc(db,"users",id),{
+status:"Rejected"
+});
+}
+
+window.approveLead = async(id)=>{
+await updateDoc(doc(db,"leads",id),{
+status:"Approved",
+commission:true
+});
+}
+
+window.payWithdraw = async(id)=>{
+await updateDoc(doc(db,"withdrawals",id),{
+status:"Paid"
+});
+}
+
+</script>
+
+</body>
+  </html>
