@@ -3,169 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register - Smile Financial Solution</title>
+<title>Agent Register</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f4f8ff;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:20px;
-}
-
-.container{
-background:white;
-padding:30px;
-width:100%;
-max-width:450px;
-border-radius:10px;
-box-shadow:0 0 15px rgba(0,0,0,.1);
-}
-
-h2{
-text-align:center;
-margin-bottom:20px;
-color:#0d6efd;
-}
-
-input{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-button{
-width:100%;
-padding:12px;
-background:#0d6efd;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-#message{
-margin-top:15px;
-text-align:center;
-font-weight:bold;
-}
+body{font-family:Arial;background:#f4f8ff;display:flex;justify-content:center;align-items:center;padding:20px}
+.container{background:#fff;padding:25px;border-radius:10px;width:100%;max-width:500px;box-shadow:0 0 10px rgba(0,0,0,.1)}
+h2{text-align:center;color:#0d6efd}
+input,select{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px}
+button{width:100%;padding:12px;background:#0d6efd;color:#fff;border:none;border-radius:5px;cursor:pointer}
+small{color:gray}
 </style>
-
 </head>
 <body>
 
 <div class="container">
-
 <h2>Agent Registration</h2>
 
 <form id="registerForm">
 
 <input type="text" id="name" placeholder="Full Name" required>
-
 <input type="tel" id="mobile" placeholder="Mobile Number" required>
-
-<input type="email" id="email" placeholder="Email Address" required>
-
+<input type="email" id="email" placeholder="Email" required>
 <input type="password" id="password" placeholder="Password" required>
+
+<input type="date" id="dob" required>
+<input type="text" id="city" placeholder="City" required>
+<input type="text" id="state" placeholder="State" required>
+
+<input type="text" id="pan" placeholder="PAN Number" required>
+<input type="text" id="aadhaar" placeholder="Aadhaar Number" required>
+
+<select id="experience">
+<option>Fresher</option>
+<option>0-1 Year</option>
+<option>1-3 Years</option>
+<option>3+ Years</option>
+</select>
+
+<input type="text" id="occupation" placeholder="Current Occupation">
+
+<select id="membership">
+<option value="Free">Free</option>
+<option value="Silver">Silver ₹299</option>
+<option value="Gold">Gold ₹499</option>
+</select>
+
+<input type="text" id="upi" placeholder="UPI ID">
 
 <button type="submit">Register</button>
 
 </form>
 
 <p id="message"></p>
-
 </div>
 
 <script type="module">
-
 import { auth, db } from "./firebase/config.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-import {
-createUserWithEmailAndPassword
-}
-from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-
-import {
-doc,
-setDoc
-}
-from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-
-const form =
-document.getElementById("registerForm");
-
-form.addEventListener("submit", async (e)=>{
-
+document.getElementById("registerForm").addEventListener("submit", async(e)=>{
 e.preventDefault();
 
-const name =
-document.getElementById("name").value;
-
-const mobile =
-document.getElementById("mobile").value;
-
-const email =
-document.getElementById("email").value;
-
-const password =
-document.getElementById("password").value;
-
-const message =
-document.getElementById("message");
-
-try{
-
-const userCredential =
-await createUserWithEmailAndPassword(
+const userCredential = await createUserWithEmailAndPassword(
 auth,
-email,
-password
+email.value,
+password.value
 );
 
 const user = userCredential.user;
 
-await setDoc(
-doc(db,"users",user.uid),
-{
-name:name,
-mobile:mobile,
-email:email,
-role:"agent",
-membership:"Free",
-walletBalance:0,
-status:"Active",
-createdAt:new Date()
-}
-);
+await setDoc(doc(db,"users",user.uid),{
 
-message.innerHTML =
-"Registration Successful ✅";
+agentId:"SFS"+Date.now(),
+name:name.value,
+mobile:mobile.value,
+email:email.value,
+dob:dob.value,
+city:city.value,
+state:state.value,
+pan:pan.value,
+aadhaar:aadhaar.value,
+experience:experience.value,
+occupation:occupation.value,
+membership:membership.value,
+upi:upi.value,
+
+walletBalance:0,
+status:"Pending Verification",
+role:"agent",
+createdAt:new Date()
+
+});
+
+document.getElementById("message").innerText =
+"Registration Successful ✔";
 
 setTimeout(()=>{
 window.location.href="dashboard.html";
 },1500);
 
-}
-catch(error){
-
-message.innerHTML =
-error.code + " : " + error.message;
-
-}
-
 });
-
 </script>
 
 </body>
