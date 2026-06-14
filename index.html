@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smile Financial Solution</title>
+<title>Smile Financial Solution | Become Financial Agent</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
 background:#f4f8ff;
+color:#111;
 }
 
 header{
@@ -21,31 +22,47 @@ justify-content:space-between;
 align-items:center;
 }
 
+header h2{
+font-size:18px;
+}
+
 .container{
-padding:20px;
+padding:15px;
 }
 
 .hero{
 background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
+padding:25px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 text-align:center;
 }
 
 .hero h1{
 color:#0d6efd;
+font-size:26px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:15px;
+color:#333;
+line-height:1.6;
 }
 
 .btn{
 display:inline-block;
 margin:10px;
-padding:10px 15px;
+padding:12px 18px;
 background:#0d6efd;
 color:white;
-border:none;
-border-radius:5px;
+border-radius:6px;
 text-decoration:none;
+font-weight:bold;
+}
+
+.btn.black{
+background:#000;
 }
 
 .section{
@@ -57,29 +74,34 @@ background:white;
 padding:15px;
 margin-top:10px;
 border-radius:10px;
-box-shadow:0 0 8px rgba(0,0,0,.1);
+box-shadow:0 0 8px rgba(0,0,0,0.1);
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
 gap:10px;
-margin-top:10px;
 }
 
-.service{
+.box{
 background:#e9f2ff;
-padding:15px;
+padding:12px;
 border-radius:10px;
 text-align:center;
+font-weight:bold;
+}
+
+ul{
+padding-left:18px;
+line-height:1.7;
 }
 
 footer{
 text-align:center;
 padding:15px;
-margin-top:20px;
 background:#0d6efd;
 color:white;
+margin-top:20px;
 }
 </style>
 
@@ -88,69 +110,115 @@ color:white;
 <body>
 
 <header>
-<h3>Smile Financial Solution</h3>
+<h2>Smile Financial Solution</h2>
 <div>
+<a class="btn black" href="admin-login.html">Admin</a>
 <a class="btn" href="login.html">Login</a>
-<a class="btn" href="register.html">Register</a>
 </div>
 </header>
 
 <div class="container">
 
+<!-- HERO SECTION -->
 <div class="hero">
-<h1>Become a Financial Agent</h1>
-<p>Unlimited Earning | Work From Home | No Target | No Pressure</p>
 
-<a class="btn" href="register.html">Become an Agent</a>
-<a class="btn" href="login.html">Login</a>
+<h1>Become a Financial Agent & Build Unlimited Income</h1>
+
+<p>
+Join Smile Financial Solution and start your journey as a <b>Independent Financial Agent</b>.
+Work from home, earn unlimited commission, and become your own boss without pressure or targets.
+</p>
+
+<a class="btn" href="register.html">🚀 Become an Agent</a>
+<a class="btn black" href="login.html">Login</a>
+
 </div>
 
+<!-- WHY JOIN -->
 <div class="section">
-<h2>Membership Plans</h2>
-
-<div class="card">
-<p>Free Plan - Basic Access</p>
-<p>Silver ₹299 - Training + Leads</p>
-<p>Gold ₹499 - Premium Offers + High Commission</p>
-</div>
-</div>
-
-<div class="section">
-<h2>Our Services</h2>
-
-<div class="grid">
-
-<div class="service">Business Loan</div>
-<div class="service">Personal Loan</div>
-<div class="service">Home Loan</div>
-<div class="service">Credit Card</div>
-<div class="service">Insurance</div>
-<div class="service">GST/MSME</div>
-
-</div>
-
-</div>
-
-<div class="section">
-<h2>Why Join Us?</h2>
+<h2>🔥 Why Join Us?</h2>
 
 <div class="card">
 <ul>
-<li>Unlimited Earning Opportunity</li>
-<li>Work From Home</li>
-<li>Training + Certificate</li>
-<li>CRM Dashboard Access</li>
-<li>Offer & Incentives</li>
-<li>Leaderboard & Rewards</li>
+<li>💰 Unlimited Earning Opportunity (No Salary Limit)</li>
+<li>🏠 Work From Home / Mobile se Work</li>
+<li>📈 High Commission on Every Approved Lead</li>
+<li>🎓 Free CRM Training & Sales Guidance</li>
+<li>📊 Real-Time Dashboard & Lead Tracking</li>
+<li>🧾 Professional Financial Products Access</li>
+<li>🏆 Rewards, Incentives & Leaderboard System</li>
+<li>📞 Support Team for Every Agent</li>
 </ul>
 </div>
+</div>
 
+<!-- HOW IT WORKS -->
+<div class="section">
+<h2>⚙️ How It Works</h2>
+
+<div class="grid">
+
+<div class="box">Register as Agent</div>
+<div class="box">Get CRM Access</div>
+<div class="box">Start Sharing Leads</div>
+<div class="box">Leads Verified by Admin</div>
+<div class="box">Commission Added</div>
+<div class="box">Withdraw Earnings</div>
+
+</div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+<h2>🏦 Financial Services You Can Sell</h2>
+
+<div class="card">
+<ul>
+<li>Business Loan</li>
+<li>Personal Loan</li>
+<li>Home Loan</li>
+<li>Credit Cards (HDFC, Kotak etc.)</li>
+<li>Insurance (Life, Health, Motor)</li>
+<li>GST & MSME Registration</li>
+<li>Business Funding & Schemes</li>
+</ul>
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+<h2>🏢 About Smile Financial Solution</h2>
+
+<div class="card">
+<p>
+Smile Financial Solution is a digital financial agent platform where individuals can join as independent partners and earn commission by helping customers get financial services like loans, credit cards, insurance, and business funding.
+</p>
+
+<p>
+We provide <b>CRM system, training, sales support, and real-time tracking</b> to help every agent grow professionally and financially.
+</p>
+</div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="section">
+<div class="hero">
+
+<h2>Start Your Financial Career Today</h2>
+
+<p>
+No investment required to start. Just register, get approved, and start earning from day one.
+</p>
+
+<a class="btn" href="register.html">Become an Agent</a>
+
+</div>
 </div>
 
 </div>
 
 <footer>
-© 2026 Smile Financial Solution
+© 2026 Smile Financial Solution | All Rights Reserved
 </footer>
 
 </body>
