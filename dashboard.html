@@ -3,127 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard - Smile Financial Solution</title>
+<title>Dashboard</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f4f8ff;
-}
-
-header{
-background:#0d6efd;
-color:white;
-padding:15px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.container{
-padding:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.btn{
-display:inline-block;
-background:#0d6efd;
-color:white;
-padding:10px 15px;
-text-decoration:none;
-border-radius:5px;
-margin-top:10px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-margin-top:20px;
-}
-
-.service-card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-button{
-background:red;
-color:white;
-border:none;
-padding:10px 15px;
-border-radius:5px;
-cursor:pointer;
-}
+body{margin:0;font-family:Arial;background:#f4f8ff}
+header{background:#0d6efd;color:#fff;padding:15px;display:flex;justify-content:space-between}
+.container{padding:20px}
+.card{background:#fff;padding:15px;margin-bottom:15px;border-radius:10px;box-shadow:0 0 8px rgba(0,0,0,.1)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.service{background:#e9f2ff;padding:15px;border-radius:10px;text-align:center;cursor:pointer}
+.btn{background:#0d6efd;color:#fff;padding:8px 12px;border:none;border-radius:5px;cursor:pointer}
 </style>
-
 </head>
+
 <body>
 
 <header>
-<h2>Smile Financial Solution</h2>
-<button id="logoutBtn">Logout</button>
+<h3>Smile Financial Solution</h3>
+<button class="btn" id="logoutBtn">Logout</button>
 </header>
 
 <div class="container">
 
 <div class="card">
-<h3>Welcome Agent</h3>
-<p id="userEmail">Loading...</p>
+<h3>Agent Profile</h3>
+<p id="name">Loading...</p>
+<p id="agentId"></p>
+<p id="membership"></p>
+<p id="status"></p>
 </div>
 
-<div class="services">
-
-<div class="service-card">
-🏦 Business Loan
+<div class="card">
+<h3>Why Join Us</h3>
+<ul>
+<li>Unlimited Earning</li>
+<li>No Target</li>
+<li>Work From Home</li>
+<li>Training + Certificate</li>
+<li>CRM Access</li>
+</ul>
 </div>
 
-<div class="service-card">
-👤 Personal Loan
+<div class="card">
+<h3>Wallet</h3>
+<p>Balance: ₹0</p>
 </div>
 
-<div class="service-card">
-🏠 Home Loan
-</div>
+<div class="card">
+<h3>Services</h3>
 
-<div class="service-card">
-💳 Credit Card
-</div>
+<div class="grid">
 
-<div class="service-card">
-🚗 Motor Insurance
-</div>
+<div class="service">Business Loan</div>
+<div class="service">Personal Loan</div>
+<div class="service">Home Loan</div>
+<div class="service">Credit Card</div>
+<div class="service">Insurance</div>
+<div class="service">GST/MSME</div>
 
-<div class="service-card">
-❤️ Health Insurance
-</div>
-
-<div class="service-card">
-🛡️ Life Insurance
-</div>
-
-<div class="service-card">
-📄 GST Registration
-</div>
-
-<div class="service-card">
-🏢 MSME Registration
 </div>
 
 </div>
@@ -132,36 +69,35 @@ cursor:pointer;
 
 <script type="module">
 
-import { auth } from "./firebase/config.js";
-
-import {
-onAuthStateChanged,
-signOut
-}
+import { auth, db } from "./firebase/config.js";
+import { onAuthStateChanged, signOut } 
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-onAuthStateChanged(auth,(user)=>{
+import { doc, getDoc } 
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-if(user){
+onAuthStateChanged(auth, async(user)=>{
 
-document.getElementById("userEmail").innerHTML =
-user.email;
-
-}else{
-
+if(!user){
 window.location.href="login.html";
+}
 
+const snap = await getDoc(doc(db,"users",user.uid));
+
+if(snap.exists()){
+const data = snap.data();
+
+document.getElementById("name").innerText = "Name: " + data.name;
+document.getElementById("agentId").innerText = "ID: " + data.agentId;
+document.getElementById("membership").innerText = "Plan: " + data.membership;
+document.getElementById("status").innerText = "Status: " + data.status;
 }
 
 });
 
-document.getElementById("logoutBtn")
-.addEventListener("click",async()=>{
-
+document.getElementById("logoutBtn").addEventListener("click",async()=>{
 await signOut(auth);
-
 window.location.href="login.html";
-
 });
 
 </script>
