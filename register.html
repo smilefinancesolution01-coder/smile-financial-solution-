@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Agent Registration | Smile Financial Solution</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f5f9ff;
+color:#222;
+}
+
+header{
+background:white;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#0d6efd;
+}
+
+.btn{
+background:#0d6efd;
+color:white;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+}
+
+/* HERO */
+
+.hero{
+padding:70px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+background:linear-gradient(135deg,#0d6efd,#5fa8ff);
+color:white;
+}
+
+.hero-content{
+flex:1;
+min-width:300px;
+}
+
+.hero-content h1{
+font-size:45px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:1.8;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+min-width:300px;
+}
+
+.hero-image img{
+width:100%;
+max-width:500px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* SECTION */
+
+.section{
+padding:70px 5%;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+color:#0d6efd;
+margin-bottom:15px;
+}
+
+.section-sub{
+text-align:center;
+color:#666;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h3{
+color:#0d6efd;
+margin-bottom:10px;
+}
+
+/* FORM */
+
+.form-box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+max-width:900px;
+margin:auto;
+}
+
+.form-row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-top:8px;
+margin-bottom:15px;
+}
+
+label{
+font-weight:600;
+}
+
+.submit-btn{
+width:100%;
+padding:14px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.hero{
+text-align:center;
+}
+
+.hero-content h1{
+font-size:32px;
+}
+
+.form-row{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Smile Financial Solution
+</div>
+
+<a href="index.html" class="btn">
+Home
+</a>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Become A Financial Agent
+</h1>
+
+<p>
+Join Smile Financial Solution and start your journey in financial services.
+Learn, grow and build opportunities through professional training and support.
+</p>
+
+</div>
+
+<div class="hero-image">
+
+<img
+src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+alt="Financial Agent Training">
+
+</div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section class="section">
+
+<h2 class="section-title">
+Why Join Us?
+</h2>
+
+<p class="section-sub">
+Everything you need to start and grow
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>💰 Growth Opportunities</h3>
+<p>
+Access multiple financial products and learning resources.
+</p>
+</div>
+
+<div class="card">
+<h3>📊 CRM Dashboard</h3>
+<p>
+Track leads, activities and updates in one place.
+</p>
+</div>
+
+<div class="card">
+<h3>🎓 Training Support</h3>
+<p>
+Product knowledge, communication skills and guidance.
+</p>
+</div>
+
+<div class="card">
+<h3>🏠 Work Flexibility</h3>
+<p>
+Learn and operate from anywhere using mobile or laptop.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- REGISTRATION FORM -->
+
+<section class="section">
+
+<h2 class="section-title">
+Agent Registration Form
+</h2>
+
+<p class="section-sub">
+Complete your application and our team will review it.
+</p>
+
+<div class="form-box">
+
+<form id="registerForm">
+
+<div class="form-row">
+
+<div>
+<label>Full Name *</label>
+<input type="text" id="name" required>
+</div>
+
+<div>
+<label>Mobile Number *</label>
+<input type="tel" id="mobile" required>
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div>
+<label>Email Address *</label>
+<input type="email" id="email" required>
+</div>
+
+<div>
+<label>City *</label>
+<input type="text" id="city" required>
+</div>
+
+</div>
