@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | Smile Financial Solution</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f5f9ff;
+}
+
+.hero{
+display:flex;
+flex-wrap:wrap;
+min-height:100vh;
+}
+
+.left{
+flex:1;
+background:linear-gradient(135deg,#0d6efd,#5fa8ff);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+.left img{
+width:100%;
+max-width:500px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.right{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+
+.login-box{
+background:white;
+width:100%;
+max-width:450px;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+h2{
+text-align:center;
+color:#0d6efd;
+margin-bottom:10px;
+}
+
+.sub{
+text-align:center;
+color:#666;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+}
+
+.links{
+text-align:center;
+margin-top:20px;
+}
+
+.links a{
+text-decoration:none;
+color:#0d6efd;
+}
+
+#message{
+margin-top:15px;
+text-align:center;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.left{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="left">
+
+<img
+src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+alt="Financial Login">
+
+</div>
+
+<div class="right">
+
+<div class="login-box">
+
+<h2>Agent Login</h2>
+
+<p class="sub">
+Access your CRM Dashboard
+</p>
+
+<form id="loginForm">
+
+<input
+type="email"
+id="email"
+placeholder="Email Address"
+required>
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+required>
+
+<button type="submit">
+Login
+</button>
+
+</form>
+
+<p id="message"></p>
+
+<div class="links">
+
+<p>
+<a href="#">Forgot Password?</a>
+</p>
+
+<br>
+
+<p>
+Don't have an account?
+
+<a href="register.html">
+Register Now
+</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
