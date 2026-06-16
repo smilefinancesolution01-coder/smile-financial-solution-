@@ -426,3 +426,274 @@ serviceData[service].overview;
 }
 
 </script>
+<!-- EMI CALCULATOR -->
+
+<section class="section">
+
+<div class="card">
+
+<img
+src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg"
+alt="EMI Calculator">
+
+<h2>📊 EMI Calculator</h2>
+
+<input
+type="number"
+id="loanAmount"
+placeholder="Loan Amount"
+style="width:100%;padding:12px;margin:10px 0;">
+
+<input
+type="number"
+id="loanTenure"
+placeholder="Tenure (Months)"
+style="width:100%;padding:12px;margin:10px 0;">
+
+<button
+onclick="calculateEMI()"
+style="
+background:#0d6efd;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;">
+Calculate EMI
+</button>
+
+<h3
+id="emiResult"
+style="margin-top:15px;color:#0d6efd;">
+</h3>
+
+</div>
+
+<!-- APPLY FORM -->
+
+<div class="card">
+
+<img
+src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
+alt="Apply Now">
+
+<h2>📝 Apply Now</h2>
+
+<form id="leadForm">
+
+<input
+type="text"
+id="customerName"
+placeholder="Customer Name"
+required
+style="width:100%;padding:12px;margin:10px 0;">
+
+<input
+type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required
+style="width:100%;padding:12px;margin:10px 0;">
+
+<input
+type="text"
+id="city"
+placeholder="City"
+required
+style="width:100%;padding:12px;margin:10px 0;">
+
+<input
+type="text"
+id="pan"
+placeholder="PAN Number"
+style="width:100%;padding:12px;margin:10px 0;">
+
+<input
+type="number"
+id="cibil"
+placeholder="CIBIL Score"
+style="width:100%;padding:12px;margin:10px 0;">
+
+<input
+type="number"
+id="income"
+placeholder="Monthly Income"
+style="width:100%;padding:12px;margin:10px 0;">
+
+<input
+type="file"
+id="documents"
+style="width:100%;padding:12px;margin:10px 0;">
+
+<button
+type="submit"
+style="
+background:#0d6efd;
+color:white;
+padding:14px;
+width:100%;
+border:none;
+border-radius:8px;
+font-size:16px;">
+Submit Lead
+</button>
+
+</form>
+
+<p
+id="leadMessage"
+style="
+margin-top:15px;
+font-weight:bold;
+color:green;">
+</p>
+
+</div>
+
+</section>
+
+<script type="module">
+
+import { db } from "./firebase/config.js";
+
+import {
+collection,
+addDoc,
+serverTimestamp
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+window.calculateEMI = function(){
+
+let amount =
+Number(document.getElementById("loanAmount").value);
+
+let tenure =
+Number(document.getElementById("loanTenure").value);
+
+if(!amount || !tenure) return;
+
+let emi =
+(amount / tenure).toFixed(0);
+
+document.getElementById("emiResult").innerHTML =
+"Estimated EMI: ₹" + emi + " / Month";
+};
+
+const form =
+document.getElementById("leadForm");
+
+form.addEventListener("submit", async(e)=>{
+
+e.preventDefault();
+
+try{
+
+await addDoc(
+collection(db,"leads"),
+{
+
+service:
+document.getElementById("serviceTitle").innerText,
+
+customerName:
+document.getElementById("customerName").value,
+
+mobile:
+document.getElementById("mobile").value,
+
+city:
+document.getElementById("city").value,
+
+pan:
+document.getElementById("pan").value,
+
+cibil:
+document.getElementById("cibil").value,
+
+income:
+document.getElementById("income").value,
+
+status:"Pending",
+
+createdAt:
+serverTimestamp()
+
+}
+);
+
+document.getElementById("leadMessage").innerHTML =
+"✅ Lead Submitted Successfully";
+
+form.reset();
+
+}
+catch(error){
+
+document.getElementById("leadMessage").innerHTML =
+error.message;
+
+}
+
+});
+
+</script>
+
+<!-- FOOTER -->
+
+<footer
+style="
+background:#111;
+color:white;
+padding:50px 5%;
+text-align:center;
+">
+
+<img
+src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
+style="
+width:100%;
+max-width:500px;
+border-radius:15px;
+margin-bottom:20px;
+">
+
+<h3>Smile Financial Solution</h3>
+
+<p>
+Loans • Insurance • Credit Cards • GST • MSME
+</p>
+
+<br>
+
+<p>
+WhatsApp: 7290977231
+</p>
+
+<br>
+
+<p>
+© 2026 Smile Financial Solution
+</p>
+
+</footer>
+
+<a
+href="https://wa.me/917290977231"
+target="_blank"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:9999;">
+WhatsApp
+</a>
+
+</body>
+</html>
