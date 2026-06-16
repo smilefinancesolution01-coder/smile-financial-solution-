@@ -219,3 +219,210 @@ Required Documents
 </ul>
 
 </div>
+<!-- SALES PITCH -->
+
+<div class="card">
+
+<img
+src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
+alt="Sales Pitch">
+
+<h2>
+🎯 Sales Pitch
+</h2>
+
+<p id="salesPitch">
+
+Sir/Madam, aapki requirement ke hisab se suitable financial solution check kiya ja sakta hai.
+Main aapki basic eligibility verify karne me madad kar sakta hoon.
+
+</p>
+
+</div>
+
+<!-- OBJECTION HANDLING -->
+
+<div class="card">
+
+<img
+src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg"
+alt="Objection Handling">
+
+<h2>
+💬 Objection Handling
+</h2>
+
+<ul id="objectionList">
+
+<li>Interest rate final eligibility ke baad confirm hoti hai.</li>
+<li>Documents verification ke baad process aage badhta hai.</li>
+<li>Approval lender ke internal assessment par depend karta hai.</li>
+<li>Processing timeline case-to-case vary kar sakti hai.</li>
+
+</ul>
+
+</div>
+
+<!-- FAQ -->
+
+<div class="card">
+
+<img
+src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg"
+alt="FAQ">
+
+<h2>
+❓ Frequently Asked Questions
+</h2>
+
+<ul id="faqList">
+
+<li>Minimum age requirement kya hai?</li>
+<li>Income proof mandatory hai?</li>
+<li>PAN aur Aadhaar required hain?</li>
+<li>Processing kitne din me hoti hai?</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- DYNAMIC SERVICE DATA -->
+
+<script>
+
+const params =
+new URLSearchParams(window.location.search);
+
+const service =
+params.get("service");
+
+const serviceData = {
+
+"business-loan":{
+
+title:"Business Loan",
+
+desc:"Funding solutions for business growth and expansion.",
+
+overview:
+"Business loans can help manage working capital, inventory and expansion requirements."
+
+},
+
+"personal-loan":{
+
+title:"Personal Loan",
+
+desc:"Personal financial assistance for various needs.",
+
+overview:
+"Personal loans can be used for planned expenses and emergency requirements."
+
+},
+
+"home-loan":{
+
+title:"Home Loan",
+
+desc:"Finance options for home purchase and ownership.",
+
+overview:
+"Home loans support purchase, construction and related housing requirements."
+
+},
+
+"credit-card":{
+
+title:"Credit Card",
+
+desc:"Convenient card-based spending solutions.",
+
+overview:
+"Credit cards provide flexibility, rewards and digital payment convenience."
+
+},
+
+"health-insurance":{
+
+title:"Health Insurance",
+
+desc:"Coverage for medical and hospitalization expenses.",
+
+overview:
+"Health insurance helps manage healthcare related financial risks."
+
+},
+
+"life-insurance":{
+
+title:"Life Insurance",
+
+desc:"Long-term financial protection planning.",
+
+overview:
+"Life insurance can provide financial support to dependents based on policy terms."
+
+},
+
+"motor-insurance":{
+
+title:"Motor Insurance",
+
+desc:"Protection for vehicles.",
+
+overview:
+"Motor insurance provides coverage options for vehicles."
+
+},
+
+"gst-registration":{
+
+title:"GST Registration",
+
+desc:"GST compliance and registration support.",
+
+overview:
+"GST registration helps businesses comply with applicable tax requirements."
+
+},
+
+"msme-registration":{
+
+title:"MSME Registration",
+
+desc:"MSME recognition and benefits.",
+
+overview:
+"MSME registration can help eligible businesses access government benefits."
+
+},
+
+"scheme-funding":{
+
+title:"Scheme Funding",
+
+desc:"Funding and business assistance information.",
+
+overview:
+"Explore suitable funding programs and financial assistance opportunities."
+
+}
+
+};
+
+if(serviceData[service]){
+
+document.getElementById("serviceTitle").innerHTML =
+serviceData[service].title;
+
+document.getElementById("serviceDesc").innerHTML =
+serviceData[service].desc;
+
+document.getElementById("overviewText").innerHTML =
+serviceData[service].overview;
+
+}
+
+</script>
