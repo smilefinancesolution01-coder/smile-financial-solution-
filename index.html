@@ -1,14 +1,14 @@
  <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Smile Financial Solution | Loans, Funding & Employment
-</title>
+<title>Smile Financial Solution | Financial Growth & Business Success</title>
+
+<meta name="description" content="Smile Financial Solution helps individuals, startups and businesses with loans, funding, insurance, compliance and financial growth solutions.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,141 +16,265 @@ Smile Financial Solution | Loans, Funding & Employment
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:#f5f9ff;
-color:#222;
+font-family:'Poppins',sans-serif;
+background:#ffffff;
+color:#1a1a1a;
+overflow-x:hidden;
 }
 
+img{
+max-width:100%;
+display:block;
+height:auto;
+}
+
+.container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+/* HEADER */
+
 header{
-background:white;
-padding:15px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 15px rgba(0,0,0,.08);
 position:sticky;
 top:0;
 z-index:1000;
+background:#ffffff;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:80px;
 }
 
 .logo{
 font-size:28px;
-font-weight:bold;
+font-weight:800;
 color:#0d6efd;
 }
 
-nav a{
+.logo span{
+color:#111;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
 text-decoration:none;
-margin:0 12px;
-color:#333;
-font-weight:600;
+color:#222;
+font-weight:500;
+transition:.3s;
 }
 
-nav a:hover{
+.nav-links a:hover{
 color:#0d6efd;
 }
+
+.nav-buttons{
+display:flex;
+gap:10px;
+}
+
+.btn{
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+transition:.3s;
+}
+
+.btn-primary{
+background:#0d6efd;
+color:#fff;
+}
+
+.btn-primary:hover{
+background:#0056d6;
+}
+
+.btn-outline{
+border:2px solid #0d6efd;
+color:#0d6efd;
+}
+
+.btn-outline:hover{
+background:#0d6efd;
+color:white;
+}
+
+/* HERO */
 
 .hero{
-padding:80px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-background:linear-gradient(
+padding:80px 0;
+background:
+linear-gradient(
 135deg,
-#0d6efd,
-#5fa8ff
+#f7fbff,
+#eef5ff
 );
-color:white;
+}
+
+.hero-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
 }
 
 .hero-content{
 flex:1;
-min-width:320px;
+min-width:300px;
+}
+
+.hero-tag{
+display:inline-block;
+padding:10px 18px;
+background:#e7f0ff;
+color:#0d6efd;
+border-radius:50px;
+font-size:14px;
+font-weight:600;
+margin-bottom:20px;
 }
 
 .hero-content h1{
-font-size:55px;
-margin-bottom:20px;
+font-size:58px;
+font-weight:800;
 line-height:1.2;
+margin-bottom:20px;
 }
 
 .hero-content p{
 font-size:18px;
-line-height:1.8;
-margin-bottom:25px;
+line-height:1.9;
+color:#555;
+margin-bottom:30px;
 }
 
-.hero-buttons a{
-display:inline-block;
-padding:14px 22px;
-margin:5px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.btn-primary{
-background:white;
-color:#0d6efd;
-}
-
-.btn-secondary{
-background:#111;
-color:white;
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
 }
 
 .hero-image{
 flex:1;
-text-align:center;
-min-width:320px;
+min-width:300px;
 }
 
 .hero-image img{
-width:100%;
-max-width:600px;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
+box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
+/* STATS */
+
 .stats{
-padding:50px 5%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+padding:70px 0;
 background:white;
 }
 
-.stat-box{
-background:#f4f8ff;
-padding:25px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
-.stat-box h2{
+.stat-card{
+background:#fff;
+padding:35px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.stat-card h2{
+font-size:40px;
 color:#0d6efd;
-font-size:32px;
 margin-bottom:10px;
 }
 
-</style>
+.stat-card p{
+color:#666;
+font-size:15px;
+}
 
+/* MOBILE */
+
+@media(max-width:992px){
+
+.hero-content h1{
+font-size:42px;
+}
+
+}
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.nav-buttons{
+display:none;
+}
+
+.hero{
+padding:60px 0;
+}
+
+.hero-content h1{
+font-size:34px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn{
+text-align:center;
+width:100%;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
+<div class="container">
+
+<div class="navbar">
+
 <div class="logo">
-Smile Financial Solution
+Smile <span>Financial</span>
 </div>
 
-<nav>
+<nav class="nav-links">
 
 <a href="#">Home</a>
 <a href="about.html">About</a>
@@ -158,59 +282,63 @@ Smile Financial Solution
 <a href="blogs.html">Blogs</a>
 <a href="faq.html">FAQ</a>
 <a href="contact.html">Contact</a>
-<a href="become-agent.html">Become Agent</a>
-<a href="login.html">Login</a>
 
 </nav>
 
-</header>
+<div class="nav-buttons">
 
-<!-- HERO SECTION -->
+<a href="login.html" class="btn btn-outline">
+Login
+</a>
+
+<a href="become-agent.html" class="btn btn-primary">
+Become Agent
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
 
 <section class="hero">
 
+<div class="container">
+
+<div class="hero-wrapper">
+
 <div class="hero-content">
 
+<div class="hero-tag">
+Trusted Financial Growth Partner
+</div>
+
 <h1>
-Financial Growth, Business Funding & Employment Opportunities
+Empowering Businesses,
+Supporting Growth,
+Creating Opportunities
 </h1>
 
 <p>
 
-Smile Financial Solution पिछले 6+ वर्षों से individuals,
-business owners, startups और professionals को
-loans, funding, insurance, credit cards और
-business compliance solutions में support कर रहा है.
-
-हमारा mission financial growth और employment generation
-दोनों को एक ही platform पर लाना है.
+Smile Financial Solution helps individuals,
+business owners and startups access financial
+services, business funding, compliance support,
+credit solutions and growth opportunities through
+a modern and professional platform.
 
 </p>
 
 <div class="hero-buttons">
 
-<a
-href="services.html"
-class="btn-primary">
-
-Apply Now
-
+<a href="services.html" class="btn btn-primary">
+Explore Services
 </a>
 
-<a
-href="become-agent.html"
-class="btn-secondary">
-
-Become Agent
-
-</a>
-
-<a
-href="contact.html"
-class="btn-primary">
-
-Contact Us
-
+<a href="become-agent.html" class="btn btn-outline">
+Become an Agent
 </a>
 
 </div>
@@ -220,744 +348,41 @@ Contact Us
 <div class="hero-image">
 
 <img
-src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-alt="Financial Services">
+src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+alt="Business Meeting">
+
+</div>
+
+</div>
 
 </div>
 
 </section>
-
-<!-- TRUST STATS -->
 
 <section class="stats">
 
-<div class="stat-box">
+<div class="container">
 
+<div class="stats-grid">
+
+<div class="stat-card">
 <h2>6+</h2>
-
-<p>
-Years of Experience
-</p>
-
+<p>Years of Industry Experience</p>
 </div>
 
-<div class="stat-box">
-
+<div class="stat-card">
 <h2>5000+</h2>
-
-<p>
-Customers Assisted
-</p>
-
+<p>Customers Assisted</p>
 </div>
 
-<div class="stat-box">
-
+<div class="stat-card">
 <h2>50+</h2>
-
-<p>
-Financial Solutions
-</p>
-
+<p>Financial Solutions</p>
 </div>
 
-<div class="stat-box">
-
-<h2>24×7</h2>
-
-<p>
-Customer Support
-</p>
-
-</div>
-
-</section>
-<!-- ABOUT US SECTION -->
-
-<section
-style="
-padding:80px 5%;
-background:#ffffff;
-">
-
-<div
-style="
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:40px;
-flex-wrap:wrap;
-">
-
-<div style="flex:1;min-width:320px;">
-
-<img
-src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
-alt="Office Team"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</div>
-
-<div style="flex:1;min-width:320px;">
-
-<h2
-style="
-font-size:40px;
-color:#0d6efd;
-margin-bottom:20px;
-">
-
-About Smile Financial Solution
-
-</h2>
-
-<p
-style="
-font-size:18px;
-line-height:1.9;
-color:#444;
-">
-
-Smile Financial Solution ek growing financial consultancy
-aur business support platform hai jo pichle 6+ years se
-customers aur businesses ko financial solutions provide
-karne me support kar raha hai.
-
-Hamara objective sirf loan process karna nahi,
-balki customers aur businesses ko long-term growth
-ke liye end-to-end support dena hai.
-
-</p>
-
-<br>
-
-<p
-style="
-font-size:18px;
-line-height:1.9;
-color:#444;
-">
-
-Hum business funding, loan consultancy,
-credit cards, insurance, GST registration,
-MSME registration aur government schemes
-me assistance provide karte hain.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- DIRECTOR SECTION -->
-
-<section
-style="
-padding:80px 5%;
-background:#f4f8ff;
-">
-
-<div
-style="
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:40px;
-flex-wrap:wrap;
-">
-
-<div style="flex:1;min-width:320px;">
-
-<h2
-style="
-font-size:40px;
-color:#0d6efd;
-margin-bottom:20px;
-">
-
-Message From Director
-
-</h2>
-
-<h3
-style="
-font-size:28px;
-margin-bottom:15px;
-">
-
-Mohammad Aarif
-
-</h3>
-
-<p
-style="
-font-size:18px;
-line-height:1.9;
-color:#444;
-">
-
-Hamari vision hai ki har individual aur business
-ko financial opportunities aur professional guidance
-mil sake.
-
-Smile Financial Solution ka goal hai
-financial services ko simple, transparent
-aur accessible banana.
-
-</p>
-
-<br>
-
-<p
-style="
-font-size:18px;
-line-height:1.9;
-color:#444;
-">
-
-Hum technology, CRM system aur expert support
-ke through customers aur agents dono ko
-growth opportunities provide karte hain.
-
-</p>
-
-</div>
-
-<div style="flex:1;min-width:320px;">
-
-<img
-src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg"
-alt="Director"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MISSION & VISION -->
-
-<section
-style="
-padding:80px 5%;
-background:white;
-">
-
-<h2
-style="
-text-align:center;
-font-size:40px;
-color:#0d6efd;
-margin-bottom:50px;
-">
-
-Our Mission & Vision
-
-</h2>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-">
-
-<div
-style="
-background:#f4f8ff;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-">
-
-<h3
-style="
-color:#0d6efd;
-margin-bottom:15px;
-">
-
-🎯 Our Mission
-
-</h3>
-
-<p
-style="
-line-height:1.9;
-color:#444;
-">
-
-Customers aur businesses ko financial growth,
-funding solutions aur compliance support
-provide karna.
-
-</p>
-
-</div>
-
-<div
-style="
-background:#f4f8ff;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-">
-
-<h3
-style="
-color:#0d6efd;
-margin-bottom:15px;
-">
-
-🚀 Our Vision
-
-</h3>
-
-<p
-style="
-line-height:1.9;
-color:#444;
-">
-
-India ka trusted financial services aur
-employment generation platform banna.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- BRANCH NETWORK -->
-
-<section
-style="
-padding:80px 5%;
-background:#f4f8ff;
-">
-
-<h2
-style="
-text-align:center;
-font-size:40px;
-color:#0d6efd;
-margin-bottom:50px;
-">
-
-🏢 Our Branch Network
-
-</h2>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-">
-
-<div class="stat-box">
-<h2>Delhi</h2>
-<p>Head Office</p>
-</div>
-
-<div class="stat-box">
-<h2>Ahmedabad</h2>
-<p>Gujarat Branch</p>
-</div>
-
-<div class="stat-box">
-<h2>Hyderabad</h2>
-<p>Regional Office</p>
-</div>
-
-<div class="stat-box">
-<h2>Rajasthan</h2>
-<p>Support Center</p>
-</div>
-
-<div class="stat-box">
-<h2>India</h2>
-<p>Growing Network</p>
-</div>
-
-</div>
-
-<br><br>
-
-<img
-src="https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg"
-alt="Branch Network"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</section>
-<!-- SERVICES SECTION -->
-
-<section
-style="
-padding:80px 5%;
-background:white;
-">
-
-<h2
-style="
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:15px;
-">
-
-Our Financial Services
-
-</h2>
-
-<p
-style="
-text-align:center;
-font-size:18px;
-color:#555;
-max-width:900px;
-margin:auto;
-line-height:1.8;
-margin-bottom:50px;
-">
-
-Loans, Funding, Insurance, Credit Cards,
-Business Registration aur Government Schemes
-ke liye complete support ek hi platform par.
-
-</p>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-">
-
-<!-- BUSINESS LOAN -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>🏦 Business Loan</h3>
-
-<p>
-Business expansion, machinery purchase,
-working capital aur growth ke liye funding solutions.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- PERSONAL LOAN -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>👤 Personal Loan</h3>
-
-<p>
-Medical, travel, education aur personal requirements
-ke liye quick finance assistance.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- HOME LOAN -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>🏠 Home Loan</h3>
-
-<p>
-Dream home purchase, construction aur renovation
-ke liye affordable financing.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- LAP -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>🏢 Loan Against Property</h3>
-
-<p>
-Residential ya commercial property par
-secured funding options.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- WORKING CAPITAL -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>📈 Working Capital Loan</h3>
-
-<p>
-Business cash flow management aur operational
-requirements ke liye funding.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- MUDRA -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/6694540/pexels-photo-6694540.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>🇮🇳 Mudra Loan</h3>
-
-<p>
-Small businesses aur entrepreneurs ke liye
-government-backed funding support.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- STARTUP FUNDING -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>🚀 Startup Funding</h3>
-
-<p>
-Seed Funding, Debt Funding aur Startup India
-guidance for growing businesses.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- CREDIT CARD -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>💳 Credit Cards</h3>
-
-<p>
-Premium, rewards aur cashback cards ke
-application support services.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- INSURANCE -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>🛡 Insurance Solutions</h3>
-
-<p>
-Life Insurance, Health Insurance aur
-Motor Insurance assistance.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- GST -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>📄 GST Registration</h3>
-
-<p>
-GST registration, filing aur compliance
-support for businesses.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- MSME -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>🏭 MSME Registration</h3>
-
-<p>
-Government benefits aur business growth
-ke liye MSME registration support.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-<!-- PMEGP -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg"
-style="width:100%;height:220px;object-fit:cover;">
-
-<div class="service-content">
-
-<h3>💼 PMEGP & CGTMSE</h3>
-
-<p>
-Government schemes aur credit guarantee
-support for entrepreneurs.
-</p>
-
-<a href="service-details.html"
-class="btn">
-Learn More
-</a>
-
+<div class="stat-card">
+<h2>24/7</h2>
+<p>Dedicated Support</p>
 </div>
 
 </div>
@@ -965,800 +390,3 @@ Learn More
 </div>
 
 </section>
-
-<!-- EMI CALCULATOR CTA -->
-
-<section
-style="
-padding:80px 5%;
-background:#0d6efd;
-color:white;
-text-align:center;
-">
-
-<img
-src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg"
-style="
-width:100%;
-max-width:900px;
-border-radius:20px;
-margin-bottom:30px;
-">
-
-<h2
-style="
-font-size:40px;
-margin-bottom:20px;
-">
-
-EMI Calculator Available
-
-</h2>
-
-<p
-style="
-font-size:18px;
-line-height:1.8;
-max-width:900px;
-margin:auto;
-">
-
-Calculate your monthly EMI instantly before applying
-for Business Loan, Personal Loan, Home Loan,
-Education Loan or Loan Against Property.
-
-</p>
-
-<br>
-
-<a
-href="service-details.html"
-style="
-background:white;
-color:#0d6efd;
-padding:15px 30px;
-border-radius:10px;
-font-weight:bold;
-text-decoration:none;
-">
-
-Calculate EMI
-
-</a>
-
-</section>
-<!-- WHY CHOOSE US -->
-
-<section
-style="
-padding:80px 5%;
-background:#ffffff;
-">
-
-<h2
-style="
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:20px;
-">
-
-Why Choose Smile Financial Solution?
-
-</h2>
-
-<p
-style="
-text-align:center;
-max-width:900px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
-color:#555;
-margin-bottom:50px;
-">
-
-Hum sirf loan consultancy nahi, balki complete financial
-growth aur business support ecosystem provide karte hain.
-
-</p>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
-
-<div class="stat-box">
-<h2>⚡ Fast Support</h2>
-<p>Dedicated customer assistance process.</p>
-</div>
-
-<div class="stat-box">
-<h2>🏦 Multiple Solutions</h2>
-<p>Loans, funding, cards, insurance & compliance.</p>
-</div>
-
-<div class="stat-box">
-<h2>👨‍💼 Expert Guidance</h2>
-<p>Professional support at every stage.</p>
-</div>
-
-<div class="stat-box">
-<h2>📈 Business Growth</h2>
-<p>Funding and growth opportunities.</p>
-</div>
-
-<div class="stat-box">
-<h2>🎓 Training Platform</h2>
-<p>Learning & earning opportunities.</p>
-</div>
-
-<div class="stat-box">
-<h2>💻 Digital CRM</h2>
-<p>Lead tracking and performance monitoring.</p>
-</div>
-
-</div>
-
-<br><br>
-
-<img
-src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</section>
-
-<!-- PARTNERS SECTION -->
-
-<section
-style="
-padding:80px 5%;
-background:#f4f8ff;
-">
-
-<h2
-style="
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:20px;
-">
-
-🤝 Our Network & Financial Ecosystem
-
-</h2>
-
-<p
-style="
-text-align:center;
-max-width:900px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
-color:#555;
-margin-bottom:50px;
-">
-
-Hum customers ko suitable financial products tak
-pahunchane ke liye banking, NBFC, insurance aur
-business support ecosystem ke saath kaam karte hain.
-
-</p>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-">
-
-<div class="stat-box">Business Funding</div>
-<div class="stat-box">Startup Support</div>
-<div class="stat-box">Insurance Solutions</div>
-<div class="stat-box">Credit Card Services</div>
-<div class="stat-box">Business Compliance</div>
-<div class="stat-box">Government Schemes</div>
-
-</div>
-
-<br><br>
-
-<img
-src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</section>
-
-<!-- CUSTOMER TESTIMONIALS -->
-
-<section
-style="
-padding:80px 5%;
-background:white;
-">
-
-<h2
-style="
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:50px;
-">
-
-⭐ Customer Testimonials
-
-</h2>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-">
-
-<div class="stat-box">
-
-<h3>Business Owner</h3>
-
-<br>
-
-<p>
-"Professional guidance aur timely support ne
-hamare business funding process ko easy bana diya."
-</p>
-
-</div>
-
-<div class="stat-box">
-
-<h3>Startup Founder</h3>
-
-<br>
-
-<p>
-"Funding aur compliance support ek hi place par
-milna hamare liye bahut helpful raha."
-</p>
-
-</div>
-
-<div class="stat-box">
-
-<h3>Individual Customer</h3>
-
-<br>
-
-<p>
-"Loan process aur documentation support bahut
-smooth tha."
-</p>
-
-</div>
-
-</div>
-
-<br><br>
-
-<img
-src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</section>
-
-<!-- SUCCESS STORIES -->
-
-<section
-style="
-padding:80px 5%;
-background:#f4f8ff;
-">
-
-<h2
-style="
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:50px;
-">
-
-🚀 Success Stories
-
-</h2>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-">
-
-<div class="stat-box">
-<h2>₹50L+</h2>
-<p>Business Expansion Support</p>
-</div>
-
-<div class="stat-box">
-<h2>1000+</h2>
-<p>Loan Assistance Cases</p>
-</div>
-
-<div class="stat-box">
-<h2>500+</h2>
-<p>Business Registrations Supported</p>
-</div>
-
-</div>
-
-<br><br>
-
-<img
-src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</section>
-
-<!-- FAQ PREVIEW -->
-
-<section
-style="
-padding:80px 5%;
-background:white;
-">
-
-<h2
-style="
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:50px;
-">
-
-❓ Frequently Asked Questions
-
-</h2>
-
-<div class="stat-box">
-
-<h3>
-How can I apply for a loan?
-</h3>
-
-<br>
-
-<p>
-Choose your required service and submit an enquiry form.
-</p>
-
-</div>
-
-<br>
-
-<div class="stat-box">
-
-<h3>
-Can I become an agent?
-</h3>
-
-<br>
-
-<p>
-Yes, you can join our platform and access training,
-CRM and earning opportunities.
-</p>
-
-</div>
-
-<br>
-
-<div class="stat-box">
-
-<h3>
-Do you help businesses with compliance?
-</h3>
-
-<br>
-
-<p>
-Yes, GST, MSME, registrations and funding support
-services are available.
-</p>
-
-</div>
-
-</section>
-<!-- BECOME AN AGENT -->
-
-<section
-style="
-padding:80px 5%;
-background:linear-gradient(135deg,#0d6efd,#0047b3);
-color:white;
-">
-
-<div
-style="
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:40px;
-flex-wrap:wrap;
-">
-
-<div style="flex:1;min-width:320px;">
-
-<h2
-style="
-font-size:48px;
-margin-bottom:20px;
-">
-
-🚀 Become a Financial Agent
-
-</h2>
-
-<p
-style="
-font-size:18px;
-line-height:1.9;
-margin-bottom:25px;
-">
-
-Join Smile Financial Solution and build your own
-financial services business.
-
-Work from home, generate leads, help customers
-and earn performance-based incentives through our CRM platform.
-
-</p>
-
-<ul
-style="
-line-height:2;
-font-size:18px;
-">
-
-<li>✅ Unlimited Earning Opportunity</li>
-<li>✅ No Office Required</li>
-<li>✅ Work From Mobile</li>
-<li>✅ CRM Access</li>
-<li>✅ Training & Product Knowledge</li>
-<li>✅ Sales Scripts & Guidance</li>
-<li>✅ Performance Rewards</li>
-<li>✅ Professional Growth Opportunity</li>
-
-</ul>
-
-<br>
-
-<a
-href="become-agent.html"
-style="
-background:white;
-color:#0d6efd;
-padding:15px 30px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-">
-
-Become An Agent
-
-</a>
-
-</div>
-
-<div style="flex:1;min-width:320px;">
-
-<img
-src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TRAINING SECTION -->
-
-<section
-style="
-padding:80px 5%;
-background:white;
-">
-
-<h2
-style="
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:50px;
-">
-
-🎓 Training & Career Development
-
-</h2>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
-
-<div class="stat-box">
-<h2>📚 Product Training</h2>
-<p>Detailed financial product knowledge.</p>
-</div>
-
-<div class="stat-box">
-<h2>🎤 Sales Training</h2>
-<p>Professional sales pitch learning.</p>
-</div>
-
-<div class="stat-box">
-<h2>📞 Customer Handling</h2>
-<p>Real-world customer interaction guidance.</p>
-</div>
-
-<div class="stat-box">
-<h2>🏆 Performance Growth</h2>
-<p>Career growth and recognition opportunities.</p>
-</div>
-
-</div>
-
-<br><br>
-
-<img
-src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</section>
-
-<!-- CONTACT US -->
-
-<section
-style="
-padding:80px 5%;
-background:#f4f8ff;
-">
-
-<h2
-style="
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:50px;
-">
-
-📞 Contact Us
-
-</h2>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-">
-
-<div class="stat-box">
-
-<h2>📱 Phone</h2>
-
-<p>
-7290977231
-</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>📧 Email</h2>
-
-<p>
-smilefinacialsolutions@gmail.com
-</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>👤 Director</h2>
-
-<p>
-Mohammad Aarif
-</p>
-
-</div>
-
-</div>
-
-<br><br>
-
-<img
-src="https://images.pexels.com/photos/3183198/pexels-photo-3183198.jpeg"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-">
-
-</section>
-
-<!-- FINAL CTA -->
-
-<section
-style="
-padding:80px 5%;
-text-align:center;
-background:#0d6efd;
-color:white;
-">
-
-<h2
-style="
-font-size:45px;
-margin-bottom:20px;
-">
-
-Let's Build Financial Growth Together
-
-</h2>
-
-<p
-style="
-font-size:20px;
-max-width:900px;
-margin:auto;
-line-height:1.8;
-">
-
-Whether you are looking for funding, financial services,
-business support or an earning opportunity,
-Smile Financial Solution is here to support your journey.
-
-</p>
-
-<br><br>
-
-<a
-href="contact.html"
-style="
-background:white;
-color:#0d6efd;
-padding:15px 35px;
-border-radius:10px;
-font-weight:bold;
-text-decoration:none;
-">
-
-Contact Now
-
-</a>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer
-style="
-background:#111;
-color:white;
-padding:60px 5%;
-">
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-">
-
-<div>
-
-<h3>Smile Financial Solution</h3>
-
-<br>
-
-<p>
-Financial Services, Business Funding,
-Insurance, Credit Cards, Business Compliance
-and Employment Opportunities.
-</p>
-
-</div>
-
-<div>
-
-<h3>Quick Links</h3>
-
-<br>
-
-<p>Home</p>
-<p>About Us</p>
-<p>Services</p>
-<p>Blogs</p>
-<p>Contact</p>
-
-</div>
-
-<div>
-
-<h3>Contact Details</h3>
-
-<br>
-
-<p>📱 7290977231</p>
-<p>📧 smilefinacialsolutions@gmail.com</p>
-<p>👤 Mohammad Aarif</p>
-
-</div>
-
-</div>
-
-<hr style="margin:40px 0;border-color:#333;">
-
-<center>
-
-<p>
-© 2026 Smile Financial Solution.
-All Rights Reserved.
-</p>
-
-</center>
-
-</footer>
-
-<!-- WHATSAPP BUTTON -->
-
-<a
-href="https://wa.me/917290977231"
-target="_blank"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-z-index:9999;
-">
-
-WhatsApp
-
-</a>
-
-</body>
-</html>
