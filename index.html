@@ -1,12 +1,17 @@
- <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Smile Financial Solution | Financial Growth & Business Success</title>
+<title>Smile Financial Solution | Funding, Loans & Business Growth</title>
 
-<meta name="description" content="Smile Financial Solution helps individuals, startups and businesses with loans, funding, insurance, compliance and financial growth solutions.">
+<meta name="description"
+content="Smile Financial Solution helps businesses, startups and individuals with loans, funding, compliance and financial growth services.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -24,15 +29,14 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#ffffff;
-color:#1a1a1a;
+background:#fff;
+color:#222;
 overflow-x:hidden;
 }
 
 img{
 max-width:100%;
 display:block;
-height:auto;
 }
 
 .container{
@@ -47,21 +51,27 @@ padding:0 20px;
 header{
 position:sticky;
 top:0;
-z-index:1000;
-background:#ffffff;
+background:#fff;
+z-index:9999;
 box-shadow:0 2px 15px rgba(0,0,0,.08);
 }
 
 .navbar{
+height:80px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-height:80px;
 }
 
-```css
 .logo{
+font-size:28px;
+font-weight:800;
+color:#0d6efd;
 text-decoration:none;
+}
+
+.logo span{
+color:#111;
 }
 
 #menu-toggle{
@@ -72,9 +82,133 @@ display:none;
 display:none;
 font-size:30px;
 cursor:pointer;
-font-weight:700;
+font-weight:bold;
+}
+
+.nav-links{
+display:flex;
+gap:22px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
 color:#0d6efd;
 }
+
+.btn{
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+}
+
+.btn-primary{
+background:#0d6efd;
+color:#fff;
+}
+
+.btn-outline{
+border:2px solid #0d6efd;
+color:#0d6efd;
+}
+
+/* HERO */
+
+.hero{
+padding:100px 0;
+background:linear-gradient(135deg,#f7fbff,#eef5ff);
+}
+
+.hero-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.hero-content{
+flex:1;
+min-width:300px;
+}
+
+.hero-badge{
+display:inline-block;
+padding:10px 18px;
+background:#e7f0ff;
+color:#0d6efd;
+border-radius:50px;
+font-size:14px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+.hero-content h1{
+font-size:58px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:1.9;
+color:#555;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.hero-image{
+flex:1;
+min-width:300px;
+}
+
+.hero-image img{
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+/* STATS */
+
+.stats{
+padding:80px 0;
+background:#fff;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-card{
+background:#fff;
+padding:35px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.stat-card h2{
+font-size:42px;
+color:#0d6efd;
+margin-bottom:10px;
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -83,34 +217,38 @@ display:block;
 }
 
 .nav-links{
-display:none !important;
+display:none;
 position:absolute;
 top:80px;
 left:0;
 width:100%;
-background:#ffffff;
+background:#fff;
 padding:20px;
 flex-direction:column;
-gap:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-z-index:9999;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
 #menu-toggle:checked ~ .nav-links{
-display:flex !important;
+display:flex;
 }
 
-.nav-links a{
-padding:10px 0;
-border-bottom:1px solid #eee;
+.hero-content h1{
+font-size:36px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn{
 width:100%;
+text-align:center;
 }
 
 }
-```
-
 
 </style>
+
 </head>
 
 <body>
@@ -134,23 +272,12 @@ Smile <span>Financial</span>
 <nav class="nav-links">
 
 <a href="index.html">Home</a>
-
-<a href="about.html">About Us</a>
-
+<a href="about.html">About</a>
 <a href="services.html">Services</a>
-
-<a href="service-details.html">Service Details</a>
-
 <a href="blogs.html">Blogs</a>
-
-<a href="success-stories.html">Success Stories</a>
-
 <a href="faq.html">FAQ</a>
-
 <a href="contact.html">Contact</a>
-
 <a href="become-agent.html">Become Agent</a>
-
 <a href="login.html">Login</a>
 
 </nav>
@@ -169,24 +296,18 @@ Smile <span>Financial</span>
 
 <div class="hero-content">
 
-<div class="hero-tag">
+<div class="hero-badge">
 Trusted Financial Growth Partner
 </div>
 
 <h1>
-Empowering Businesses,
-Supporting Growth,
+Funding Dreams,
+Growing Businesses,
 Creating Opportunities
 </h1>
 
 <p>
-
-Smile Financial Solution helps individuals,
-business owners and startups access financial
-services, business funding, compliance support,
-credit solutions and growth opportunities through
-a modern and professional platform.
-
+Smile Financial Solution provides professional support for business loans, startup funding, personal loans, compliance services, insurance, credit cards and business growth opportunities.
 </p>
 
 <div class="hero-buttons">
@@ -196,7 +317,7 @@ Explore Services
 </a>
 
 <a href="become-agent.html" class="btn btn-outline">
-Become an Agent
+Become An Agent
 </a>
 
 </div>
@@ -205,8 +326,7 @@ Become an Agent
 
 <div class="hero-image">
 
-<img
-src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+<img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
 alt="Business Meeting">
 
 </div>
@@ -225,7 +345,7 @@ alt="Business Meeting">
 
 <div class="stat-card">
 <h2>6+</h2>
-<p>Years of Industry Experience</p>
+<p>Years Experience</p>
 </div>
 
 <div class="stat-card">
@@ -240,7 +360,7 @@ alt="Business Meeting">
 
 <div class="stat-card">
 <h2>24/7</h2>
-<p>Dedicated Support</p>
+<p>Professional Support</p>
 </div>
 
 </div>
@@ -248,1371 +368,4 @@ alt="Business Meeting">
 </div>
 
 </section>
-<!-- ABOUT SECTION -->
-
-<section
-style="
-padding:100px 0;
-background:#ffffff;
-">
-
-<div class="container">
-
-<div
-style="
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-">
-
-<div style="flex:1;min-width:300px;">
-
-<img
-src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
-alt="Corporate Office"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-">
-
-</div>
-
-<div style="flex:1;min-width:300px;">
-
-<span
-style="
-color:#0d6efd;
-font-weight:700;
-letter-spacing:1px;
-">
-
-ABOUT US
-
-</span>
-
-<h2
-style="
-font-size:42px;
-margin:20px 0;
-line-height:1.3;
-">
-
-Building Financial Success
-Through Trust & Expertise
-
-</h2>
-
-<p
-style="
-color:#555;
-line-height:1.9;
-font-size:16px;
-margin-bottom:20px;
-">
-
-Smile Financial Solution is a professional financial
-services and business support platform committed to
-helping individuals, entrepreneurs, startups and
-established businesses achieve their financial goals.
-
-</p>
-
-<p
-style="
-color:#555;
-line-height:1.9;
-font-size:16px;
-margin-bottom:20px;
-">
-
-Over the years, we have supported clients with
-business loans, personal loans, home loans,
-working capital, startup funding, insurance,
-credit cards and compliance services.
-
-</p>
-
-<p
-style="
-color:#555;
-line-height:1.9;
-font-size:16px;
-">
-
-Our objective is not only to provide financial
-solutions but also to create opportunities for
-growth, stability and long-term success.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- DIRECTOR SECTION -->
-
-<section
-style="
-padding:100px 0;
-background:#f8fbff;
-">
-
-<div class="container">
-
-<div
-style="
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-">
-
-<div style="flex:1;min-width:300px;">
-
-<span
-style="
-color:#0d6efd;
-font-weight:700;
-">
-
-DIRECTOR'S MESSAGE
-
-</span>
-
-<h2
-style="
-font-size:42px;
-margin:20px 0;
-">
-
-Mohammad Aarif
-
-</h2>
-
-<p
-style="
-font-size:16px;
-line-height:1.9;
-color:#555;
-margin-bottom:20px;
-">
-
-At Smile Financial Solution, our vision is to
-make financial services more accessible,
-transparent and growth-oriented for every customer.
-
-</p>
-
-<p
-style="
-font-size:16px;
-line-height:1.9;
-color:#555;
-margin-bottom:20px;
-">
-
-We believe that every individual and business
-deserves access to the right opportunities,
-financial guidance and professional support.
-
-</p>
-
-<p
-style="
-font-size:16px;
-line-height:1.9;
-color:#555;
-">
-
-Our commitment is to build long-term relationships
-based on trust, integrity and results while
-creating opportunities for customers, businesses
-and future financial professionals.
-
-</p>
-
-</div>
-
-<div style="flex:1;min-width:300px;">
-
-<img
-src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
-alt="Business Leadership"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MISSION VISION -->
-
-<section
-style="
-padding:100px 0;
-background:white;
-">
-
-<div class="container">
-
-<div
-style="
-text-align:center;
-margin-bottom:60px;
-">
-
-<span
-style="
-color:#0d6efd;
-font-weight:700;
-">
-
-OUR PURPOSE
-
-</span>
-
-<h2
-style="
-font-size:42px;
-margin-top:15px;
-">
-
-Mission & Vision
-
-</h2>
-
-</div>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-">
-
-<div
-style="
-background:#f8fbff;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.06);
-">
-
-<h3
-style="
-font-size:28px;
-margin-bottom:20px;
-color:#0d6efd;
-">
-
-Our Mission
-
-</h3>
-
-<p
-style="
-line-height:1.9;
-color:#555;
-">
-
-To provide reliable financial solutions,
-business support services and professional
-guidance that empower individuals and
-organizations to achieve sustainable growth.
-
-</p>
-
-</div>
-
-<div
-style="
-background:#f8fbff;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.06);
-">
-
-<h3
-style="
-font-size:28px;
-margin-bottom:20px;
-color:#0d6efd;
-">
-
-Our Vision
-
-</h3>
-
-<p
-style="
-line-height:1.9;
-color:#555;
-">
-
-To become a trusted financial growth partner
-known for innovation, customer success,
-business excellence and employment generation
-through technology-driven solutions.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- COMPANY JOURNEY -->
-
-<section
-style="
-padding:100px 0;
-background:#f8fbff;
-">
-
-<div class="container">
-
-<div
-style="
-text-align:center;
-margin-bottom:50px;
-">
-
-<span
-style="
-color:#0d6efd;
-font-weight:700;
-">
-
-OUR JOURNEY
-
-</span>
-
-<h2
-style="
-font-size:42px;
-margin-top:15px;
-">
-
-Growing With Customers & Businesses
-
-</h2>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
-alt="Company Growth"
-style="
-width:100%;
-border-radius:20px;
-margin-bottom:40px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-">
-
-<p
-style="
-max-width:1000px;
-margin:auto;
-text-align:center;
-line-height:2;
-font-size:17px;
-color:#555;
-">
-
-Over the years, Smile Financial Solution has
-expanded its support network, strengthened
-customer relationships and developed a broader
-range of financial and business solutions.
-Our journey continues with a commitment to
-helping businesses grow, individuals succeed
-and future professionals create new opportunities.
-
-</p>
-
-</div>
-
-</section>
-<!-- SERVICES SECTION -->
-
-<section class="services-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>OUR SERVICES</span>
-
-<h2>
-Complete Financial & Business Solutions
-</h2>
-
-<p>
-Explore our wide range of financial products,
-funding solutions and business support services.
-</p>
-
-</div>
-
-<div class="services-grid">
-
-<!-- BUSINESS LOAN -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg"
-alt="Business Loan">
-
-<div class="service-content">
-
-<h3>Business Loan</h3>
-
-<p>
-Flexible funding solutions for business expansion,
-machinery purchase, inventory and working capital.
-</p>
-
-<div class="service-buttons">
-
-<a href="contact.html" class="service-btn">
-Apply Now
-</a>
-
-<a href="service-details.html" class="service-btn-outline">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- PERSONAL LOAN -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg"
-alt="Personal Loan">
-
-<div class="service-content">
-
-<h3>Personal Loan</h3>
-
-<p>
-Quick financial assistance for education,
-travel, medical and personal requirements.
-</p>
-
-<div class="service-buttons">
-
-<a href="contact.html" class="service-btn">
-Apply Now
-</a>
-
-<a href="service-details.html" class="service-btn-outline">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- HOME LOAN -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
-alt="Home Loan">
-
-<div class="service-content">
-
-<h3>Home Loan</h3>
-
-<p>
-Affordable financing options for purchasing,
-building or renovating your dream home.
-</p>
-
-<div class="service-buttons">
-
-<a href="contact.html" class="service-btn">
-Apply Now
-</a>
-
-<a href="service-details.html" class="service-btn-outline">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- LAP -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg"
-alt="Loan Against Property">
-
-<div class="service-content">
-
-<h3>Loan Against Property</h3>
-
-<p>
-Unlock the value of your property and get
-funding for personal or business needs.
-</p>
-
-<div class="service-buttons">
-
-<a href="contact.html" class="service-btn">
-Apply Now
-</a>
-
-<a href="service-details.html" class="service-btn-outline">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- STARTUP FUNDING -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-alt="Startup Funding">
-
-<div class="service-content">
-
-<h3>Startup Funding</h3>
-
-<p>
-Seed funding, debt funding and startup growth
-support for innovative businesses.
-</p>
-
-<div class="service-buttons">
-
-<a href="contact.html" class="service-btn">
-Apply Now
-</a>
-
-<a href="service-details.html" class="service-btn-outline">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- CREDIT CARD -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg"
-alt="Credit Cards">
-
-<div class="service-content">
-
-<h3>Credit Cards</h3>
-
-<p>
-Access premium credit card solutions with
-rewards, cashback and travel benefits.
-</p>
-
-<div class="service-buttons">
-
-<a href="contact.html" class="service-btn">
-Apply Now
-</a>
-
-<a href="service-details.html" class="service-btn-outline">
-Learn More
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<style>
-
-.services-section{
-padding:100px 0;
-background:#fff;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:60px;
-}
-
-.section-title span{
-color:#0d6efd;
-font-weight:700;
-}
-
-.section-title h2{
-font-size:42px;
-margin:15px 0;
-}
-
-.section-title p{
-color:#666;
-max-width:700px;
-margin:auto;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-
-.service-card{
-background:#fff;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.service-card img{
-width:100%;
-height:230px;
-object-fit:cover;
-}
-
-.service-content{
-padding:25px;
-}
-
-.service-content h3{
-margin-bottom:15px;
-}
-
-.service-content p{
-line-height:1.8;
-color:#555;
-margin-bottom:20px;
-}
-
-.service-buttons{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-}
-
-.service-btn{
-background:#0d6efd;
-color:#fff;
-padding:12px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-}
-
-.service-btn-outline{
-border:2px solid #0d6efd;
-color:#0d6efd;
-padding:10px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-}
-
-@media(max-width:768px){
-
-.section-title h2{
-font-size:32px;
-}
-
-}
-
-</style>
-<!-- WHY CHOOSE US -->
-
-<section class="why-us">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>WHY CHOOSE US</span>
-
-<h2>Trusted Partner For Financial Growth</h2>
-
-<p>
-We combine financial expertise, technology and dedicated support
-to help individuals and businesses achieve their goals.
-</p>
-
-</div>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h3>Fast Assistance</h3>
-<p>Quick guidance and professional support throughout the process.</p>
-</div>
-
-<div class="why-card">
-<h3>Multiple Solutions</h3>
-<p>Loans, funding, insurance, compliance and growth support.</p>
-</div>
-
-<div class="why-card">
-<h3>Expert Team</h3>
-<p>Experienced professionals focused on customer success.</p>
-</div>
-
-<div class="why-card">
-<h3>Transparent Process</h3>
-<p>Clear communication and professional service standards.</p>
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
-alt="Professional Team"
-class="section-image">
-
-</div>
-
-</section>
-
-<!-- BRANCH NETWORK -->
-
-<section class="branches">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>OUR PRESENCE</span>
-
-<h2>Growing Across Multiple Locations</h2>
-
-<p>
-Serving customers through our expanding support network.
-</p>
-
-</div>
-
-<div class="branch-grid">
-
-<div class="branch-card">
-<h3>Delhi</h3>
-<p>Head Office</p>
-</div>
-
-<div class="branch-card">
-<h3>Ahmedabad</h3>
-<p>Gujarat Branch</p>
-</div>
-
-<div class="branch-card">
-<h3>Hyderabad</h3>
-<p>Regional Support Office</p>
-</div>
-
-<div class="branch-card">
-<h3>Rajasthan</h3>
-<p>Business Support Center</p>
-</div>
-
-<div class="branch-card">
-<h3>India</h3>
-<p>Growing Network</p>
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg"
-alt="Office Network"
-class="section-image">
-
-</div>
-
-</section>
-
-<!-- SUCCESS STORIES -->
-
-<section class="success">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>SUCCESS STORIES</span>
-
-<h2>Helping Businesses Move Forward</h2>
-
-<p>
-Real impact through financial support and business growth solutions.
-</p>
-
-</div>
-
-<div class="success-grid">
-
-<div class="success-card">
-<h2>5000+</h2>
-<p>Customers Assisted</p>
-</div>
-
-<div class="success-card">
-<h2>1000+</h2>
-<p>Business Cases Supported</p>
-</div>
-
-<div class="success-card">
-<h2>6+</h2>
-<p>Years of Experience</p>
-</div>
-
-<div class="success-card">
-<h2>50+</h2>
-<p>Financial Solutions</p>
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-alt="Business Growth"
-class="section-image">
-
-</div>
-
-</section>
-
-<!-- TESTIMONIALS -->
-
-<section class="testimonials">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>CLIENT FEEDBACK</span>
-
-<h2>What Our Clients Say</h2>
-
-</div>
-
-<div class="testimonial-grid">
-
-<div class="testimonial-card">
-
-<p>
-"The support and guidance provided by Smile Financial Solution
-helped us secure funding for our expansion plans."
-</p>
-
-<h4>Business Owner</h4>
-
-</div>
-
-<div class="testimonial-card">
-
-<p>
-"Professional team, transparent process and excellent service."
-</p>
-
-<h4>Startup Founder</h4>
-
-</div>
-
-<div class="testimonial-card">
-
-<p>
-"The entire experience was smooth and highly professional."
-</p>
-
-<h4>Individual Client</h4>
-
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg"
-alt="Happy Clients"
-class="section-image">
-
-</div>
-
-</section>
-
-<!-- FAQ -->
-
-<section class="faq">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>FAQ</span>
-
-<h2>Frequently Asked Questions</h2>
-
-</div>
-
-<div class="faq-box">
-
-<h3>How do I apply for financial services?</h3>
-<p>Choose a service and submit your enquiry through our website.</p>
-
-</div>
-
-<div class="faq-box">
-
-<h3>Do you support startups?</h3>
-<p>Yes, we provide startup funding guidance and business support.</p>
-
-</div>
-
-<div class="faq-box">
-
-<h3>Can I become an agent?</h3>
-<p>Yes, you can join our network and access CRM-based opportunities.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<style>
-
-.why-us,
-.branches,
-.success,
-.testimonials,
-.faq{
-padding:100px 0;
-}
-
-.branches,
-.testimonials{
-background:#f8fbff;
-}
-
-.section-heading{
-text-align:center;
-margin-bottom:50px;
-}
-
-.section-heading span{
-color:#0d6efd;
-font-weight:700;
-}
-
-.section-heading h2{
-font-size:42px;
-margin:15px 0;
-}
-
-.section-heading p{
-max-width:700px;
-margin:auto;
-color:#666;
-line-height:1.8;
-}
-
-.why-grid,
-.branch-grid,
-.success-grid,
-.testimonial-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-bottom:50px;
-}
-
-.why-card,
-.branch-card,
-.success-card,
-.testimonial-card,
-.faq-box{
-background:white;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.success-card{
-text-align:center;
-}
-
-.success-card h2{
-color:#0d6efd;
-font-size:40px;
-margin-bottom:10px;
-}
-
-.section-image{
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-}
-
-.faq-box{
-margin-bottom:20px;
-}
-
-.faq-box h3{
-margin-bottom:10px;
-}
-
-.faq-box p{
-line-height:1.8;
-color:#555;
-}
-
-@media(max-width:768px){
-
-.section-heading h2{
-font-size:32px;
-}
-
-}
-
-</style>
-<!-- OUR PARTNERS -->
-
-<section class="partners-section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>OUR ECOSYSTEM</span>
-
-<h2>Trusted Business & Financial Network</h2>
-
-<p>
-We work within a broad financial and business ecosystem to help customers access suitable solutions for growth and success.
-</p>
-
-</div>
-
-<div class="partners-grid">
-
-<div class="partner-card">
-🏦 Banking Solutions
-</div>
-
-<div class="partner-card">
-💳 Credit Card Services
-</div>
-
-<div class="partner-card">
-🛡 Insurance Support
-</div>
-
-<div class="partner-card">
-🚀 Startup Assistance
-</div>
-
-<div class="partner-card">
-📈 Business Funding
-</div>
-
-<div class="partner-card">
-🏢 Compliance Services
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg"
-class="full-image"
-alt="Partners">
-
-</div>
-
-</section>
-
-<!-- CRM PLATFORM -->
-
-<section class="crm-section">
-
-<div class="container">
-
-<div class="crm-grid">
-
-<div>
-
-<img
-src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-class="full-image"
-alt="CRM Platform">
-
-</div>
-
-<div>
-
-<span class="small-title">
-CRM PLATFORM
-</span>
-
-<h2>
-Smart Lead Management & Agent Dashboard
-</h2>
-
-<p>
-Our CRM platform is designed to help agents manage leads, track performance, monitor activities and improve productivity through a centralized dashboard.
-</p>
-
-<ul class="crm-list">
-
-<li>Lead Tracking System</li>
-
-<li>Performance Dashboard</li>
-
-<li>Training Resources</li>
-
-<li>Real-Time Updates</li>
-
-<li>Professional Support</li>
-
-<li>Growth Opportunities</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TRAINING CENTER -->
-
-<section class="training-section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>LEARNING CENTER</span>
-
-<h2>Training & Professional Development</h2>
-
-<p>
-We believe continuous learning creates better opportunities and stronger professional growth.
-</p>
-
-</div>
-
-<div class="training-grid">
-
-<div class="training-card">
-
-<h3>Financial Products</h3>
-
-<p>
-Learn about loans, funding solutions, insurance and business services.
-</p>
-
-</div>
-
-<div class="training-card">
-
-<h3>Sales Development</h3>
-
-<p>
-Improve communication skills and customer engagement strategies.
-</p>
-
-</div>
-
-<div class="training-card">
-
-<h3>CRM Training</h3>
-
-<p>
-Understand lead management and productivity tools.
-</p>
-
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg"
-class="full-image"
-alt="Training">
-
-</div>
-
-</section>
-
-<!-- EMPLOYMENT OPPORTUNITIES -->
-
-<section class="employment-section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>CAREER OPPORTUNITIES</span>
-
-<h2>Create Opportunities, Build Your Future</h2>
-
-<p>
-Join a growing network of professionals and explore career opportunities in financial services and business development.
-</p>
-
-</div>
-
-<div class="employment-grid">
-
-<div class="employment-card">
-Flexible Work Environment
-</div>
-
-<div class="employment-card">
-Professional Training
-</div>
-
-<div class="employment-card">
-Career Growth
-</div>
-
-<div class="employment-card">
-Digital CRM Access
-</div>
-
-<div class="employment-card">
-Performance Recognition
-</div>
-
-<div class="employment-card">
-Long-Term Opportunities
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
-class="full-image"
-alt="Career Growth">
-
-</div>
-
-</section>
-
-<style>
-
-.partners-section,
-.crm-section,
-.training-section,
-.employment-section{
-padding:100px 0;
-}
-
-.partners-grid,
-.training-grid,
-.employment-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin:40px 0;
-}
-
-.partner-card,
-.training-card,
-.employment-card{
-background:white;
-padding:30px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-font-weight:600;
-}
-
-.crm-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:40px;
-align-items:center;
-}
-
-.crm-list{
-margin-top:20px;
-padding-left:20px;
-line-height:2;
-}
-
-.small-title{
-color:#0d6efd;
-font-weight:700;
-letter-spacing:1px;
-}
-
-.full-image{
-width:100%;
-border-radius:20px;
-margin-top:40px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-}
-
-@media(max-width:768px){
-
-.partners-section,
-.crm-section,
-.training-section,
-.employment-section{
-padding:70px 0;
-}
-
-}
-
-</style>
+```
