@@ -1,0 +1,288 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Smile Financial Solution</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+color:#222;
+}
+
+.container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+background:#fff;
+z-index:9999;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+height:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#0d6efd;
+text-decoration:none;
+}
+
+.logo span{
+color:#111;
+}
+
+#menu-toggle{
+display:none;
+}
+
+.menu-icon{
+display:none;
+font-size:30px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#0d6efd;
+}
+
+/* HERO */
+
+.about-hero{
+padding:100px 0;
+background:linear-gradient(135deg,#f7fbff,#eef5ff);
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:60px;
+align-items:center;
+}
+
+.about-content span{
+color:#0d6efd;
+font-weight:700;
+}
+
+.about-content h1{
+font-size:56px;
+margin:20px 0;
+line-height:1.2;
+}
+
+.about-content p{
+line-height:1.9;
+color:#555;
+font-size:17px;
+}
+
+.about-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+/* INTRO */
+
+.company-intro{
+padding:100px 0;
+background:#fff;
+}
+
+.intro-box{
+background:#f8fbff;
+padding:50px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.intro-box h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.intro-box p{
+line-height:2;
+color:#555;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.menu-icon{
+display:block;
+}
+
+.nav-links{
+display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#fff;
+padding:20px;
+flex-direction:column;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+#menu-toggle:checked ~ .nav-links{
+display:flex;
+}
+
+.about-content h1{
+font-size:36px;
+}
+
+.intro-box{
+padding:30px;
+}
+
+.intro-box h2{
+font-size:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<div class="navbar">
+
+<a href="index.html" class="logo">
+Smile <span>Financial</span>
+</a>
+
+<input type="checkbox" id="menu-toggle">
+
+<label for="menu-toggle" class="menu-icon">
+☰
+</label>
+
+<nav class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="blogs.html">Blogs</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="about-hero">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-content">
+
+<span>ABOUT SMILE FINANCIAL SOLUTION</span>
+
+<h1>
+Helping Businesses Grow With Confidence
+</h1>
+
+<p>
+
+Smile Financial Solution is committed to helping individuals, startups and businesses access funding, financial services, compliance support and growth opportunities through a professional and technology-driven platform.
+
+</p>
+
+</div>
+
+<div class="about-image">
+
+<img
+src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
+alt="About Company">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="company-intro">
+
+<div class="container">
+
+<div class="intro-box">
+
+<h2>
+Who We Are
+</h2>
+
+<p>
+
+Smile Financial Solution is a growing financial services and business consulting organization with more than 6 years of experience supporting customers across multiple sectors.
+
+We provide assistance in Business Loans, Personal Loans, Home Loans, Loan Against Property, Startup Funding, Credit Cards, Insurance Services, Government Schemes, Compliance Solutions and Business Development Support.
+
+Our mission is to simplify financial access while creating opportunities for entrepreneurs, professionals and growing businesses throughout India.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+```
