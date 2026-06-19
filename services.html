@@ -1,9 +1,18 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Services | Smile Financial Solution</title>
+
+<title>Services | Smile Financial Solution</title>
+
+<meta name="description"
+content="Explore business loans, personal loans, startup funding, credit cards, compliance services and financial solutions.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,233 +20,335 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:#f5f9ff;
+font-family:'Poppins',sans-serif;
+background:#fff;
 color:#222;
+overflow-x:hidden;
 }
 
+.container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+/* HEADER */
+
 header{
-background:white;
-padding:15px 5%;
+position:sticky;
+top:0;
+background:#fff;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+height:80px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 15px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:1000;
 }
 
 .logo{
-font-size:24px;
-font-weight:bold;
+font-size:28px;
+font-weight:800;
 color:#0d6efd;
 }
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#333;
-font-weight:600;
+.logo span{
+color:#111;
 }
 
-.hero{
-padding:80px 5%;
+.nav-menu{
 display:flex;
-align-items:center;
-justify-content:space-between;
-gap:40px;
-flex-wrap:wrap;
-background:linear-gradient(135deg,#0d6efd,#5fa8ff);
-color:white;
+gap:25px;
 }
 
-.hero-content{
-flex:1;
-min-width:300px;
+.nav-menu a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+}
+
+.nav-menu a:hover{
+color:#0d6efd;
+}
+
+/* HERO */
+
+.services-hero{
+padding:100px 0;
+background:linear-gradient(135deg,#eef5ff,#f8fbff);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
+align-items:center;
 }
 
 .hero-content h1{
-font-size:48px;
+font-size:58px;
+line-height:1.2;
 margin-bottom:20px;
 }
 
 .hero-content p{
-line-height:1.8;
-font-size:18px;
-}
-
-.hero-image{
-flex:1;
-text-align:center;
+line-height:2;
+color:#555;
+margin-bottom:25px;
 }
 
 .hero-image img{
 width:100%;
-max-width:550px;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-.section{
-padding:70px 5%;
-}
-
-.section-title{
-text-align:center;
-font-size:35px;
-color:#0d6efd;
-margin-bottom:15px;
-}
-
-.section-sub{
-text-align:center;
-color:#666;
-margin-bottom:40px;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.service-card{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.service-card:hover{
-transform:translateY(-8px);
-}
-
-.service-card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.service-content{
-padding:20px;
-}
-
-.service-content h3{
-color:#0d6efd;
-margin-bottom:10px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
 }
 
 .btn{
 display:inline-block;
-padding:10px 18px;
+padding:14px 25px;
 background:#0d6efd;
 color:white;
 text-decoration:none;
 border-radius:8px;
+font-weight:600;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title span{
+color:#0d6efd;
+font-weight:700;
+}
+
+.section-title h2{
+font-size:42px;
 margin-top:15px;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+color:#666;
+line-height:1.8;
 }
 
 @media(max-width:768px){
 
-.hero{
-text-align:center;
+.nav-menu{
+display:none;
 }
 
 .hero-content h1{
-font-size:34px;
+font-size:38px;
 }
 
-nav{
-display:none;
+.section-title h2{
+font-size:32px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 
+<div class="container">
+
+<div class="navbar">
+
 <div class="logo">
-Smile Financial Solution
+Smile <span>Financial</span>
 </div>
 
-<nav>
+<nav class="nav-menu">
+
 <a href="index.html">Home</a>
-<a href="become-agent.html">Become Agent</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="calculator.html">EMI Calculator</a>
 <a href="contact.html">Contact</a>
-<a href="login.html">Login</a>
+
 </nav>
+
+</div>
+
+</div>
 
 </header>
 
-<!-- HERO -->
+<section class="services-hero">
 
-<section class="hero">
+<div class="container">
+
+<div class="hero-grid">
 
 <div class="hero-content">
 
+<span style="
+color:#0d6efd;
+font-weight:700;
+letter-spacing:1px;
+">
+
+OUR SERVICES
+
+</span>
+
 <h1>
-Financial Services Under One Platform
+Financial Solutions For Every Stage Of Growth
 </h1>
 
 <p>
-Explore loans, insurance, credit cards, GST registration,
-MSME registration and business funding opportunities.
-Find the right solution for your customers and business needs.
+
+Smile Financial Solution provides funding, loans,
+credit solutions, startup support and business
+services designed to help individuals,
+entrepreneurs and organizations achieve their goals.
+
 </p>
+
+<a href="#services" class="btn">
+Explore Services
+</a>
 
 </div>
 
 <div class="hero-image">
 
 <img
-src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
 alt="Financial Services">
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- SERVICES INTRO -->
+<!-- INTRO SECTION -->
 
-<section class="section">
+<section
+style="
+padding:100px 0;
+background:#fff;
+">
 
-<h2 class="section-title">
-Our Popular Services
+<div class="container">
+
+<div class="section-title">
+
+<span>WHAT WE OFFER</span>
+
+<h2>
+Complete Financial & Business Support
 </h2>
 
-<p class="section-sub">
-Choose a service to learn more and apply
+<p>
+
+From business loans and startup funding to
+compliance support and credit solutions,
+we help customers access professional
+financial services under one platform.
+
 </p>
 
-<div class="services-grid">
+</div>
+
+<img
+src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
+alt="Business Support"
+style="
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+">
+
+</div>
+
+</section>
+```
+```html
+<!-- SERVICES GRID -->
+
+<section id="services"
+style="
+padding:100px 0;
+background:#f8fbff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>OUR CORE SERVICES</span>
+
+<h2>
+Choose The Right Financial Solution
+</h2>
+
+<p>
+Explore our most popular financial and business support services designed for individuals, professionals and businesses.
+</p>
+
+</div>
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+">
+
 <!-- BUSINESS LOAN -->
 
-<div class="service-card">
+<div style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
 
 <img
 src="https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg"
-alt="Business Loan">
+alt="Business Loan"
+style="width:100%;height:240px;object-fit:cover;">
 
-<div class="service-content">
+<div style="padding:25px;">
 
-<h3>🏦 Business Loan</h3>
+<h3>Business Loan</h3>
 
-<p>
-Funding solutions for business expansion, working capital and growth.
+<p style="line-height:1.8;color:#555;margin:15px 0;">
+Funding solutions for expansion, inventory, machinery purchase, working capital and business growth.
 </p>
 
-<a
-href="service-details.html?service=business-loan"
-class="btn">
+<a href="business-loan.html"
+style="
+display:inline-block;
+padding:12px 20px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+">
 View Details
 </a>
 
@@ -247,23 +358,36 @@ View Details
 
 <!-- PERSONAL LOAN -->
 
-<div class="service-card">
+<div style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
 
 <img
 src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg"
-alt="Personal Loan">
+alt="Personal Loan"
+style="width:100%;height:240px;object-fit:cover;">
 
-<div class="service-content">
+<div style="padding:25px;">
 
-<h3>👤 Personal Loan</h3>
+<h3>Personal Loan</h3>
 
-<p>
-Quick financial assistance for personal and family needs.
+<p style="line-height:1.8;color:#555;margin:15px 0;">
+Quick financial support for medical emergencies, travel, education and personal requirements.
 </p>
 
-<a
-href="service-details.html?service=personal-loan"
-class="btn">
+<a href="personal-loan.html"
+style="
+display:inline-block;
+padding:12px 20px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+">
 View Details
 </a>
 
@@ -273,23 +397,36 @@ View Details
 
 <!-- HOME LOAN -->
 
-<div class="service-card">
+<div style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
 
 <img
 src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
-alt="Home Loan">
+alt="Home Loan"
+style="width:100%;height:240px;object-fit:cover;">
 
-<div class="service-content">
+<div style="padding:25px;">
 
-<h3>🏠 Home Loan</h3>
+<h3>Home Loan</h3>
 
-<p>
-Affordable financing options to purchase your dream home.
+<p style="line-height:1.8;color:#555;margin:15px 0;">
+Affordable financing for purchasing, constructing or renovating residential property.
 </p>
 
-<a
-href="service-details.html?service=home-loan"
-class="btn">
+<a href="home-loan.html"
+style="
+display:inline-block;
+padding:12px 20px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+">
 View Details
 </a>
 
@@ -297,25 +434,38 @@ View Details
 
 </div>
 
-<!-- CREDIT CARD -->
+<!-- LAP -->
 
-<div class="service-card">
+<div style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
 
 <img
-src="https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg"
-alt="Credit Card">
+src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg"
+alt="Loan Against Property"
+style="width:100%;height:240px;object-fit:cover;">
 
-<div class="service-content">
+<div style="padding:25px;">
 
-<h3>💳 Credit Card</h3>
+<h3>Loan Against Property</h3>
 
-<p>
-Explore credit card options with rewards and benefits.
+<p style="line-height:1.8;color:#555;margin:15px 0;">
+Unlock your property's value and secure funds for personal or business requirements.
 </p>
 
-<a
-href="service-details.html?service=credit-card"
-class="btn">
+<a href="loan-against-property.html"
+style="
+display:inline-block;
+padding:12px 20px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+">
 View Details
 </a>
 
@@ -323,25 +473,38 @@ View Details
 
 </div>
 
-<!-- HEALTH INSURANCE -->
+<!-- EDUCATION LOAN -->
 
-<div class="service-card">
+<div style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
 
 <img
-src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg"
-alt="Health Insurance">
+src="https://images.pexels.com/photos/6146970/pexels-photo-6146970.jpeg"
+alt="Education Loan"
+style="width:100%;height:240px;object-fit:cover;">
 
-<div class="service-content">
+<div style="padding:25px;">
 
-<h3>❤️ Health Insurance</h3>
+<h3>Education Loan</h3>
 
-<p>
-Financial protection against medical expenses and emergencies.
+<p style="line-height:1.8;color:#555;margin:15px 0;">
+Financial support for higher education in India and abroad.
 </p>
 
-<a
-href="service-details.html?service=health-insurance"
-class="btn">
+<a href="education-loan.html"
+style="
+display:inline-block;
+padding:12px 20px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+">
 View Details
 </a>
 
@@ -349,325 +512,48 @@ View Details
 
 </div>
 
-<!-- LIFE INSURANCE -->
+<!-- MOTOR LOAN -->
 
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/7551664/pexels-photo-7551664.jpeg"
-alt="Life Insurance">
-
-<div class="service-content">
-
-<h3>🛡 Life Insurance</h3>
-
-<p>
-Help protect your family’s financial future.
-</p>
-
-<a
-href="service-details.html?service=life-insurance"
-class="btn">
-View Details
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- MOTOR INSURANCE -->
-
-<section class="section">
-
-<div class="services-grid">
-
-<div class="service-card">
+<div style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
 
 <img
 src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg"
-alt="Motor Insurance">
+alt="Motor Loan"
+style="width:100%;height:240px;object-fit:cover;">
 
-<div class="service-content">
+<div style="padding:25px;">
 
-<h3>🚗 Motor Insurance</h3>
+<h3>Motor Loan</h3>
 
-<p>
-Protection for cars, bikes and commercial vehicles.
+<p style="line-height:1.8;color:#555;margin:15px 0;">
+Vehicle financing solutions for cars, commercial vehicles and two-wheelers.
 </p>
 
-<a
-href="service-details.html?service=motor-insurance"
-class="btn">
-View Details
-</a>
-
-</div>
-
-</div>
-
-<!-- GST -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg"
-alt="GST Registration">
-
-<div class="service-content">
-
-<h3>📄 GST Registration</h3>
-
-<p>
-Business GST registration and compliance support.
-</p>
-
-<a
-href="service-details.html?service=gst-registration"
-class="btn">
-View Details
-</a>
-
-</div>
-
-</div>
-
-<!-- MSME -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg"
-alt="MSME Registration">
-
-<div class="service-content">
-
-<h3>🏢 MSME Registration</h3>
-
-<p>
-Government-recognized MSME registration services.
-</p>
-
-<a
-href="service-details.html?service=msme-registration"
-class="btn">
-View Details
-</a>
-
-</div>
-
-</div>
-
-<!-- FUNDING -->
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/4386367/pexels-photo-4386367.jpeg"
-alt="Business Funding">
-
-<div class="service-content">
-
-<h3>💰 Scheme Funding</h3>
-
-<p>
-Explore business funding and financial assistance programs.
-</p>
-
-<a
-href="service-details.html?service=scheme-funding"
-class="btn">
-View Details
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- WHY CHOOSE US -->
-
-<section class="section">
-
-<h2 class="section-title">
-Why Choose Smile Financial Solution?
-</h2>
-
-<p class="section-sub">
-Professional support for customers and agents
-</p>
-
-<div class="services-grid">
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg"
-alt="Support">
-
-<div class="service-content">
-
-<h3>📞 Expert Support</h3>
-
-<p>
-Dedicated guidance and customer assistance.
-</p>
-
-</div>
-
-</div>
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-alt="Training">
-
-<div class="service-content">
-
-<h3>🎓 Professional Training</h3>
-
-<p>
-Learn products, sales techniques and customer handling.
-</p>
-
-</div>
-
-</div>
-
-<div class="service-card">
-
-<img
-src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
-alt="Technology">
-
-<div class="service-content">
-
-<h3>📊 CRM Technology</h3>
-
-<p>
-Real-time tracking and management tools.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FINAL CTA -->
-
-<section
+<a href="motor-loan.html"
 style="
-padding:80px 5%;
-background:linear-gradient(135deg,#0d6efd,#5fa8ff);
+display:inline-block;
+padding:12px 20px;
+background:#0d6efd;
 color:white;
-text-align:center;
-">
-
-<img
-src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
-style="
-width:100%;
-max-width:700px;
-border-radius:20px;
-margin-bottom:30px;
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-">
-
-<h2 style="font-size:40px;margin-bottom:20px;">
-Need Financial Assistance?
-</h2>
-
-<p style="max-width:800px;margin:auto;line-height:1.8;">
-Connect with Smile Financial Solution and explore the right financial products for your needs.
-</p>
-
-<br>
-
-<a
-href="contact.html"
-style="
-background:white;
-color:#0d6efd;
-padding:12px 25px;
-border-radius:10px;
 text-decoration:none;
-font-weight:bold;
+border-radius:8px;
+font-weight:600;
 ">
-Contact Us
+View Details
 </a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
-
-<!-- FOOTER -->
-
-<footer
-style="
-background:#111;
-color:white;
-padding:50px 5%;
-text-align:center;
-">
-
-<img
-src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
-style="
-width:100%;
-max-width:500px;
-border-radius:15px;
-margin-bottom:20px;
-">
-
-<h3>Smile Financial Solution</h3>
-
-<br>
-
-<p>
-Loans • Credit Cards • Insurance • GST • MSME • Funding
-</p>
-
-<br>
-
-<p>
-WhatsApp: 7290977231
-</p>
-
-<br>
-
-<p>
-© 2026 Smile Financial Solution. All Rights Reserved.
-</p>
-
-</footer>
-
-<!-- WHATSAPP BUTTON -->
-
-<a
-href="https://wa.me/917290977231"
-target="_blank"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-z-index:9999;
-">
-WhatsApp
-</a>
-
-</body>
-</html>
+```
