@@ -1456,3 +1456,265 @@ document.getElementById("futureValue").innerHTML=
 }
 
 </script>
+
+<!-- FD CALCULATOR -->
+
+<section
+style="
+padding:100px 0;
+background:#f8fbff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+style="
+color:#0d6efd;
+font-weight:700;
+">
+FD CALCULATOR
+</span>
+
+<h2
+style="
+font-size:42px;
+margin:15px 0;
+">
+Fixed Deposit Calculator
+</h2>
+
+<p
+style="
+max-width:850px;
+margin:auto;
+line-height:1.9;
+color:#666;
+">
+Calculate maturity amount, interest earned and total wealth generated through Fixed Deposits.
+</p>
+
+</div>
+
+<div
+style="
+max-width:1000px;
+margin:auto;
+background:#fff;
+padding:50px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+">
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+">
+
+<div>
+
+<label style="font-weight:600;">
+Investment Amount (₹)
+</label>
+
+<input
+type="number"
+id="fdAmount"
+placeholder="100000"
+style="
+width:100%;
+padding:18px;
+font-size:17px;
+margin-top:8px;
+border:1px solid #ddd;
+border-radius:12px;">
+
+</div>
+
+<div>
+
+<label style="font-weight:600;">
+Interest Rate (%)
+</label>
+
+<input
+type="number"
+id="fdRate"
+placeholder="7"
+style="
+width:100%;
+padding:18px;
+font-size:17px;
+margin-top:8px;
+border:1px solid #ddd;
+border-radius:12px;">
+
+</div>
+
+<div>
+
+<label style="font-weight:600;">
+Tenure (Years)
+</label>
+
+<input
+type="number"
+id="fdYears"
+placeholder="5"
+style="
+width:100%;
+padding:18px;
+font-size:17px;
+margin-top:8px;
+border:1px solid #ddd;
+border-radius:12px;">
+
+</div>
+
+</div>
+
+<div
+style="
+text-align:center;
+margin-top:35px;
+">
+
+<button
+onclick="calculateFD()"
+style="
+background:#0d6efd;
+color:white;
+border:none;
+padding:18px 50px;
+font-size:18px;
+font-weight:700;
+border-radius:12px;
+cursor:pointer;">
+Calculate FD
+</button>
+
+</div>
+
+<div
+id="fdResult"
+style="
+display:none;
+margin-top:45px;
+">
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+">
+
+<div
+style="
+background:#eef5ff;
+padding:35px;
+border-radius:18px;
+text-align:center;
+">
+
+<h4>Total Investment</h4>
+
+<h2
+id="fdInvested"
+style="
+margin-top:15px;
+font-size:32px;
+color:#0d6efd;">
+₹0
+</h2>
+
+</div>
+
+<div
+style="
+background:#eef5ff;
+padding:35px;
+border-radius:18px;
+text-align:center;
+">
+
+<h4>Interest Earned</h4>
+
+<h2
+id="fdInterest"
+style="
+margin-top:15px;
+font-size:32px;
+color:#0d6efd;">
+₹0
+</h2>
+
+</div>
+
+<div
+style="
+background:#eef5ff;
+padding:35px;
+border-radius:18px;
+text-align:center;
+">
+
+<h4>Maturity Amount</h4>
+
+<h2
+id="fdMaturity"
+style="
+margin-top:15px;
+font-size:32px;
+color:#0d6efd;">
+₹0
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function calculateFD(){
+
+let P =
+parseFloat(document.getElementById("fdAmount").value) || 0;
+
+let R =
+parseFloat(document.getElementById("fdRate").value) || 0;
+
+let T =
+parseFloat(document.getElementById("fdYears").value) || 0;
+
+let maturity =
+P * Math.pow((1 + R/100), T);
+
+let interest =
+maturity - P;
+
+document.getElementById("fdResult").style.display="block";
+
+document.getElementById("fdInvested").innerHTML =
+"₹" + Math.round(P).toLocaleString();
+
+document.getElementById("fdInterest").innerHTML =
+"₹" + Math.round(interest).toLocaleString();
+
+document.getElementById("fdMaturity").innerHTML =
+"₹" + Math.round(maturity).toLocaleString();
+
+}
+
+</script>
