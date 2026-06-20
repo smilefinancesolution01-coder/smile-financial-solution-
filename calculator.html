@@ -1,0 +1,1234 @@
+<!-- CALCULATOR PAGE INTRO -->
+
+<section id="calculator-tools"
+style="
+padding:100px 0;
+background:#ffffff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span style="
+color:#0d6efd;
+font-weight:700;
+">
+SMART FINANCIAL TOOLS
+</span>
+
+<h2 style="
+font-size:42px;
+margin:15px 0;
+">
+Financial Calculators
+</h2>
+
+<p style="
+max-width:800px;
+margin:auto;
+line-height:1.9;
+color:#666;
+">
+Use advanced financial calculators to estimate EMI, loan affordability, interest costs and repayment schedules before applying for any financial product.
+</p>
+
+</div>
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
+">
+
+<div style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>EMI Calculator</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.8;
+color:#555;
+">
+Calculate monthly EMI, total repayment amount and total interest payable.
+</p>
+
+</div>
+
+<div style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>Loan Eligibility Calculator</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.8;
+color:#555;
+">
+Estimate loan eligibility based on income, obligations and repayment capacity.
+</p>
+
+</div>
+
+<div style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>Interest Calculator</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.8;
+color:#555;
+">
+Estimate interest payable on different loan products and repayment periods.
+</p>
+
+</div>
+
+<div style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>Business Loan Calculator</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.8;
+color:#555;
+">
+Understand repayment planning and financing requirements for business growth.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EMI CALCULATOR SECTION -->
+
+<section
+style="
+padding:100px 0;
+background:#f8fbff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+style="
+color:#0d6efd;
+font-weight:700;
+">
+EMI CALCULATOR
+</span>
+
+<h2
+style="
+font-size:42px;
+margin:15px 0;
+">
+Loan EMI Calculator
+</h2>
+
+<p
+style="
+max-width:800px;
+margin:auto;
+line-height:1.9;
+color:#666;
+">
+Calculate monthly EMI, total interest payable and total repayment amount instantly.
+</p>
+
+</div>
+
+<div
+style="
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+">
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+">
+
+<div>
+<label>Loan Amount (₹)</label>
+<input
+type="number"
+id="loanAmount"
+placeholder="500000"
+style="
+width:100%;
+padding:15px;
+margin-top:8px;
+border:1px solid #ddd;
+border-radius:10px;">
+</div>
+
+<div>
+<label>Interest Rate (%)</label>
+<input
+type="number"
+id="interestRate"
+placeholder="12"
+style="
+width:100%;
+padding:15px;
+margin-top:8px;
+border:1px solid #ddd;
+border-radius:10px;">
+</div>
+
+<div>
+<label>Tenure (Years)</label>
+<input
+type="number"
+id="loanYears"
+placeholder="5"
+style="
+width:100%;
+padding:15px;
+margin-top:8px;
+border:1px solid #ddd;
+border-radius:10px;">
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+
+<button
+onclick="calculateEMI()"
+style="
+background:#0d6efd;
+color:white;
+border:none;
+padding:15px 35px;
+font-size:16px;
+font-weight:600;
+border-radius:10px;
+cursor:pointer;">
+Calculate EMI
+</button>
+
+</div>
+
+<div
+id="emiResult"
+style="
+margin-top:40px;
+display:none;
+">
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+">
+
+<div style="
+background:#eef5ff;
+padding:25px;
+border-radius:15px;
+text-align:center;">
+<h4>Monthly EMI</h4>
+<h2 id="monthlyEMI">₹0</h2>
+</div>
+
+<div style="
+background:#eef5ff;
+padding:25px;
+border-radius:15px;
+text-align:center;">
+<h4>Total Interest</h4>
+<h2 id="totalInterest">₹0</h2>
+</div>
+
+<div style="
+background:#eef5ff;
+padding:25px;
+border-radius:15px;
+text-align:center;">
+<h4>Total Payment</h4>
+<h2 id="totalPayment">₹0</h2>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function calculateEMI(){
+
+let P=parseFloat(document.getElementById("loanAmount").value);
+
+let annualRate=parseFloat(document.getElementById("interestRate").value);
+
+let years=parseFloat(document.getElementById("loanYears").value);
+
+let R=annualRate/12/100;
+
+let N=years*12;
+
+let EMI=(P*R*Math.pow(1+R,N))/
+(Math.pow(1+R,N)-1);
+
+let totalPayment=EMI*N;
+
+let totalInterest=totalPayment-P;
+
+document.getElementById("emiResult").style.display="block";
+
+document.getElementById("monthlyEMI").innerHTML=
+"₹"+EMI.toFixed(0);
+
+document.getElementById("totalInterest").innerHTML=
+"₹"+totalInterest.toFixed(0);
+
+document.getElementById("totalPayment").innerHTML=
+"₹"+totalPayment.toFixed(0);
+
+}
+
+</script>
+
+<!-- LOAN CALCULATOR CATEGORIES -->
+
+<section
+style="
+padding:100px 0;
+background:#ffffff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+style="
+color:#0d6efd;
+font-weight:700;
+">
+ADVANCED CALCULATORS
+</span>
+
+<h2
+style="
+font-size:42px;
+margin:15px 0;
+">
+Specialized Loan Calculators
+</h2>
+
+<p
+style="
+max-width:850px;
+margin:auto;
+line-height:1.9;
+color:#666;
+">
+Calculate estimated EMI, repayment planning and loan affordability for different financial products.
+</p>
+
+</div>
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
+">
+
+<div
+style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>🏠 Home Loan Calculator</h3>
+
+<p style="
+line-height:1.8;
+color:#555;
+margin-top:15px;
+">
+Estimate EMI for home purchase, construction and renovation financing.
+</p>
+
+<ul style="
+margin-top:15px;
+padding-left:20px;
+line-height:2;
+color:#666;
+">
+<li>Property Purchase</li>
+<li>Home Construction</li>
+<li>Home Renovation</li>
+<li>Balance Transfer</li>
+</ul>
+
+</div>
+
+<div
+style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>👤 Personal Loan Calculator</h3>
+
+<p style="
+line-height:1.8;
+color:#555;
+margin-top:15px;
+">
+Calculate repayment obligations for personal financial requirements.
+</p>
+
+<ul style="
+margin-top:15px;
+padding-left:20px;
+line-height:2;
+color:#666;
+">
+<li>Medical Expenses</li>
+<li>Travel Planning</li>
+<li>Education Costs</li>
+<li>Personal Needs</li>
+</ul>
+
+</div>
+
+<div
+style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>🏢 Business Loan Calculator</h3>
+
+<p style="
+line-height:1.8;
+color:#555;
+margin-top:15px;
+">
+Business expansion and working capital repayment estimation.
+</p>
+
+<ul style="
+margin-top:15px;
+padding-left:20px;
+line-height:2;
+color:#666;
+">
+<li>Working Capital</li>
+<li>Machinery Purchase</li>
+<li>Inventory Finance</li>
+<li>Business Expansion</li>
+</ul>
+
+</div>
+
+<div
+style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>🏠 Loan Against Property</h3>
+
+<p style="
+line-height:1.8;
+color:#555;
+margin-top:15px;
+">
+Estimate funding eligibility using residential or commercial property.
+</p>
+
+<ul style="
+margin-top:15px;
+padding-left:20px;
+line-height:2;
+color:#666;
+">
+<li>Residential Property</li>
+<li>Commercial Property</li>
+<li>Business Expansion</li>
+<li>Debt Consolidation</li>
+</ul>
+
+</div>
+
+<div
+style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>🎓 Education Loan Calculator</h3>
+
+<p style="
+line-height:1.8;
+color:#555;
+margin-top:15px;
+">
+Estimate education financing requirements for India and abroad studies.
+</p>
+
+<ul style="
+margin-top:15px;
+padding-left:20px;
+line-height:2;
+color:#666;
+">
+<li>India Studies</li>
+<li>Study Abroad</li>
+<li>Professional Courses</li>
+<li>Skill Programs</li>
+</ul>
+
+</div>
+
+<div
+style="
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+
+<h3>🚗 Vehicle Loan Calculator</h3>
+
+<p style="
+line-height:1.8;
+color:#555;
+margin-top:15px;
+">
+Calculate financing costs for cars, commercial vehicles and two-wheelers.
+</p>
+
+<ul style="
+margin-top:15px;
+padding-left:20px;
+line-height:2;
+color:#666;
+">
+<li>New Car Loan</li>
+<li>Used Car Loan</li>
+<li>Commercial Vehicle</li>
+<li>Bike Loan</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINANCIAL FACTORS -->
+
+<section
+style="
+padding:100px 0;
+background:#f8fbff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+style="
+color:#0d6efd;
+font-weight:700;
+">
+IMPORTANT FACTORS
+</span>
+
+<h2
+style="
+font-size:42px;
+margin:15px 0;
+">
+What Affects Your EMI?
+</h2>
+
+</div>
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>Loan Amount</h3>
+<p>The higher the loan amount, the higher the EMI obligation.</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>Interest Rate</h3>
+<p>Lower interest rates reduce total repayment burden.</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>Loan Tenure</h3>
+<p>Longer tenure lowers EMI but increases total interest cost.</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>Credit Profile</h3>
+<p>Better credit profiles often receive better loan offers.</p>
+</div>
+
+</div>
+
+</div>
+
+</section> 
+
+<!-- LOAN ELIGIBILITY CALCULATOR -->
+
+<section
+style="
+padding:100px 0;
+background:#ffffff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+style="
+color:#0d6efd;
+font-weight:700;
+">
+LOAN ELIGIBILITY
+</span>
+
+<h2
+style="
+font-size:42px;
+margin:15px 0;
+">
+Loan Eligibility Calculator
+</h2>
+
+<p
+style="
+max-width:850px;
+margin:auto;
+line-height:1.9;
+color:#666;
+">
+Estimate your loan eligibility based on monthly income, obligations and repayment capacity.
+</p>
+
+</div>
+
+<div
+style="
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+">
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+">
+
+<div>
+
+<label>Monthly Income (₹)</label>
+
+<input
+type="number"
+id="monthlyIncome"
+placeholder="50000"
+style="
+width:100%;
+padding:15px;
+margin-top:8px;
+border:1px solid #ddd;
+border-radius:10px;">
+
+</div>
+
+<div>
+
+<label>Monthly EMI / Obligations (₹)</label>
+
+<input
+type="number"
+id="monthlyObligation"
+placeholder="10000"
+style="
+width:100%;
+padding:15px;
+margin-top:8px;
+border:1px solid #ddd;
+border-radius:10px;">
+
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+
+<button
+onclick="checkEligibility()"
+style="
+background:#0d6efd;
+color:white;
+border:none;
+padding:15px 35px;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;">
+Check Eligibility
+</button>
+
+</div>
+
+<div
+id="eligibilityResult"
+style="
+display:none;
+margin-top:30px;
+background:#eef5ff;
+padding:25px;
+border-radius:15px;
+text-align:center;
+">
+
+<h3>Estimated Loan Eligibility</h3>
+
+<h2
+id="eligibleAmount"
+style="
+color:#0d6efd;
+margin-top:15px;">
+₹0
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINANCIAL HEALTH DASHBOARD -->
+
+<section
+style="
+padding:100px 0;
+background:#f8fbff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+style="
+color:#0d6efd;
+font-weight:700;
+">
+FINANCIAL HEALTH
+</span>
+
+<h2
+style="
+font-size:42px;
+margin:15px 0;
+">
+Financial Readiness Dashboard
+</h2>
+
+</div>
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+">
+
+<div
+style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+">
+
+<h3>Income Stability</h3>
+
+<p>
+Consistent monthly income improves loan approval chances.
+</p>
+
+</div>
+
+<div
+style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+">
+
+<h3>Credit Profile</h3>
+
+<p>
+Strong credit history may help secure better financing terms.
+</p>
+
+</div>
+
+<div
+style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+">
+
+<h3>Repayment Capacity</h3>
+
+<p>
+Lower obligations generally improve borrowing capacity.
+</p>
+
+</div>
+
+<div
+style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+">
+
+<h3>Financial Planning</h3>
+
+<p>
+Proper planning helps manage debt responsibly.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function checkEligibility(){
+
+let income =
+parseFloat(document.getElementById("monthlyIncome").value) || 0;
+
+let obligation =
+parseFloat(document.getElementById("monthlyObligation").value) || 0;
+
+let eligibility =
+(income - obligation) * 60;
+
+document.getElementById("eligibilityResult").style.display = "block";
+
+document.getElementById("eligibleAmount").innerHTML =
+"₹" + eligibility.toLocaleString();
+
+}
+
+</script>
+
+<!-- INVESTMENT CALCULATORS -->
+
+<section
+style="
+padding:100px 0;
+background:#ffffff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+style="
+color:#0d6efd;
+font-weight:700;
+">
+INVESTMENT TOOLS
+</span>
+
+<h2
+style="
+font-size:42px;
+margin:15px 0;
+">
+Investment & Wealth Planning
+</h2>
+
+<p
+style="
+max-width:850px;
+margin:auto;
+line-height:1.9;
+color:#666;
+">
+Explore calculators designed for long-term wealth creation, retirement planning and investment growth estimation.
+</p>
+
+</div>
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>📈 SIP Calculator</h3>
+<p style="line-height:1.8;color:#555;">
+Estimate future value of monthly SIP investments and long-term wealth creation.
+</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>🏦 FD Calculator</h3>
+<p style="line-height:1.8;color:#555;">
+Calculate maturity amount and interest earned on fixed deposits.
+</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>💹 Compound Interest Calculator</h3>
+<p style="line-height:1.8;color:#555;">
+Understand how investments grow through compounding over time.
+</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>👴 Retirement Planner</h3>
+<p style="line-height:1.8;color:#555;">
+Estimate retirement corpus requirements and future financial goals.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINANCIAL TIPS -->
+
+<section
+style="
+padding:100px 0;
+background:#f8fbff;
+">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+style="
+color:#0d6efd;
+font-weight:700;
+">
+FINANCIAL INSIGHTS
+</span>
+
+<h2
+style="
+font-size:42px;
+margin:15px 0;
+">
+Smart Borrowing Tips
+</h2>
+
+</div>
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>Maintain Credit Health</h3>
+<p>Strong repayment history may improve financing opportunities.</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>Compare Options</h3>
+<p>Evaluate multiple products before making a financial decision.</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>Borrow Responsibly</h3>
+<p>Choose EMIs that comfortably fit within your monthly budget.</p>
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+">
+<h3>Plan Long Term</h3>
+<p>Financial planning supports stability and future growth.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section
+style="
+padding:100px 0;
+background:#0d6efd;
+color:white;
+text-align:center;
+">
+
+<div class="container">
+
+<h2
+style="
+font-size:48px;
+margin-bottom:20px;
+">
+Need Professional Financial Guidance?
+</h2>
+
+<p
+style="
+max-width:800px;
+margin:auto;
+line-height:2;
+margin-bottom:35px;
+">
+Our team can help you understand loan options, repayment planning, business funding and financial growth opportunities.
+</p>
+
+<a
+href="contact.html"
+style="
+display:inline-block;
+padding:15px 35px;
+background:white;
+color:#0d6efd;
+font-weight:700;
+text-decoration:none;
+border-radius:10px;
+">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer
+style="
+background:#111827;
+color:white;
+padding:70px 0 30px;
+">
+
+<div class="container">
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+margin-bottom:40px;
+">
+
+<div>
+
+<h3 style="margin-bottom:15px;">
+Smile Financial Solution
+</h3>
+
+<p style="line-height:1.9;color:#d1d5db;">
+Professional financial services, funding support, registrations and business growth solutions.
+</p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:15px;">
+Quick Links
+</h3>
+
+<p><a href="index.html" style="color:#d1d5db;text-decoration:none;">Home</a></p>
+<p><a href="about.html" style="color:#d1d5db;text-decoration:none;">About</a></p>
+<p><a href="services.html" style="color:#d1d5db;text-decoration:none;">Services</a></p>
+<p><a href="contact.html" style="color:#d1d5db;text-decoration:none;">Contact</a></p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:15px;">
+Contact Information
+</h3>
+
+<p>Director: Mohammad Aarif</p>
+<p>Mobile: 7290977231</p>
+<p>Email: smilefinacialsolutions@gmail.com</p>
+
+</div>
+
+</div>
+
+<hr style="border-color:#374151;margin-bottom:25px;">
+
+<p style="text-align:center;color:#9ca3af;">
+© 2026 Smile Financial Solution. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
