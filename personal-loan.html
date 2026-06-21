@@ -1,6 +1,6 @@
-<!-- PERSONAL LOAN HERO -->
+<!-- PERSONAL LOAN HERO SECTION -->
 
-<section class="hero">
+<section class="hero-section">
 
 <div class="container">
 
@@ -8,19 +8,19 @@
 
 <div class="hero-content">
 
-<div class="loan-badge">
-Personal Loan Solutions
-</div>
+<span class="loan-tag">
+PERSONAL LOAN
+</span>
 
 <h1>
-Personal Loan For Every Important Moment
+Personal Loan For Every Important Need
 </h1>
 
 <p>
-Get support for medical emergencies, education, travel, weddings, home renovation and other personal financial requirements with professional guidance from Smile Financial Solution.
+Get financial support for medical emergencies, education, weddings, travel, home renovation and other personal requirements with professional assistance from Smile Financial Solution.
 </p>
 
-<div class="hero-btns">
+<div class="hero-buttons">
 
 <a href="#apply-personal-loan" class="btn-primary">
 Apply Now
@@ -48,9 +48,9 @@ alt="Personal Loan">
 
 </section>
 
-<!-- LOAN HIGHLIGHTS -->
+<!-- HIGHLIGHTS -->
 
-<section class="highlights">
+<section class="highlights-section">
 
 <div class="container">
 
@@ -58,12 +58,12 @@ alt="Personal Loan">
 
 <div class="highlight-card">
 <h3>₹25L+</h3>
-<p>Personal Loan Options</p>
+<p>Loan Options</p>
 </div>
 
 <div class="highlight-card">
 <h3>24-48 Hrs</h3>
-<p>Quick Assistance</p>
+<p>Quick Support</p>
 </div>
 
 <div class="highlight-card">
@@ -73,7 +73,7 @@ alt="Personal Loan">
 
 <div class="highlight-card">
 <h3>India Wide</h3>
-<p>Service Support</p>
+<p>Service Network</p>
 </div>
 
 </div>
@@ -91,11 +91,11 @@ alt="Personal Loan">
 <div class="section-title">
 
 <h2>
-Why Choose A Personal Loan?
+Why Choose Personal Loan?
 </h2>
 
 <p>
-Simple financing solutions for important life goals and unexpected expenses.
+Flexible financing solutions designed for important life goals and urgent financial needs.
 </p>
 
 </div>
@@ -103,24 +103,33 @@ Simple financing solutions for important life goals and unexpected expenses.
 <div class="card-grid">
 
 <div class="card">
+
 <h3>Medical Emergency</h3>
+
 <p>
-Quick financial support for healthcare and hospitalization expenses.
+Support healthcare and hospitalization expenses.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>Wedding Planning</h3>
+
 <p>
-Manage wedding and family celebration expenses smoothly.
+Manage wedding and celebration expenses easily.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>Education Support</h3>
+
 <p>
-Invest in higher education, courses and skill development.
+Invest in education, courses and career growth.
 </p>
+
 </div>
 
 </div>
@@ -129,195 +138,241 @@ Invest in higher education, courses and skill development.
 
 </section>
 
-<!-- FLOATING WHATSAPP -->
-
-<a href="https://wa.me/917290977231"
-class="whatsapp-btn">
-WhatsApp
-</a>
-
-<!-- AUTO POPUP -->
-
-<div class="popup-overlay" id="loanPopup">
-
-<div class="popup-box">
-
-<span class="close-popup" onclick="closeLoanPopup()">
-×
-</span>
-
-<h2>
-Free Personal Loan Consultation
-</h2>
-
-<form>
-
-<input type="text" placeholder="Full Name">
-
-<input type="tel" placeholder="Mobile Number">
-
-<input type="text" placeholder="City">
-
-<textarea rows="4"
-placeholder="Loan Requirement"></textarea>
-
-<button type="submit">
-Request Callback
-</button>
-
-</form>
-
-</div>
-
-</div>
+<!-- CSS -->
 
 <style>
 
-.popup-overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.65);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:99999;
-padding:20px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.popup-box{
-background:#fff;
+body{
+font-family:Arial,sans-serif;
+overflow-x:hidden;
+}
+
+.container{
 width:100%;
-max-width:500px;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+img{
+max-width:100%;
+display:block;
+height:auto;
+}
+
+.hero-section{
+padding:90px 0;
+background:#f8fbff;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.loan-tag{
+display:inline-block;
+background:#eaf2ff;
+color:#0d6efd;
+padding:8px 18px;
+border-radius:30px;
+font-weight:700;
+font-size:14px;
+}
+
+.hero-content h1{
+font-size:52px;
+line-height:1.2;
+margin:20px 0;
+color:#111827;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:1.8;
+color:#666;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-secondary{
+padding:14px 30px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+}
+
+.btn-primary{
+background:#0d6efd;
+color:white;
+}
+
+.btn-secondary{
+background:#111827;
+color:white;
+}
+
+.hero-image img{
+width:100%;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.highlights-section{
+padding:40px 0;
+margin-top:-40px;
+}
+
+.highlight-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.highlight-card{
+background:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.highlight-card h3{
+color:#0d6efd;
+font-size:28px;
+margin-bottom:10px;
+}
+
+.section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.section-title p{
+color:#666;
+max-width:700px;
+margin:auto;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.card{
+background:white;
 padding:30px;
 border-radius:20px;
-position:relative;
-animation:popupShow .4s ease;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-@keyframes popupShow{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.card:hover{
+transform:translateY(-5px);
 }
 
-.close-popup{
-position:absolute;
-top:12px;
-right:18px;
-font-size:30px;
-cursor:pointer;
-font-weight:700;
-}
-
-.popup-box h2{
-text-align:center;
-margin-bottom:20px;
-}
-
-.popup-box input,
-.popup-box textarea{
-width:100%;
-padding:14px;
+.card h3{
 margin-bottom:12px;
-border:1px solid #ddd;
-border-radius:10px;
-font-size:15px;
 }
 
-.popup-box button{
-width:100%;
-padding:15px;
-background:#0d6efd;
-border:none;
-color:white;
-font-weight:700;
-border-radius:10px;
-cursor:pointer;
+.card p{
+color:#666;
+line-height:1.7;
 }
 
-@media(max-width:768px){
+/* MOBILE */
+
+@media(max-width:991px){
 
 .hero-grid{
 grid-template-columns:1fr;
-gap:30px;
 }
 
-.hero h1{
-font-size:34px;
-text-align:center;
-}
-
-.hero p{
-text-align:center;
-}
-
-.hero-content{
-text-align:center;
-}
-
-.hero-btns{
-justify-content:center;
+.card-grid{
+grid-template-columns:1fr 1fr;
 }
 
 .highlight-grid{
 grid-template-columns:1fr 1fr;
 }
 
+.hero-content h1{
+font-size:42px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-section{
+padding:70px 0;
+}
+
+.hero-content{
+text-align:center;
+}
+
+.hero-content h1{
+font-size:32px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.btn-primary,
+.btn-secondary{
+width:100%;
+text-align:center;
+}
+
+.highlight-grid{
+grid-template-columns:1fr;
+}
+
 .card-grid{
 grid-template-columns:1fr;
 }
 
-.popup-box{
-padding:22px;
+.section-title h2{
+font-size:28px;
+}
+
+.container{
+padding:0 15px;
 }
 
 }
 
 </style>
-
-<script>
-
-let popupShown = false;
-
-window.addEventListener("scroll", function(){
-
-if(window.scrollY > 600 && !popupShown){
-
-document.getElementById("loanPopup").style.display = "flex";
-
-popupShown = true;
-
-}
-
-});
-
-setTimeout(function(){
-
-if(!popupShown){
-
-document.getElementById("loanPopup").style.display = "flex";
-
-popupShown = true;
-
-}
-
-},10000);
-
-function closeLoanPopup(){
-
-document.getElementById("loanPopup").style.display = "none";
-
-}
-
-</script>
 
 
 <!-- PERSONAL LOAN FEATURES -->
@@ -333,7 +388,7 @@ Personal Loan Features
 </h2>
 
 <p>
-Flexible financing solutions designed for different personal requirements.
+Simple, flexible and convenient financing solutions.
 </p>
 
 </div>
@@ -343,42 +398,42 @@ Flexible financing solutions designed for different personal requirements.
 <div class="card">
 <h3>Quick Assistance</h3>
 <p>
-Fast support and professional guidance throughout the process.
+Fast support from enquiry to application guidance.
 </p>
 </div>
 
 <div class="card">
 <h3>Simple Documentation</h3>
 <p>
-Basic document requirements for a smoother application experience.
+Basic document requirements for easy processing.
 </p>
 </div>
 
 <div class="card">
 <h3>Flexible Usage</h3>
 <p>
-Use funds according to your personal financial needs.
+Use funds according to your personal requirements.
 </p>
 </div>
 
 <div class="card">
-<h3>Professional Support</h3>
+<h3>Professional Guidance</h3>
 <p>
-Dedicated assistance from experienced financial consultants.
+Dedicated support from financial experts.
 </p>
 </div>
 
 <div class="card">
 <h3>Transparent Process</h3>
 <p>
-Clear communication and step-by-step guidance.
+Clear communication at every step.
 </p>
 </div>
 
 <div class="card">
-<h3>India Wide Service</h3>
+<h3>Nationwide Service</h3>
 <p>
-Personal loan assistance available across India.
+Support available across India.
 </p>
 </div>
 
@@ -397,11 +452,11 @@ Personal loan assistance available across India.
 <div class="section-title">
 
 <h2>
-Common Uses Of Personal Loan
+Popular Loan Uses
 </h2>
 
 <p>
-Financing support for important life events and financial requirements.
+Personal loans can support multiple financial goals.
 </p>
 
 </div>
@@ -409,44 +464,44 @@ Financing support for important life events and financial requirements.
 <div class="card-grid">
 
 <div class="card">
-<h3>Medical Expenses</h3>
+<h3>🏥 Medical Expenses</h3>
 <p>
-Manage healthcare, treatment and emergency medical requirements.
+Hospitalization, treatment and healthcare support.
 </p>
 </div>
 
 <div class="card">
-<h3>Wedding Expenses</h3>
+<h3>🎓 Education</h3>
 <p>
-Support wedding planning and family celebrations.
+Courses, certifications and higher studies.
 </p>
 </div>
 
 <div class="card">
-<h3>Higher Education</h3>
+<h3>💍 Wedding</h3>
 <p>
-Invest in courses, certifications and career development.
+Wedding planning and family celebrations.
 </p>
 </div>
 
 <div class="card">
-<h3>Travel & Holidays</h3>
+<h3>✈ Travel</h3>
 <p>
-Plan memorable trips and vacations with confidence.
+Domestic and international travel plans.
 </p>
 </div>
 
 <div class="card">
-<h3>Home Renovation</h3>
+<h3>🏠 Home Renovation</h3>
 <p>
-Upgrade interiors, repairs and home improvement projects.
+Interior upgrades and home improvements.
 </p>
 </div>
 
 <div class="card">
-<h3>Financial Planning</h3>
+<h3>📈 Financial Planning</h3>
 <p>
-Handle planned expenses in an organized manner.
+Managing important personal expenses.
 </p>
 </div>
 
@@ -469,53 +524,31 @@ Why Choose Smile Financial Solution?
 </h2>
 
 <p>
-Trusted support for personal financing and financial guidance.
+Trusted support for your personal financing journey.
 </p>
 
 </div>
 
-<div class="card-grid">
+<div class="highlight-grid">
 
-<div class="card">
-<h3>✔ Trusted Guidance</h3>
-<p>
-Professional assistance at every stage of the process.
-</p>
+<div class="highlight-card">
+<h3>5000+</h3>
+<p>Customers Assisted</p>
 </div>
 
-<div class="card">
-<h3>✔ Fast Response</h3>
-<p>
-Quick support for your financial requirements.
-</p>
+<div class="highlight-card">
+<h3>24-48 Hrs</h3>
+<p>Quick Response</p>
 </div>
 
-<div class="card">
-<h3>✔ Easy Process</h3>
-<p>
-Simple and customer-friendly application journey.
-</p>
+<div class="highlight-card">
+<h3>Expert Team</h3>
+<p>Professional Support</p>
 </div>
 
-<div class="card">
-<h3>✔ Customer Support</h3>
-<p>
-Dedicated team available to answer your queries.
-</p>
-</div>
-
-<div class="card">
-<h3>✔ Transparent Service</h3>
-<p>
-Clear information without unnecessary confusion.
-</p>
-</div>
-
-<div class="card">
-<h3>✔ Nationwide Reach</h3>
-<p>
-Serving customers from different cities across India.
-</p>
+<div class="highlight-card">
+<h3>India Wide</h3>
+<p>Service Network</p>
 </div>
 
 </div>
@@ -524,13 +557,13 @@ Serving customers from different cities across India.
 
 </section>
 
-<!-- CTA SECTION -->
+<!-- CTA BANNER -->
 
 <section style="
 padding:80px 0;
 background:linear-gradient(135deg,#0d6efd,#0057d9);
-color:white;
 text-align:center;
+color:white;
 ">
 
 <div class="container">
@@ -539,7 +572,7 @@ text-align:center;
 font-size:42px;
 margin-bottom:20px;
 ">
-Need Financial Support?
+Need Financial Support Today?
 </h2>
 
 <p style="
@@ -548,7 +581,7 @@ margin:auto;
 line-height:1.8;
 margin-bottom:30px;
 ">
-Get expert assistance and explore personal loan solutions that fit your financial goals.
+Our team is ready to guide you with personal loan solutions designed for your financial needs.
 </p>
 
 <a href="#apply-personal-loan"
@@ -561,7 +594,7 @@ font-weight:700;
 text-decoration:none;
 border-radius:10px;
 ">
-Apply Today
+Apply Now
 </a>
 
 </div>
@@ -569,7 +602,7 @@ Apply Today
 </section>
 
 
-<!-- ELIGIBILITY SECTION -->
+<!-- ELIGIBILITY -->
 
 <section class="section">
 
@@ -582,7 +615,7 @@ Who Can Apply?
 </h2>
 
 <p>
-Personal loan solutions available for eligible salaried and self-employed individuals.
+Personal loan solutions for eligible individuals from different professions.
 </p>
 
 </div>
@@ -590,44 +623,44 @@ Personal loan solutions available for eligible salaried and self-employed indivi
 <div class="card-grid">
 
 <div class="card">
-<h3>Salaried Employees</h3>
+<h3>👨‍💼 Salaried Employees</h3>
 <p>
-Private company, MNC and government employees may apply subject to eligibility.
+Private company, MNC and government employees.
 </p>
 </div>
 
 <div class="card">
-<h3>Self Employed</h3>
+<h3>👨‍⚕️ Professionals</h3>
 <p>
-Professionals and self-employed individuals can explore financing options.
+Doctors, architects, consultants and other professionals.
 </p>
 </div>
 
 <div class="card">
-<h3>Business Owners</h3>
+<h3>💼 Self Employed</h3>
 <p>
-Business owners seeking personal financial support may be eligible.
+Individuals with stable income and business activity.
 </p>
 </div>
 
 <div class="card">
-<h3>Professionals</h3>
+<h3>🏢 Business Owners</h3>
 <p>
-Doctors, consultants, architects and other professionals.
+Business owners seeking personal financial assistance.
 </p>
 </div>
 
 <div class="card">
-<h3>Freelancers</h3>
+<h3>💻 Freelancers</h3>
 <p>
-Individuals with stable income sources may qualify.
+Freelancers with regular income records.
 </p>
 </div>
 
 <div class="card">
-<h3>Working Professionals</h3>
+<h3>👥 Working Professionals</h3>
 <p>
-Individuals looking for financial support for personal requirements.
+Individuals looking for support for personal financial goals.
 </p>
 </div>
 
@@ -637,7 +670,7 @@ Individuals looking for financial support for personal requirements.
 
 </section>
 
-<!-- DOCUMENTS REQUIRED -->
+<!-- DOCUMENTS -->
 
 <section class="section" style="background:#f8fbff;">
 
@@ -650,7 +683,7 @@ Documents Required
 </h2>
 
 <p>
-Basic documents help make the application process smooth and simple.
+Basic documents for smooth application processing.
 </p>
 
 </div>
@@ -658,44 +691,44 @@ Basic documents help make the application process smooth and simple.
 <div class="card-grid">
 
 <div class="card">
-<h3>Aadhaar Card</h3>
+<h3>🪪 Aadhaar Card</h3>
 <p>
-Identity verification and KYC documentation.
+Identity verification and KYC process.
 </p>
 </div>
 
 <div class="card">
-<h3>PAN Card</h3>
+<h3>📝 PAN Card</h3>
 <p>
-Mandatory document for financial applications.
+Important document for financial applications.
 </p>
 </div>
 
 <div class="card">
-<h3>Address Proof</h3>
+<h3>🏠 Address Proof</h3>
 <p>
-Utility bill, Aadhaar or other valid address proof.
+Aadhaar, utility bill or other valid proof.
 </p>
 </div>
 
 <div class="card">
-<h3>Bank Statement</h3>
+<h3>🏦 Bank Statement</h3>
 <p>
-Recent banking transaction records for assessment.
+Recent banking records for profile review.
 </p>
 </div>
 
 <div class="card">
-<h3>Income Proof</h3>
+<h3>💰 Income Proof</h3>
 <p>
-Salary slips, ITR or professional income documents.
+Salary slips, ITR or professional income proof.
 </p>
 </div>
 
 <div class="card">
-<h3>Photograph</h3>
+<h3>📸 Photograph</h3>
 <p>
-Recent passport-size photograph if required.
+Recent passport size photograph if required.
 </p>
 </div>
 
@@ -705,7 +738,7 @@ Recent passport-size photograph if required.
 
 </section>
 
-<!-- SIMPLE PROCESS -->
+<!-- PROCESS -->
 
 <section class="section">
 
@@ -718,7 +751,7 @@ Simple 4-Step Process
 </h2>
 
 <p>
-A transparent and easy process designed for customer convenience.
+Easy and transparent process designed for convenience.
 </p>
 
 </div>
@@ -735,7 +768,7 @@ Submit Enquiry
 <div class="highlight-card">
 <h3>02</h3>
 <p>
-Document Verification
+Document Review
 </p>
 </div>
 
@@ -759,7 +792,7 @@ Application Support
 
 </section>
 
-<!-- PROFILE ASSESSMENT -->
+<!-- TRUST SECTION -->
 
 <section class="section" style="background:#f8fbff;">
 
@@ -768,11 +801,11 @@ Application Support
 <div class="section-title">
 
 <h2>
-Factors Commonly Considered
+Why Customers Trust Us
 </h2>
 
 <p>
-Certain factors may be reviewed during the application process.
+Dedicated support and professional financial guidance.
 </p>
 
 </div>
@@ -780,91 +813,45 @@ Certain factors may be reviewed during the application process.
 <div class="card-grid">
 
 <div class="card">
-<h3>Income Stability</h3>
-<p>
-Regular and verifiable income may support assessment.
-</p>
-</div>
-
-<div class="card">
-<h3>Employment Profile</h3>
-<p>
-Work experience and employment background may be considered.
-</p>
-</div>
-
-<div class="card">
-<h3>Banking History</h3>
-<p>
-Account activity and financial behaviour may be reviewed.
-</p>
-</div>
-
-<div class="card">
-<h3>Repayment Capacity</h3>
-<p>
-Existing financial commitments may be assessed.
-</p>
-</div>
-
-<div class="card">
-<h3>Documentation</h3>
-<p>
-Accurate and complete documents help processing.
-</p>
-</div>
-
-<div class="card">
-<h3>Profile Evaluation</h3>
-<p>
-Overall applicant profile may be reviewed.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TRUST SECTION -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Trusted Financial Assistance
-</h2>
-
-<p>
-Helping individuals explore financing solutions with confidence.
-</p>
-
-</div>
-
-<div class="highlight-grid">
-
-<div class="highlight-card">
 <h3>5000+</h3>
-<p>Customers Assisted</p>
+<p>
+Customers Assisted Across India
+</p>
 </div>
 
-<div class="highlight-card">
-<h3>India Wide</h3>
-<p>Service Network</p>
-</div>
-
-<div class="highlight-card">
+<div class="card">
 <h3>Expert Team</h3>
-<p>Professional Guidance</p>
+<p>
+Experienced Financial Professionals
+</p>
 </div>
 
-<div class="highlight-card">
+<div class="card">
 <h3>Fast Support</h3>
-<p>Customer Assistance</p>
+<p>
+Quick Response To Customer Queries
+</p>
+</div>
+
+<div class="card">
+<h3>Transparent Process</h3>
+<p>
+Clear Information And Professional Guidance
+</p>
+</div>
+
+<div class="card">
+<h3>Customer First</h3>
+<p>
+Focused On Better Customer Experience
+</p>
+</div>
+
+<div class="card">
+<h3>Nationwide Reach</h3>
+<p>
+Serving Customers Across India
+</p>
 </div>
 
 </div>
@@ -879,9 +866,21 @@ Helping individuals explore financing solutions with confidence.
 
 <div class="container">
 
+<div class="section-title">
+
+<h2>
+Financial Support For Life Goals
+</h2>
+
+<p>
+Helping individuals move forward with confidence and financial planning.
+</p>
+
+</div>
+
 <img
 src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg"
-alt="Personal Loan"
+alt="Personal Loan Support"
 style="
 width:100%;
 border-radius:25px;
@@ -902,11 +901,11 @@ box-shadow:0 15px 35px rgba(0,0,0,.12);
 <div class="section-title">
 
 <h2>
-What Our Customers Say
+Customer Reviews
 </h2>
 
 <p>
-Trusted by individuals across India for financial guidance and support.
+Trusted by customers across India.
 </p>
 
 </div>
@@ -918,11 +917,11 @@ Trusted by individuals across India for financial guidance and support.
 <h3>⭐⭐⭐⭐⭐</h3>
 
 <p>
-The team was very supportive and explained every step clearly. Excellent experience.
+Very professional team. Smooth guidance and excellent customer support.
 </p>
 
 <strong>
-Salaried Professional
+Rahul Sharma
 </strong>
 
 </div>
@@ -932,11 +931,11 @@ Salaried Professional
 <h3>⭐⭐⭐⭐⭐</h3>
 
 <p>
-Quick response and professional guidance throughout the process.
+Quick response and clear communication throughout the process.
 </p>
 
 <strong>
-Business Owner
+Amit Verma
 </strong>
 
 </div>
@@ -946,11 +945,11 @@ Business Owner
 <h3>⭐⭐⭐⭐⭐</h3>
 
 <p>
-Smooth documentation support and very helpful customer service.
+Helpful team and a very professional experience from start to finish.
 </p>
 
 <strong>
-Self Employed Professional
+Neha Gupta
 </strong>
 
 </div>
@@ -961,7 +960,7 @@ Self Employed Professional
 
 </section>
 
-<!-- FAQ SECTION -->
+<!-- FAQ -->
 
 <section class="section">
 
@@ -974,29 +973,17 @@ Frequently Asked Questions
 </h2>
 
 <p>
-Common questions related to personal loan assistance.
+Common questions about personal loan assistance.
 </p>
 
 </div>
 
 <div class="card">
 
-<h3>Who can apply for a personal loan?</h3>
+<h3>Who can apply?</h3>
 
 <p>
-Eligible salaried individuals, self-employed professionals and business owners may apply subject to profile assessment.
-</p>
-
-</div>
-
-<br>
-
-<div class="card">
-
-<h3>What documents are usually required?</h3>
-
-<p>
-Aadhaar Card, PAN Card, Address Proof, Bank Statements and Income Proof.
+Eligible salaried employees, self-employed professionals and business owners may apply.
 </p>
 
 </div>
@@ -1005,10 +992,10 @@ Aadhaar Card, PAN Card, Address Proof, Bank Statements and Income Proof.
 
 <div class="card">
 
-<h3>Can personal loans be used for different purposes?</h3>
+<h3>What documents are required?</h3>
 
 <p>
-Personal financing can support education, medical needs, weddings, travel and home improvement requirements.
+Aadhaar Card, PAN Card, Income Proof and Bank Statements.
 </p>
 
 </div>
@@ -1017,10 +1004,22 @@ Personal financing can support education, medical needs, weddings, travel and ho
 
 <div class="card">
 
-<h3>How can I get started?</h3>
+<h3>Can I use funds for any purpose?</h3>
 
 <p>
-Submit your enquiry and our team will contact you for further guidance.
+Personal financing solutions can support multiple personal requirements.
+</p>
+
+</div>
+
+<br>
+
+<div class="card">
+
+<h3>How do I start?</h3>
+
+<p>
+Fill the enquiry form and our team will contact you.
 </p>
 
 </div>
@@ -1042,13 +1041,13 @@ Apply For Personal Loan
 </h2>
 
 <p>
-Fill in your details and our team will contact you shortly.
+Submit your details and our team will contact you shortly.
 </p>
 
 </div>
 
 <div style="
-max-width:750px;
+max-width:800px;
 margin:auto;
 background:#fff;
 padding:35px;
@@ -1091,9 +1090,7 @@ border:1px solid #ddd;
 border-radius:10px;
 ">
 
-<input
-type="text"
-placeholder="Occupation"
+<select
 style="
 width:100%;
 padding:15px;
@@ -1101,6 +1098,14 @@ margin-bottom:15px;
 border:1px solid #ddd;
 border-radius:10px;
 ">
+
+<option>Select Occupation</option>
+<option>Salaried</option>
+<option>Self Employed</option>
+<option>Business Owner</option>
+<option>Professional</option>
+
+</select>
 
 <textarea
 rows="5"
@@ -1117,9 +1122,9 @@ border-radius:10px;
 type="submit"
 style="
 width:100%;
-padding:15px;
+padding:16px;
 background:#0d6efd;
-color:white;
+color:#fff;
 border:none;
 border-radius:10px;
 font-size:16px;
@@ -1137,11 +1142,11 @@ Submit Application
 
 </section>
 
-<!-- PREMIUM CTA -->
+<!-- FINAL CTA -->
 
 <section style="
 padding:90px 0;
-background:linear-gradient(135deg,#0d6efd,#004fd1);
+background:linear-gradient(135deg,#0d6efd,#0052cc);
 text-align:center;
 color:white;
 ">
@@ -1149,10 +1154,10 @@ color:white;
 <div class="container">
 
 <h2 style="
-font-size:48px;
+font-size:46px;
 margin-bottom:20px;
 ">
-Need Personal Financial Support?
+Need Financial Support Today?
 </h2>
 
 <p style="
@@ -1161,10 +1166,11 @@ margin:auto;
 line-height:1.8;
 margin-bottom:30px;
 ">
-Connect with Smile Financial Solution and explore personal loan options designed for your financial goals.
+Connect with Smile Financial Solution and get professional assistance for your financial goals.
 </p>
 
-<a href="tel:+917290977231"
+<a
+href="tel:+917290977231"
 style="
 display:inline-block;
 padding:15px 35px;
@@ -1181,13 +1187,13 @@ Call Now
 
 </section>
 
-<!-- AUTO POPUP FORM -->
+<!-- POPUP FORM -->
 
-<div class="popup-overlay" id="personalLoanPopup">
+<div class="popup-overlay" id="personalPopup">
 
 <div class="popup-box">
 
-<span class="close-popup" onclick="closePersonalPopup()">
+<span class="close-popup" onclick="closePopup()">
 ×
 </span>
 
@@ -1203,8 +1209,6 @@ Free Personal Loan Consultation
 
 <input type="text" placeholder="City">
 
-<textarea rows="4" placeholder="Loan Requirement"></textarea>
-
 <button type="submit">
 Request Callback
 </button>
@@ -1215,12 +1219,48 @@ Request Callback
 
 </div>
 
+<script>
+
+let popupOpen = false;
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY > 700 && !popupOpen){
+
+document.getElementById("personalPopup").style.display="flex";
+
+popupOpen=true;
+
+}
+
+});
+
+setTimeout(function(){
+
+if(!popupOpen){
+
+document.getElementById("personalPopup").style.display="flex";
+
+popupOpen=true;
+
+}
+
+},10000);
+
+function closePopup(){
+
+document.getElementById("personalPopup").style.display="none";
+
+}
+
+</script>
+
 <!-- FOOTER -->
 
 <footer style="
 background:#111827;
-color:white;
 padding:70px 0 20px;
+color:white;
 ">
 
 <div class="container">
@@ -1237,10 +1277,10 @@ gap:30px;
 
 <p style="
 margin-top:15px;
-line-height:1.8;
 color:#ccc;
+line-height:1.8;
 ">
-Personal Loans, Business Loans, MSME Loans, Startup Funding and Financial Solutions across India.
+Personal Loans, Business Loans, MSME Loans and Financial Services across India.
 </p>
 
 </div>
@@ -1249,21 +1289,13 @@ Personal Loans, Business Loans, MSME Loans, Startup Funding and Financial Soluti
 
 <h3>Quick Links</h3>
 
-<p style="margin-top:15px;">
-<a href="index.html" style="color:#ccc;text-decoration:none;">Home</a>
-</p>
+<p style="margin-top:15px;"><a href="index.html" style="color:#ccc;text-decoration:none;">Home</a></p>
 
-<p>
-<a href="about.html" style="color:#ccc;text-decoration:none;">About</a>
-</p>
+<p><a href="about.html" style="color:#ccc;text-decoration:none;">About Us</a></p>
 
-<p>
-<a href="services.html" style="color:#ccc;text-decoration:none;">Services</a>
-</p>
+<p><a href="services.html" style="color:#ccc;text-decoration:none;">Services</a></p>
 
-<p>
-<a href="contact.html" style="color:#ccc;text-decoration:none;">Contact</a>
-</p>
+<p><a href="contact.html" style="color:#ccc;text-decoration:none;">Contact</a></p>
 
 </div>
 
@@ -1277,10 +1309,6 @@ Personal Loans, Business Loans, MSME Loans, Startup Funding and Financial Soluti
 
 <p>
 📧 smilefinancialsolutions@gmail.com
-</p>
-
-<p>
-📍 Ghaziabad, Uttar Pradesh, India
 </p>
 
 </div>
@@ -1306,14 +1334,6 @@ color:#999;
 </div>
 
 </footer>
-
-<script>
-
-function closePersonalPopup(){
-document.getElementById("personalLoanPopup").style.display="none";
-}
-
-</script>
 
 </body>
 </html>
