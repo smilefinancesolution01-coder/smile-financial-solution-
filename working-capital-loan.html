@@ -1,28 +1,26 @@
-<!-- WORKING CAPITAL LOAN HERO SECTION -->
+<!-- WORKING CAPITAL LOAN HERO -->
 
 <section class="hero-section">
 
 <div class="container">
 
-<div class="hero-grid">
-
 <div class="hero-content">
 
-<span class="loan-tag">
+<span class="hero-badge">
 WORKING CAPITAL LOAN
 </span>
 
-<h1>
+<h1 class="hero-title">
 Keep Your Business Running Without Cash Flow Stress
 </h1>
 
-<p>
-Inventory kharidna hai? Supplier payment due hai? Staff salary aur daily business expenses manage karne hain? Working Capital Loan aapke business ko smooth operations aur growth ke liye financial support provide kar sakta hai.
+<p class="hero-text">
+Inventory purchase karna hai? Supplier payment due hai? Staff salary aur daily business expenses manage karne hain? Working Capital Loan aapke business ko smooth operations aur growth ke liye financial support provide kar sakta hai.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#apply-working-capital" class="btn-primary">
+<a href="#apply" class="btn-primary">
 Apply Now
 </a>
 
@@ -44,11 +42,9 @@ alt="Working Capital Loan">
 
 </div>
 
-</div>
-
 </section>
 
-<!-- TRUST STATS -->
+<!-- BUSINESS STATS -->
 
 <section class="stats-section">
 
@@ -57,23 +53,43 @@ alt="Working Capital Loan">
 <div class="stats-grid">
 
 <div class="stat-card">
+
 <h3>₹5 Cr+</h3>
-<p>Funding Options</p>
+
+<p>
+Funding Options
+</p>
+
 </div>
 
 <div class="stat-card">
+
 <h3>24-48 Hrs</h3>
-<p>Quick Response</p>
+
+<p>
+Quick Response
+</p>
+
 </div>
 
 <div class="stat-card">
+
 <h3>MSME</h3>
-<p>Business Focused</p>
+
+<p>
+Business Focused
+</p>
+
 </div>
 
 <div class="stat-card">
+
 <h3>India Wide</h3>
-<p>Service Network</p>
+
+<p>
+Service Network
+</p>
+
 </div>
 
 </div>
@@ -82,7 +98,7 @@ alt="Working Capital Loan">
 
 </section>
 
-<!-- BUSINESS PROBLEMS SECTION -->
+<!-- BUSINESS PROBLEMS -->
 
 <section class="section">
 
@@ -129,11 +145,23 @@ Supplier payment due hai aur customer payments abhi receive nahi hui hain.
 <div class="info-card">
 
 <h3>
-Salary & Expenses
+Staff Salaries
 </h3>
 
 <p>
-Monthly salaries, rent, electricity bills aur operational expenses manage karne hain.
+Monthly salary commitments aur operational expenses ko manage karna hai.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+Seasonal Demand
+</h3>
+
+<p>
+Festive season ya bulk orders ke liye additional inventory purchase karni hai.
 </p>
 
 </div>
@@ -143,70 +171,6 @@ Monthly salaries, rent, electricity bills aur operational expenses manage karne 
 </div>
 
 </section>
-
-<!-- BENEFITS SECTION -->
-
-<section class="section light-bg">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Why Businesses Choose Working Capital Loan
-</h2>
-
-<p>
-A flexible financial solution designed to support day-to-day business operations and growth opportunities.
-</p>
-
-</div>
-
-<div class="card-grid">
-
-<div class="info-card">
-
-<h3>
-Better Cash Flow
-</h3>
-
-<p>
-Maintain healthy cash flow and avoid operational disruptions during business cycles.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Business Growth
-</h3>
-
-<p>
-Grab new business opportunities, bulk orders and expansion plans confidently.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Smooth Operations
-</h3>
-
-<p>
-Keep daily business activities running without unnecessary financial pressure.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CSS -->
 
 <style>
 
@@ -216,58 +180,49 @@ padding:0;
 box-sizing:border-box;
 }
 
-html,
 body{
-overflow-x:hidden;
 font-family:Arial,sans-serif;
+overflow-x:hidden;
+background:#f8fafc;
 }
 
 img{
-width:100%;
 max-width:100%;
-height:auto;
 display:block;
+height:auto;
 }
 
 .container{
-width:100%;
 max-width:1200px;
 margin:auto;
-padding-left:20px;
-padding-right:20px;
+padding:0 22px;
 }
 
 .hero-section{
-padding:80px 0;
-background:#f8fbff;
+padding:70px 0;
+background:#fff;
 }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.loan-tag{
+.hero-badge{
 display:inline-block;
 padding:10px 18px;
 background:#eaf2ff;
 color:#0d6efd;
-border-radius:30px;
+font-size:14px;
 font-weight:700;
-font-size:15px;
-margin-bottom:15px;
+border-radius:50px;
+margin-bottom:18px;
 }
 
-.hero-content h1{
-font-size:52px;
-line-height:1.2;
-margin-bottom:20px;
+.hero-title{
+font-size:58px;
+font-weight:800;
+line-height:1.15;
 color:#111827;
+margin-bottom:22px;
 }
 
-.hero-content p{
+.hero-text{
 font-size:20px;
 line-height:1.9;
 color:#555;
@@ -283,63 +238,62 @@ flex-wrap:wrap;
 .btn-primary,
 .btn-secondary{
 padding:18px 30px;
-text-decoration:none;
-font-weight:700;
 border-radius:12px;
+font-weight:700;
+text-decoration:none;
 font-size:17px;
 }
 
 .btn-primary{
 background:#0d6efd;
-color:#fff;
+color:white;
 }
 
 .btn-secondary{
 background:#111827;
-color:#fff;
+color:white;
+}
+
+.hero-image{
+margin-top:40px;
 }
 
 .hero-image img{
-height:450px;
-object-fit:cover;
-border-radius:25px;
-box-shadow:0 15px 35px rgba(0,0,0,.12);
+width:100%;
+border-radius:24px;
 }
 
 .stats-section{
-padding:20px 0 60px;
+padding:30px 0 70px;
 }
 
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:25px;
 }
 
 .stat-card{
-background:#fff;
+background:white;
 padding:35px;
+border-radius:24px;
 text-align:center;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 10px 30px rgba(0,0,0,.06);
 }
 
 .stat-card h3{
-font-size:34px;
+font-size:38px;
 color:#0d6efd;
 margin-bottom:10px;
 }
 
 .stat-card p{
 font-size:18px;
+color:#555;
 }
 
 .section{
-padding:80px 0;
-}
-
-.light-bg{
-background:#f8fbff;
+padding:90px 0;
 }
 
 .section-title{
@@ -348,14 +302,14 @@ margin-bottom:50px;
 }
 
 .section-title h2{
-font-size:42px;
-margin-bottom:15px;
-color:#111827;
+font-size:48px;
+line-height:1.2;
+margin-bottom:20px;
 }
 
 .section-title p{
 font-size:20px;
-line-height:1.8;
+line-height:1.9;
 color:#666;
 max-width:850px;
 margin:auto;
@@ -363,19 +317,19 @@ margin:auto;
 
 .card-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:25px;
 }
 
 .info-card{
-background:#fff;
-padding:32px;
-border-radius:22px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+background:white;
+padding:35px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
 }
 
 .info-card h3{
-font-size:24px;
+font-size:30px;
 margin-bottom:15px;
 color:#111827;
 }
@@ -388,46 +342,14 @@ color:#555;
 
 /* MOBILE */
 
-@media(max-width:991px){
+@media(max-width:768px){
 
-.hero-grid{
-grid-template-columns:1fr;
-}
-
-.stats-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.card-grid{
-grid-template-columns:1fr;
-}
-
-.hero-content h1{
+.hero-title{
 font-size:42px;
 }
 
-}
-
-@media(max-width:768px){
-
-.hero-section{
-padding:60px 0;
-}
-
-.hero-content{
-text-align:center;
-}
-
-.hero-content h1{
-font-size:34px;
-}
-
-.hero-content p{
-font-size:18px;
-}
-
-.hero-image img{
-height:260px;
+.hero-text{
+font-size:19px;
 }
 
 .hero-buttons{
@@ -444,28 +366,36 @@ text-align:center;
 grid-template-columns:1fr;
 }
 
+.card-grid{
+grid-template-columns:1fr;
+}
+
+.stat-card{
+padding:30px;
+}
+
+.info-card{
+padding:30px;
+}
+
 .section-title h2{
-font-size:32px;
+font-size:36px;
 }
 
 .section-title p{
 font-size:18px;
 }
 
-.stat-card h3{
-font-size:32px;
-}
-
-.info-card{
-padding:28px;
-}
-
 .info-card h3{
-font-size:22px;
+font-size:26px;
 }
 
 .info-card p{
-font-size:17px;
+font-size:18px;
+}
+
+.stat-card h3{
+font-size:34px;
 }
 
 }
@@ -473,7 +403,7 @@ font-size:17px;
 </style>
 
 
-<!-- ELIGIBILITY SECTION -->
+<!-- WHY WORKING CAPITAL LOAN -->
 
 <section class="section">
 
@@ -482,11 +412,85 @@ font-size:17px;
 <div class="section-title">
 
 <h2>
-Who Can Apply For Working Capital Loan?
+Why Businesses Choose Working Capital Funding
 </h2>
 
 <p>
-Working Capital Loan is designed for businesses that need funds to manage daily operations, inventory purchases, supplier payments and business growth requirements.
+Working Capital Loan sirf ek loan nahi hai. Yeh business ko daily operations smoothly chalane, growth opportunities capture karne aur cash flow pressure ko manage karne mein help karta hai.
+</p>
+
+</div>
+
+<div class="card-grid">
+
+<div class="info-card">
+
+<h3>
+Business Continuity
+</h3>
+
+<p>
+Cash flow gap hone par bhi business operations, inventory purchase aur daily activities continue rakhne mein support mil sakta hai.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+Better Supplier Management
+</h3>
+
+<p>
+Suppliers ko timely payment karne se business relationships strong rehte hain aur inventory flow smooth bana rehta hai.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+Growth Opportunities
+</h3>
+
+<p>
+Bulk orders, new contracts aur expansion opportunities ko miss karne ki zarurat nahi padti.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+Financial Flexibility
+</h3>
+
+<p>
+Short-term working capital requirements ko manage karke business owners future planning par focus kar sakte hain.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHO CAN APPLY -->
+
+<section class="section" style="background:#ffffff;">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Who Can Apply?
+</h2>
+
+<p>
+Different types of businesses working capital funding explore kar sakte hain depending on their business profile and requirements.
 </p>
 
 </div>
@@ -500,7 +504,7 @@ MSME Businesses
 </h3>
 
 <p>
-Micro, Small and Medium Enterprises looking to improve cash flow and support business operations.
+Small aur medium enterprises jo inventory, salary ya operational expenses manage karna chahte hain.
 </p>
 
 </div>
@@ -512,19 +516,7 @@ Manufacturing Units
 </h3>
 
 <p>
-Businesses requiring funds for raw materials, production expenses and operational activities.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Traders & Wholesalers
-</h3>
-
-<p>
-Businesses involved in buying and selling goods that need regular inventory and stock purchases.
+Raw material purchase, production cost aur working expenses ke liye funding support.
 </p>
 
 </div>
@@ -536,7 +528,7 @@ Retail Businesses
 </h3>
 
 <p>
-Retail stores managing inventory, seasonal demand and day-to-day business expenses.
+Stock purchase, seasonal demand aur daily business operations ke liye support.
 </p>
 
 </div>
@@ -544,23 +536,11 @@ Retail stores managing inventory, seasonal demand and day-to-day business expens
 <div class="info-card">
 
 <h3>
-Service Providers
+Traders & Wholesalers
 </h3>
 
 <p>
-Consulting firms, agencies and service businesses managing salaries and operational costs.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Growing Companies
-</h3>
-
-<p>
-Businesses planning expansion, hiring staff or entering new markets.
+Inventory management aur supplier payment requirements ko support karne ke liye.
 </p>
 
 </div>
@@ -571,9 +551,9 @@ Businesses planning expansion, hiring staff or entering new markets.
 
 </section>
 
-<!-- DOCUMENTS SECTION -->
+<!-- DOCUMENTS -->
 
-<section class="section light-bg">
+<section class="section">
 
 <div class="container">
 
@@ -584,7 +564,7 @@ Documents Commonly Required
 </h2>
 
 <p>
-Documentation requirements may vary depending on lender policies and business profile.
+Business profile aur lender requirements ke hisab se documents vary kar sakte hain.
 </p>
 
 </div>
@@ -594,11 +574,23 @@ Documentation requirements may vary depending on lender policies and business pr
 <div class="info-card">
 
 <h3>
-Business KYC
+Business PAN
 </h3>
 
 <p>
-PAN Card, Aadhaar Card and basic business identity documents.
+Business aur proprietor/company related PAN documentation.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+Aadhaar Card
+</h3>
+
+<p>
+Identity verification aur KYC requirements ke liye.
 </p>
 
 </div>
@@ -610,7 +602,7 @@ Bank Statements
 </h3>
 
 <p>
-Recent business banking records may be required for assessment purposes.
+Recent business banking transactions assessment ke liye.
 </p>
 
 </div>
@@ -622,7 +614,7 @@ GST Documents
 </h3>
 
 <p>
-GST registration and returns wherever applicable.
+GST registration aur returns where applicable.
 </p>
 
 </div>
@@ -634,7 +626,7 @@ Income Records
 </h3>
 
 <p>
-ITR, Profit & Loss Statement and financial documents based on business type.
+ITR, Profit & Loss Statement ya relevant financial records.
 </p>
 
 </div>
@@ -646,19 +638,7 @@ Business Proof
 </h3>
 
 <p>
-Shop Act, Udyam Registration, Trade License or relevant business proof.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Financial Statements
-</h3>
-
-<p>
-Documents that help understand business performance and funding requirements.
+Udyam, Shop Act, Trade License ya applicable registration documents.
 </p>
 
 </div>
@@ -669,118 +649,20 @@ Documents that help understand business performance and funding requirements.
 
 </section>
 
-<!-- REAL BUSINESS SITUATIONS -->
+<!-- BENEFITS SECTION -->
 
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-When Businesses Need Working Capital
-</h2>
-
-<p>
-Most successful businesses experience temporary cash flow gaps. Working capital financing helps manage such situations smoothly.
-</p>
-
-</div>
-
-<div class="card-grid">
-
-<div class="info-card">
-
-<h3>
-Inventory Purchase
-</h3>
-
-<p>
-A large order arrives but stock needs to be purchased immediately to fulfill customer demand.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Supplier Payments
-</h3>
-
-<p>
-Supplier payments become due before customer payments are received.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Salary Management
-</h3>
-
-<p>
-Monthly salaries and operational expenses must continue without interruption.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Bulk Orders
-</h3>
-
-<p>
-Large customer orders may require immediate production and inventory investment.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Seasonal Demand
-</h3>
-
-<p>
-Festive seasons and peak demand periods often require additional working capital.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-Business Expansion
-</h3>
-
-<p>
-Opening new branches or increasing business capacity requires additional funds.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- KEY BENEFITS -->
-
-<section class="section light-bg">
+<section class="section" style="background:#ffffff;">
 
 <div class="container">
 
 <div class="section-title">
 
 <h2>
-Benefits Of Working Capital Financing
+Key Benefits For Business Owners
 </h2>
 
 <p>
-A healthy cash flow helps businesses focus on growth instead of worrying about short-term operational expenses.
+A healthy cash flow business growth aur stability dono ke liye important hota hai.
 </p>
 
 </div>
@@ -790,23 +672,11 @@ A healthy cash flow helps businesses focus on growth instead of worrying about s
 <div class="stat-card">
 
 <h3>
-Cash Flow
-</h3>
-
-<p>
-Helps maintain smoother business operations.
-</p>
-
-</div>
-
-<div class="stat-card">
-
-<h3>
 Growth
 </h3>
 
 <p>
-Supports expansion and new opportunities.
+Business expansion opportunities support karne mein help.
 </p>
 
 </div>
@@ -818,7 +688,7 @@ Stability
 </h3>
 
 <p>
-Reduces pressure from temporary cash shortages.
+Temporary cash flow pressure ko manage karne mein support.
 </p>
 
 </div>
@@ -826,11 +696,23 @@ Reduces pressure from temporary cash shortages.
 <div class="stat-card">
 
 <h3>
-Flexibility
+Operations
 </h3>
 
 <p>
-Supports different business requirements.
+Daily business activities smoothly continue rakhne mein help.
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+Confidence
+</h3>
+
+<p>
+Business owners ko future planning aur growth par focus karne ka confidence.
 </p>
 
 </div>
@@ -841,475 +723,319 @@ Supports different business requirements.
 
 </section>
 
+<!-- WHY SMILE FINANCIAL SOLUTION -->
 
-<!-- PROCESS SECTION -->
-
-<section class="section">
+<section class="wc-section bg-light">
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-header">
 
-<h2>
-Simple Application Process
-</h2>
-
-<p>
-A smooth and transparent process designed to help businesses get the support they need.
-</p>
-
-</div>
-
-<div class="stats-grid">
-
-<div class="stat-card">
-<h3>01</h3>
-<p>Submit Your Requirement</p>
-</div>
-
-<div class="stat-card">
-<h3>02</h3>
-<p>Document Verification</p>
-</div>
-
-<div class="stat-card">
-<h3>03</h3>
-<p>Profile Assessment</p>
-</div>
-
-<div class="stat-card">
-<h3>04</h3>
-<p>Funding Assistance</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FAQ SECTION -->
-
-<section class="section light-bg">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Frequently Asked Questions
-</h2>
-
-<p>
-Common questions business owners ask before applying for working capital funding.
-</p>
-
-</div>
-
-<div class="info-card" style="margin-bottom:20px;">
-
-<h3>
-What is a Working Capital Loan?
-</h3>
-
-<p>
-A financing solution that helps businesses manage daily operational expenses, inventory purchases and cash flow requirements.
-</p>
-
-</div>
-
-<div class="info-card" style="margin-bottom:20px;">
-
-<h3>
-Who can apply?
-</h3>
-
-<p>
-MSME businesses, manufacturers, traders, retailers and service providers may explore working capital funding options.
-</p>
-
-</div>
-
-<div class="info-card" style="margin-bottom:20px;">
-
-<h3>
-Can the funds be used for salaries and supplier payments?
-</h3>
-
-<p>
-Working capital is commonly used for operational expenses, inventory purchases and business cash flow management.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-How quickly can the process start?
-</h3>
-
-<p>
-Timelines depend on documentation, business profile and lender requirements.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- APPLY FORM -->
-
-<section class="section" id="apply-working-capital">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Request Business Funding Assistance
-</h2>
-
-<p>
-Submit your details and our team will contact you to understand your business requirements.
-</p>
-
-</div>
-
-<div style="
-max-width:850px;
-margin:auto;
-background:#fff;
-padding:35px;
-border-radius:25px;
-box-shadow:0 15px 35px rgba(0,0,0,.10);
-">
-
-<form>
-
-<input
-type="text"
-placeholder="Business Owner Name"
-style="
-width:100%;
-padding:18px;
-margin-bottom:15px;
-font-size:16px;
-border:1px solid #ddd;
-border-radius:12px;
-">
-
-<input
-type="tel"
-placeholder="Mobile Number"
-style="
-width:100%;
-padding:18px;
-margin-bottom:15px;
-font-size:16px;
-border:1px solid #ddd;
-border-radius:12px;
-">
-
-<input
-type="text"
-placeholder="Business Name"
-style="
-width:100%;
-padding:18px;
-margin-bottom:15px;
-font-size:16px;
-border:1px solid #ddd;
-border-radius:12px;
-">
-
-<input
-type="text"
-placeholder="City"
-style="
-width:100%;
-padding:18px;
-margin-bottom:15px;
-font-size:16px;
-border:1px solid #ddd;
-border-radius:12px;
-">
-
-<textarea
-rows="5"
-placeholder="Describe Your Funding Requirement"
-style="
-width:100%;
-padding:18px;
-font-size:16px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:12px;
-"></textarea>
-
-<button
-type="submit"
-style="
-width:100%;
-padding:18px;
-background:#0d6efd;
-color:#fff;
-font-size:18px;
-font-weight:700;
-border:none;
-border-radius:12px;
-cursor:pointer;
-">
-Request Callback
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- STRONG CTA -->
-
-<section style="
-padding:80px 0;
-background:linear-gradient(135deg,#0d6efd,#004fd1);
-text-align:center;
-color:white;
-">
-
-<div class="container">
-
-<h2 style="
-font-size:42px;
-margin-bottom:20px;
-">
-Need Working Capital For Your Business?
-</h2>
-
-<p style="
-font-size:20px;
-max-width:800px;
-margin:auto;
-line-height:1.8;
-margin-bottom:30px;
-">
-Talk to our team and explore funding solutions that can help support your business operations and growth plans.
-</p>
-
-<a
-href="tel:+917290977231"
-style="
-display:inline-block;
-padding:18px 35px;
-background:white;
-color:#0d6efd;
-font-weight:700;
-text-decoration:none;
-border-radius:12px;
-font-size:18px;
-">
-Call Now
-</a>
-
-</div>
-
-</section>
-
-<!-- POPUP FORM -->
-
-<div id="loanPopup"
-style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.65);
-z-index:9999;
-justify-content:center;
-align-items:center;
-padding:20px;
-">
-
-<div
-style="
-background:#fff;
-width:100%;
-max-width:420px;
-padding:30px;
-border-radius:20px;
-position:relative;
-">
-
-<span
-onclick="closePopup()"
-style="
-position:absolute;
-right:15px;
-top:10px;
-font-size:30px;
-cursor:pointer;
-">
-×
+<span class="section-tag">
+WHY CHOOSE US
 </span>
 
-<h3 style="
-margin-bottom:20px;
-font-size:26px;
-">
-Free Business Consultation
-</h3>
+<h2>
+Trusted Working Capital Loan Assistance For Growing Businesses
+</h2>
 
-<input
-type="text"
-placeholder="Your Name"
-style="
-width:100%;
-padding:15px;
-margin-bottom:12px;
-border:1px solid #ddd;
-border-radius:10px;
-">
+<p>
+Smile Financial Solution business owners ko funding options samjhane, documentation support dene aur suitable financial solutions identify karne me help karta hai. Hamara focus fast communication aur professional guidance par rehta hai.
+</p>
 
-<input
-type="tel"
-placeholder="Mobile Number"
-style="
-width:100%;
-padding:15px;
-margin-bottom:12px;
-border:1px solid #ddd;
-border-radius:10px;
-">
+</div>
 
-<button
-style="
-width:100%;
-padding:15px;
-background:#0d6efd;
-color:white;
-border:none;
-border-radius:10px;
-font-weight:700;
-">
-Request Callback
-</button>
+<div class="benefit-grid">
 
+<div class="benefit-card">
+<h3>Dedicated Support</h3>
+<p>
+Application se lekar final process tak dedicated assistance.
+</p>
+</div>
+
+<div class="benefit-card">
+<h3>MSME Focused</h3>
+<p>
+Small aur medium businesses ki funding requirements ko samajhne wali team.
+</p>
+</div>
+
+<div class="benefit-card">
+<h3>Quick Communication</h3>
+<p>
+Timely updates aur responsive customer support.
+</p>
+</div>
+
+<div class="benefit-card">
+<h3>India Wide Service</h3>
+<p>
+Different industries aur locations ke businesses ke liye assistance.
+</p>
 </div>
 
 </div>
 
-<script>
+</div>
 
-let popupShown=false;
+</section>
 
-window.addEventListener('scroll',function(){
+<!-- DOCUMENTS -->
 
-if(window.scrollY>800 && !popupShown){
-
-document.getElementById('loanPopup').style.display='flex';
-
-popupShown=true;
-
-}
-
-});
-
-setTimeout(function(){
-
-if(!popupShown){
-
-document.getElementById('loanPopup').style.display='flex';
-
-popupShown=true;
-
-}
-
-},10000);
-
-function closePopup(){
-
-document.getElementById('loanPopup').style.display='none';
-
-}
-
-</script>
-
-<!-- STICKY BUTTONS -->
-
-<a href="tel:+917290977231"
-style="
-position:fixed;
-bottom:85px;
-right:20px;
-background:#0d6efd;
-color:white;
-padding:15px 18px;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
-z-index:999;
-">
-Call
-</a>
-
-<a href="https://wa.me/917290977231"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
-z-index:999;
-">
-WhatsApp
-</a>
-
-<!-- FOOTER -->
-
-<footer style="
-background:#111827;
-padding:60px 0 25px;
-color:white;
-">
+<section class="wc-section">
 
 <div class="container">
 
-<h3 style="margin-bottom:15px;">
-Smile Financial Solution
-</h3>
+<div class="section-header">
 
-<p style="
-color:#ccc;
-line-height:1.8;
-max-width:700px;
-margin-bottom:25px;
-">
-Business Loans, Working Capital Loans, MSME Funding, Machinery Loans and Financial Assistance Services Across India.
-</p>
+<span class="section-tag">
+DOCUMENTS REQUIRED
+</span>
 
-<hr style="
-border:none;
-height:1px;
-background:#333;
-margin:25px 0;
-">
+<h2>
+Commonly Required Documents
+</h2>
 
-<p style="
-text-align:center;
-color:#999;
-">
-© 2026 Smile Financial Solution. All Rights Reserved.
+<p>
+Actual document requirement lender aur applicant profile ke hisab se different ho sakti hai.
 </p>
 
 </div>
 
-</footer>
+<div class="document-grid">
+
+<div class="document-card">
+
+<h3>Business Documents</h3>
+
+<ul>
+<li>GST Certificate</li>
+<li>Udyam Registration</li>
+<li>Business Proof</li>
+<li>Partnership / Company Documents</li>
+</ul>
+
+</div>
+
+<div class="document-card">
+
+<h3>Financial Documents</h3>
+
+<ul>
+<li>Bank Statements</li>
+<li>ITR Returns</li>
+<li>Profit & Loss Statement</li>
+<li>Balance Sheet</li>
+</ul>
+
+</div>
+
+<div class="document-card">
+
+<h3>KYC Documents</h3>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>PAN Card</li>
+<li>Address Proof</li>
+<li>Passport Size Photo</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA SECTION -->
+
+<section class="cta-section">
+
+<div class="container">
+
+<h2>
+Need Working Capital Support For Your Business?
+</h2>
+
+<p>
+Inventory, supplier payment, salary management ya daily business expenses ke liye professional assistance prapt karein.
+</p>
+
+<div class="cta-buttons">
+
+<a href="#apply-now" class="btn-primary">
+Apply Now
+</a>
+
+<a href="tel:+917290977231" class="btn-dark">
+Talk To Expert
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MOBILE OPTIMIZATION -->
+
+<style>
+
+.wc-section{
+padding:70px 0;
+}
+
+.section-header{
+text-align:center;
+margin-bottom:40px;
+}
+
+.section-tag{
+display:inline-block;
+padding:8px 18px;
+background:#eef5ff;
+color:#0d6efd;
+font-size:14px;
+font-weight:700;
+border-radius:30px;
+margin-bottom:15px;
+}
+
+.section-header h2{
+font-size:42px;
+line-height:1.3;
+font-weight:800;
+color:#111827;
+margin-bottom:18px;
+}
+
+.section-header p{
+font-size:20px;
+line-height:1.9;
+color:#555;
+max-width:900px;
+margin:auto;
+}
+
+.benefit-grid,
+.document-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.benefit-card,
+.document-card{
+background:#fff;
+padding:35px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.benefit-card h3,
+.document-card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#111827;
+}
+
+.benefit-card p,
+.document-card li{
+font-size:18px;
+line-height:1.8;
+color:#555;
+}
+
+.document-card ul{
+padding-left:20px;
+}
+
+.bg-light{
+background:#f8fbff;
+}
+
+.cta-section{
+padding:90px 0;
+background:linear-gradient(135deg,#0d6efd,#0056d6);
+text-align:center;
+color:#fff;
+}
+
+.cta-section h2{
+font-size:46px;
+margin-bottom:20px;
+line-height:1.3;
+}
+
+.cta-section p{
+font-size:20px;
+line-height:1.9;
+max-width:900px;
+margin:auto auto 30px;
+}
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+@media(max-width:768px){
+
+.wc-section{
+padding:55px 0;
+}
+
+.section-header h2{
+font-size:34px;
+line-height:1.4;
+}
+
+.section-header p{
+font-size:18px;
+line-height:1.9;
+}
+
+.benefit-grid,
+.document-grid{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.benefit-card,
+.document-card{
+padding:28px;
+border-radius:20px;
+}
+
+.benefit-card h3,
+.document-card h3{
+font-size:24px;
+}
+
+.benefit-card p,
+.document-card li{
+font-size:17px;
+line-height:1.9;
+}
+
+.cta-section h2{
+font-size:34px;
+}
+
+.cta-section p{
+font-size:18px;
+}
+
+.cta-buttons a{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
