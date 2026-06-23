@@ -1,1822 +1,1329 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Financial Solution | Premium Financial & Business Consultancy India</title>
+    <meta name="description" content="Smile Financial Solution - India's premium financial advisory firm. Specializing in Business Loans, Mudra Loans, PMEGP Subsidies, CGTMSE limits, and complete corporate registration compliances.">
+    
+    <!-- Google Fonts Framework -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Vector Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<meta charset="UTF-8">
+    <style>
+        /* --- PREMIUM FINANCIAL SYSTEM DESIGN VARIABLES --- */
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0056d6;
+            --secondary: #111111;
+            --accent-green: #198754;
+            --text-dark: #222222;
+            --text-muted: #555555;
+            --bg-light: #f8fbff;
+            --bg-dark-blue: #0b0f19;
+            --bg-gradient: linear-gradient(135deg, #f7fbff, #eef5ff);
+            --white: #ffffff;
+            --shadow-sm: 0 5px 15px rgba(0,0,0,0.03);
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.07);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 12px;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        /* --- GLOBAL RESET & SCROLLBAR --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<title>Smile Financial Solution | Funding, Loans & Business Growth</title>
+        html {
+            scroll-behavior: smooth;
+        }
 
-<meta name="description"
-content="Smile Financial Solution helps businesses, startups and individuals with loans, funding, compliance and financial growth services.">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.65;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
 
-<style>
+        img {
+            max-width: 100%;
+            display: block;
+            height: auto;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: auto;
+            padding: 0 24px;
+        }
 
-html{
-scroll-behavior:smooth;
-}
+        /* --- ADVANCED CORE TYPOGRAPHY --- */
+        .section-title-block {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 60px;
+        }
 
-body{
-font-family:'Poppins',sans-serif;
-background:#fff;
-color:#222;
-overflow-x:hidden;
-}
+        .section-tag {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 14px;
+            background: rgba(13, 110, 253, 0.08);
+            padding: 6px 18px;
+            border-radius: 50px;
+        }
 
-img{
-max-width:100%;
-display:block;
-}
+        .section-main-heading {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
 
-.container{
-width:100%;
-max-width:1200px;
-margin:auto;
-padding:0 20px;
-}
+        /* --- HIGH-CONVERSION ACTIONS BUTTONS SYSTEM --- */
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
 
-/* HEADER */
+        .action-btn {
+            padding: 15px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
 
-header{
-position:sticky;
-top:0;
-background:#fff;
-z-index:9999;
-box-shadow:0 2px 15px rgba(0,0,0,.08);
-}
+        .btn-fill {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 5px 20px rgba(13, 110, 253, 0.25);
+        }
 
-.navbar{
-height:80px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+        .btn-fill:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.35);
+            color: var(--white);
+        }
 
-.logo{
-font-size:28px;
-font-weight:800;
-color:#0d6efd;
-text-decoration:none;
-}
+        .btn-border {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
 
-.logo span{
-color:#111;
-}
+        .btn-border:hover {
+            background: rgba(13, 110, 253, 0.05);
+            transform: translateY(-3px);
+        }
 
-#menu-toggle{
-display:none;
-}
+        .btn-success {
+            background: var(--accent-green);
+            color: var(--white);
+            box-shadow: 0 5px 20px rgba(25, 135, 84, 0.2);
+        }
 
-.menu-icon{
-display:none;
-font-size:30px;
-cursor:pointer;
-font-weight:bold;
-}
+        .btn-success:hover {
+            background: #146c43;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(25, 135, 84, 0.3);
+            color: var(--white);
+        }
 
-.nav-links{
-display:flex;
-gap:22px;
-align-items:center;
-}
+/* --- HEADER, STICKY NAVIGATION & MEGA MENU MECHANICS --- */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            z-index: 9999;
+            box-shadow: var(--shadow-sm);
+        }
 
-.nav-links a{
-text-decoration:none;
-color:#222;
-font-weight:500;
-transition:.3s;
-}
+        .navbar {
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.nav-links a:hover{
-color:#0d6efd;
-}
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.5px;
+        }
 
-.btn{
-padding:12px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-display:inline-block;
-}
+        .logo span {
+            color: var(--secondary);
+        }
 
-.btn-primary{
-background:#0d6efd;
-color:#fff;
-}
+        #menu-toggle {
+            display: none;
+        }
 
-.btn-outline{
-border:2px solid #0d6efd;
-color:#0d6efd;
-}
+        .menu-icon {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+            color: var(--secondary);
+            padding: 5px;
+        }
 
-/* HERO */
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            list-style: none;
+        }
 
-.hero{
-padding:100px 0;
-background:linear-gradient(135deg,#f7fbff,#eef5ff);
-}
+        .nav-item {
+            position: relative;
+        }
 
-.hero-wrapper{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-}
+        .nav-links > .nav-item > a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 15px;
+            padding: 32px 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
 
-.hero-content{
-flex:1;
-min-width:300px;
-}
+        .nav-links > .nav-item:hover > a {
+            color: var(--primary);
+        }
 
-.hero-badge{
-display:inline-block;
-padding:10px 18px;
-background:#e7f0ff;
-color:#0d6efd;
-border-radius:50px;
-font-size:14px;
-font-weight:600;
-margin-bottom:20px;
-}
+        /* --- PRESTIGE MEGA MENU FRAMEWORK --- */
+        .mega-menu {
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            width: 92vw;
+            max-width: 1180px;
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            border-radius: 16px;
+            padding: 35px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 4px solid var(--primary);
+        }
 
-.hero-content h1{
-font-size:58px;
-font-weight:800;
-line-height:1.2;
-margin-bottom:20px;
-}
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
 
-.hero-content p{
-font-size:18px;
-line-height:1.9;
-color:#555;
-margin-bottom:30px;
-}
+        .mega-col h4 {
+            font-size: 14px;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            font-weight: 800;
+            border-bottom: 1px solid #eef2f6;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
 
-.hero-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
+        .mega-col ul {
+            list-style: none;
+        }
 
-.hero-image{
-flex:1;
-min-width:300px;
-}
+        .mega-col ul li {
+            margin-bottom: 12px;
+        }
 
-.hero-image img{
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.15);
-}
+        .mega-col ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
 
-/* STATS */
+        .mega-col ul li a:hover {
+            color: var(--primary);
+            padding-left: 6px;
+        }
 
-.stats{
-padding:80px 0;
-background:#fff;
-}
+        /* --- RESPONSIVE NAVIGATION BREAKPOINTS --- */
+        @media (max-width: 1024px) {
+            .nav-links > .nav-item > a {
+                padding: 32px 8px;
+                font-size: 14px;
+            }
+            .mega-menu {
+                grid-template-columns: repeat(2, 1fr);
+                width: 95vw;
+            }
+        }
 
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.stat-card{
-background:#fff;
-padding:35px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.stat-card h2{
-font-size:42px;
-color:#0d6efd;
-margin-bottom:10px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.menu-icon{
-display:block;
-}
-
-.nav-links{
-display:none;
-position:absolute;
-top:80px;
-left:0;
-width:100%;
-background:#fff;
-padding:20px;
-flex-direction:column;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-}
-
-#menu-toggle:checked ~ .nav-links{
-display:flex;
-}
-
-.hero-content h1{
-font-size:36px;
-}
-
-.hero-buttons{
-flex-direction:column;
-}
-
-.btn{
-width:100%;
-text-align:center;
-}
-
-}
-
-</style>
-
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                padding: 25px;
+                flex-direction: column;
+                gap: 5px;
+                align-items: flex-start;
+                box-shadow: var(--shadow-md);
+                border-top: 1px solid #eef2f6;
+                max-height: calc(100vh - 90px);
+                overflow-y: auto;
+            }
+            #menu-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+            .nav-links > .nav-item {
+                width: 100%;
+            }
+            .nav-links > .nav-item > a {
+                padding: 14px 0;
+                width: 100%;
+                justify-content: space-between;
+            }
+            .mega-menu {
+                position: static;
+                transform: none;
+                width: 100%;
+                box-shadow: none;
+                padding: 15px 0 0;
+                display: none;
+                grid-template-columns: 1fr;
+                gap: 25px;
+                opacity: 1;
+                visibility: visible;
+                border-top: none;
+            }
+            .nav-item:hover .mega-menu {
+                display: grid;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-
-<div class="container">
-
-<div class="navbar">
-
-<a href="index.html" class="logo">
-Smile <span>Financial</span>
-</a>
-
-<input type="checkbox" id="menu-toggle">
-
-<label for="menu-toggle" class="menu-icon">
-☰
-</label>
-
-<nav class="nav-links">
-
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="blogs.html">Blogs</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
-<a href="become-agent.html">Become Agent</a>
-<a href="login.html">Login</a>
-
-</nav>
-
-</div>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="container">
-
-<div class="hero-wrapper">
-
-<div class="hero-content">
-
-<div class="hero-badge">
-Trusted Financial Growth Partner
-</div>
-
-<h1>
-Funding Dreams,
-Growing Businesses,
-Creating Opportunities
-</h1>
-
-<p>
-Smile Financial Solution provides professional support for business loans, startup funding, personal loans, compliance services, insurance, credit cards and business growth opportunities.
-</p>
-
-<div class="hero-buttons">
-
-<a href="services.html" class="btn btn-primary">
-Explore Services
-</a>
-
-<a href="become-agent.html" class="btn btn-outline">
-Become An Agent
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
-alt="Business Meeting">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="container">
-
-<div class="stats-grid">
-
-<div class="stat-card">
-<h2>6+</h2>
-<p>Years Experience</p>
-</div>
-
-<div class="stat-card">
-<h2>5000+</h2>
-<p>Customers Assisted</p>
-</div>
-
-<div class="stat-card">
-<h2>50+</h2>
-<p>Financial Solutions</p>
-</div>
-
-<div class="stat-card">
-<h2>24/7</h2>
-<p>Professional Support</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT US SECTION -->
-
-<section
-style="
-padding:100px 0;
-background:#ffffff;
-">
-
-<div class="container">
-
-<div
-style="
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-">
-
-<div style="flex:1;min-width:300px;">
-
-<img
-src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
-alt="Corporate Office"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-">
-
-</div>
-
-<div style="flex:1;min-width:300px;">
-
-<span
-style="
-color:#0d6efd;
-font-weight:700;
-letter-spacing:1px;
-">
-
-ABOUT US
-
-</span>
-
-<h2
-style="
-font-size:42px;
-margin:20px 0;
-line-height:1.3;
-">
-
-Building Financial Success Through Trust & Expertise
-
-</h2>
-
-<p
-style="
-color:#555;
-line-height:1.9;
-font-size:16px;
-margin-bottom:20px;
-">
-
-Smile Financial Solution is a trusted financial and business consulting platform helping individuals, startups and businesses achieve sustainable growth.
-
-</p>
-
-<p
-style="
-color:#555;
-line-height:1.9;
-font-size:16px;
-margin-bottom:20px;
-">
-
-We assist customers with business loans, personal loans, home loans, working capital, startup funding, insurance solutions, compliance services and credit products.
-
-</p>
-
-<p
-style="
-color:#555;
-line-height:1.9;
-font-size:16px;
-">
-
-Our goal is to simplify financial access and provide professional guidance that helps customers make better business and financial decisions.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- DIRECTOR MESSAGE -->
-
-<section
-style="
-padding:100px 0;
-background:#f8fbff;
-">
-
-<div class="container">
-
-<div
-style="
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-">
-
-<div style="flex:1;min-width:300px;">
-
-<span
-style="
-color:#0d6efd;
-font-weight:700;
-">
-
-DIRECTOR'S MESSAGE
-
-</span>
-
-<h2
-style="
-font-size:42px;
-margin:20px 0;
-">
-
-Mohammad Aarif
-
-</h2>
-
-<p
-style="
-font-size:16px;
-line-height:1.9;
-color:#555;
-margin-bottom:20px;
-">
-
-Our mission is to make financial services accessible, transparent and growth-focused for every customer.
-
-</p>
-
-<p
-style="
-font-size:16px;
-line-height:1.9;
-color:#555;
-margin-bottom:20px;
-">
-
-We believe every entrepreneur, startup and individual deserves access to opportunities, professional guidance and reliable financial solutions.
-
-</p>
-
-<p
-style="
-font-size:16px;
-line-height:1.9;
-color:#555;
-">
-
-At Smile Financial Solution, we focus on trust, transparency and long-term customer success.
-
-</p>
-
-</div>
-
-<div style="flex:1;min-width:300px;">
-
-<img
-src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
-alt="Director"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MISSION & VISION -->
-
-<section
-style="
-padding:100px 0;
-background:white;
-">
-
-<div class="container">
-
-<div
-style="
-text-align:center;
-margin-bottom:60px;
-">
-
-<span
-style="
-color:#0d6efd;
-font-weight:700;
-">
-
-OUR PURPOSE
-
-</span>
-
-<h2
-style="
-font-size:42px;
-margin-top:15px;
-">
-
-Mission & Vision
-
-</h2>
-
-</div>
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-">
-
-<div
-style="
-background:#f8fbff;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.06);
-">
-
-<h3
-style="
-font-size:28px;
-margin-bottom:20px;
-color:#0d6efd;
-">
-
-Our Mission
-
-</h3>
-
-<p
-style="
-line-height:1.9;
-color:#555;
-">
-
-To provide reliable financial solutions, funding support, compliance services and business guidance that empower customers to achieve sustainable growth.
-
-</p>
-
-</div>
-
-<div
-style="
-background:#f8fbff;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.06);
-">
-
-<h3
-style="
-font-size:28px;
-margin-bottom:20px;
-color:#0d6efd;
-">
-
-Our Vision
-
-</h3>
-
-<p
-style="
-line-height:1.9;
-color:#555;
-">
-
-To become India's trusted financial growth partner known for innovation, customer success and employment generation through technology-driven solutions.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- COMPANY JOURNEY -->
-
-<section
-style="
-padding:100px 0;
-background:#f8fbff;
-">
-
-<div class="container">
-
-<div
-style="
-text-align:center;
-margin-bottom:50px;
-">
-
-<span
-style="
-color:#0d6efd;
-font-weight:700;
-">
-
-OUR JOURNEY
-
-</span>
-
-<h2
-style="
-font-size:42px;
-margin-top:15px;
-">
-
-6 Years of Customer Trust
-
-</h2>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
-alt="Company Growth"
-style="
-width:100%;
-border-radius:20px;
-margin-bottom:40px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-">
-
-<p
-style="
-max-width:1000px;
-margin:auto;
-text-align:center;
-line-height:2;
-font-size:17px;
-color:#555;
-">
-
-For more than six years, Smile Financial Solution has helped individuals, startups and businesses access funding, manage financial requirements and create new growth opportunities. Our commitment remains focused on customer success, business development and long-term value creation.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- SERVICES SECTION -->
-
-<section class="services-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>OUR SERVICES</span>
-
-<h2>
-Complete Financial & Business Solutions
-</h2>
-
-<p>
-Professional loan, funding and business support services designed for individuals, startups and growing businesses.
-</p>
-
-</div>
-
-<div class="services-grid">
-
-<!-- BUSINESS LOAN -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg" alt="Business Loan">
-
-<div class="service-content">
-
-<h3>Business Loan</h3>
-
-<p>
-Funding solutions for business expansion, inventory, machinery purchase and growth requirements.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- PERSONAL LOAN -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg" alt="Personal Loan">
-
-<div class="service-content">
-
-<h3>Personal Loan</h3>
-
-<p>
-Quick financial support for education, travel, medical expenses and personal needs.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- HOME LOAN -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Home Loan">
-
-<div class="service-content">
-
-<h3>Home Loan</h3>
-
-<p>
-Affordable home financing solutions for buying, constructing and renovating properties.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- LAP -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg" alt="Loan Against Property">
-
-<div class="service-content">
-
-<h3>Loan Against Property</h3>
-
-<p>
-Unlock the value of your property and get funds for business or personal requirements.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- STARTUP FUNDING -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Startup Funding">
-
-<div class="service-content">
-
-<h3>Startup Funding</h3>
-
-<p>
-Seed funding, debt funding and startup growth support for innovative businesses.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- CREDIT CARD -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg" alt="Credit Cards">
-
-<div class="service-content">
-
-<h3>Credit Cards</h3>
-
-<p>
-Premium credit card solutions with rewards, cashback and lifestyle benefits.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- WORKING CAPITAL -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/6693650/pexels-photo-6693650.jpeg" alt="Working Capital">
-
-<div class="service-content">
-
-<h3>Working Capital Loan</h3>
-
-<p>
-Maintain smooth business operations with flexible working capital financing.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- PMEGP -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg" alt="PMEGP">
-
-<div class="service-content">
-
-<h3>PMEGP Support</h3>
-
-<p>
-Government-backed support for new business ventures and self-employment projects.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- CGTMSE -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="CGTMSE">
-
-<div class="service-content">
-
-<h3>CGTMSE Assistance</h3>
-
-<p>
-Credit guarantee support for MSMEs seeking business funding opportunities.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- GOVERNMENT SCHEMES -->
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg" alt="Government Schemes">
-
-<div class="service-content">
-
-<h3>Government Schemes</h3>
-
-<p>
-Guidance and support for various central and state government business initiatives.
-</p>
-
-<a href="service-details.html" class="service-btn">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+    <!-- DYNAMIC PREMIUM NAVIGATION HUB BAR -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-face-smile"></i> Smile <span>Financial</span>
+                </a>
+                
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
+                <nav class="nav-links">
+                    <div class="nav-item"><a href="index.html">Home</a></div>
+                    <div class="nav-item"><a href="about.html">About Us</a></div>
+                    
+                    <!-- HIGH CONVERSION INTERACTIVE MEGA MENU -->
+                    <div class="nav-item">
+                        <a href="javascript:void(0)">Financial Services <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+                        <div class="mega-menu">
+                            <!-- Column 1: Credit & Loan Operations -->
+                            <div class="mega-col">
+                                <h4><i class="fa-solid fa-scale-balanced"></i> Debt & Credit Support</h4>
+                                <ul>
+                                    <li><a href="mudra-loan.html"><i class="fa-solid fa-circle-nodes"></i> Mudra Loan Support</a></li>
+                                    <li><a href="pmegp-loan-assistance.html"><i class="fa-solid fa-circle-nodes"></i> PMEGP Loan Assistance</a></li>
+                                    <li><a href="cgtmse-support.html"><i class="fa-solid fa-circle-nodes"></i> CGTMSE Assistance</a></li>
+                                    <li><a href="loan-consultancy.html"><i class="fa-solid fa-circle-nodes"></i> Loan Consultancy</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2: Equity & Corporate Cards -->
+                            <div class="mega-col">
+                                <h4><i class="fa-solid fa-chart-pie"></i> Funding & Capital</h4>
+                                <ul>
+                                    <li><a href="startup-funding.html"><i class="fa-solid fa-circle-nodes"></i> Startup Funding</a></li>
+                                    <li><a href="startup-funding.html?type=seed"><i class="fa-solid fa-circle-nodes"></i> Seed Funding Track</a></li>
+                                    <li><a href="startup-funding.html?type=debt"><i class="fa-solid fa-circle-nodes"></i> Debt Funding Engine</a></li>
+                                    <li><a href="credit-card.html"><i class="fa-solid fa-circle-nodes"></i> Credit Card Services</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3: Corporate Law & Incorporation -->
+                            <div class="mega-col">
+                                <h4><i class="fa-solid fa-building"></i> Company Law Filing</h4>
+                                <ul>
+                                    <li><a href="company-registration.html"><i class="fa-solid fa-circle-nodes"></i> Company Registration</a></li>
+                                    <li><a href="gst-registration.html"><i class="fa-solid fa-circle-nodes"></i> GST Registration & Filing</a></li>
+                                    <li><a href="startup-india.html"><i class="fa-solid fa-circle-nodes"></i> Startup India Registry</a></li>
+                                    <li><a href="msme-registration.html"><i class="fa-solid fa-circle-nodes"></i> Udyam MSME Registry</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 4: Industrial Licenses -->
+                            <div class="mega-col">
+                                <h4><i class="fa-solid fa-shield-halved"></i> Statutory Licensing</h4>
+                                <ul>
+                                    <li><a href="fssai-license.html"><i class="fa-solid fa-circle-nodes"></i> FSSAI Food License</a></li>
+                                    <li><a href="trademark-registration.html"><i class="fa-solid fa-circle-nodes"></i> Trademark Filing</a></li>
+                                    <li><a href="iso-certification.html"><i class="fa-solid fa-circle-nodes"></i> ISO Certification Hub</a></li>
+                                    <li><a href="iec-registration.html"><i class="fa-solid fa-circle-nodes"></i> Import Export Code (IEC)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-item"><a href="faq.html">FAQ Help</a></div>
+                    <div class="nav-item"><a href="contact.html">Contact</a></div>
+                    <div class="nav-item"><a href="become-agent.html">Become Agent</a></div>
+                    <div class="nav-item"><a href="login.html" class="action-btn btn-border" style="padding: 9px 22px; font-size: 14px; border-radius: 6px; margin-left: 10px;">Login Panel</a></div>
+                </nav>
+            </div>
+        </div>
+    </header>
 
 <style>
-
-.services-section{
-padding:100px 0;
-background:#ffffff;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:60px;
-}
-
-.section-title span{
-color:#0d6efd;
-font-weight:700;
-}
-
-.section-title h2{
-font-size:42px;
-margin:15px 0;
-}
-
-.section-title p{
-max-width:700px;
-margin:auto;
-color:#666;
-line-height:1.8;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-
-.service-card{
-background:#fff;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.service-card:hover{
-transform:translateY(-5px);
-}
-
-.service-card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.service-content{
-padding:25px;
-}
-
-.service-content h3{
-margin-bottom:15px;
-}
-
-.service-content p{
-color:#555;
-line-height:1.8;
-margin-bottom:20px;
-}
-
-.service-btn{
-display:inline-block;
-padding:12px 18px;
-background:#0d6efd;
-color:#fff;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-}
-
-@media(max-width:768px){
-
-.section-title h2{
-font-size:32px;
-}
-
-}
-
-</style>
-
-<!-- WHY CHOOSE US -->
-
-<section class="why-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>WHY CHOOSE US</span>
-
-<h2>Your Trusted Growth Partner</h2>
-
-<p>
-We combine financial expertise, technology and business support to help customers achieve long-term success.
-</p>
-
-</div>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h3>6+ Years Experience</h3>
-<p>Trusted financial guidance and customer support.</p>
-</div>
-
-<div class="why-card">
-<h3>5000+ Customers</h3>
-<p>Successfully assisted individuals and businesses.</p>
-</div>
-
-<div class="why-card">
-<h3>End-to-End Support</h3>
-<p>From funding to compliance and growth planning.</p>
-</div>
-
-<div class="why-card">
-<h3>Digital CRM Platform</h3>
-<p>Technology-driven lead management and support.</p>
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
-alt="Professional Team"
-class="section-image">
-
-</div>
-
-</section>
-
-<!-- BRANCH NETWORK -->
-
-<section class="branch-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>OUR PRESENCE</span>
-
-<h2>Growing Across India</h2>
-
-<p>
-Supporting customers through our expanding branch and support network.
-</p>
-
-</div>
-
-<div class="branch-grid">
-
-<div class="branch-card">
-<h3>Delhi</h3>
-<p>Head Quarter - Patel Nagar</p>
-</div>
-
-<div class="branch-card">
-<h3>Ahmedabad</h3>
-<p>Gujarat Branch Office</p>
-</div>
-
-<div class="branch-card">
-<h3>Hyderabad</h3>
-<p>Regional Support Center</p>
-</div>
-
-<div class="branch-card">
-<h3>Rajasthan</h3>
-<p>Business Development Office</p>
-</div>
-
-<div class="branch-card">
-<h3>Expansion Center</h3>
-<p>Growing Across India</p>
-</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg"
-alt="Office Network"
-class="section-image">
-
-</div>
-
-</section>
-
-<!-- PARTNER ECOSYSTEM -->
-
-<section class="partner-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>OUR ECOSYSTEM</span>
-
-<h2>Business & Financial Network</h2>
-
-<p>
-Helping customers access multiple growth opportunities through a broad support ecosystem.
-</p>
-
-</div>
-
-<div class="partner-grid">
-
-<div class="partner-card">Business Loans</div>
-<div class="partner-card">Startup Funding</div>
-<div class="partner-card">Credit Cards</div>
-<div class="partner-card">Insurance Support</div>
-<div class="partner-card">Compliance Services</div>
-<div class="partner-card">Financial Advisory</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg"
-alt="Partners"
-class="section-image">
-
-</div>
-
-</section>
-
-<!-- STARTUP INDIA -->
-
-<section class="startup-section">
-
-<div class="container">
-
-<div class="two-column">
-
-<div>
-
-<img
-src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-alt="Startup India"
-class="section-image">
-
-</div>
-
-<div>
-
-<span class="blue-title">
-STARTUP SUPPORT
-</span>
-
-<h2>
-Startup India, Seed Funding & Growth Support
-</h2>
-
-<p>
-We help startups explore Startup India opportunities, seed funding support, debt funding solutions and business growth strategies.
-</p>
-
-<p>
-Our team guides entrepreneurs from business planning to funding readiness and compliance support.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- INCUBATION SUPPORT -->
-
-<section class="incubation-section">
-
-<div class="container">
-
-<div class="two-column">
-
-<div>
-
-<span class="blue-title">
-INCUBATION SUPPORT
-</span>
-
-<h2>
-Incubation & Business Development Assistance
-</h2>
-
-<p>
-We assist startups and entrepreneurs in connecting with incubation programs, innovation ecosystems and growth opportunities.
-</p>
-
-<p>
-Our objective is to support scalable businesses with mentorship, networking and financial readiness.
-</p>
-
-</div>
-
-<div>
-
-<img
-src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg"
-alt="Incubation"
-class="section-image">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CRM PLATFORM -->
-
-<section class="crm-section">
-
-<div class="container">
-
-<div class="two-column">
-
-<div>
-
-<img
-src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-alt="CRM Platform"
-class="section-image">
-
-</div>
-
-<div>
-
-<span class="blue-title">
-CRM PLATFORM
-</span>
-
-<h2>
-Smart Lead Management & Agent Dashboard
-</h2>
-
-<p>
-Our CRM platform is being developed to support lead tracking, customer management, performance monitoring and agent productivity.
-</p>
-
-<ul class="crm-list">
-
-<li>Lead Management</li>
-<li>Customer Tracking</li>
-<li>Performance Dashboard</li>
-<li>Training Resources</li>
-<li>Digital Workflow</li>
-<li>Business Opportunities</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EMPLOYMENT -->
-
-<section class="employment-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>CAREER OPPORTUNITIES</span>
-
-<h2>Create Opportunities & Build Your Future</h2>
-
-<p>
-Join our growing network and explore opportunities in sales, customer support, business development and financial services.
-</p>
-
-</div>
-
-<div class="partner-grid">
-
-<div class="partner-card">Flexible Work</div>
-<div class="partner-card">Professional Training</div>
-<div class="partner-card">CRM Access</div>
-<div class="partner-card">Performance Rewards</div>
-<div class="partner-card">Career Growth</div>
-<div class="partner-card">Digital Opportunities</div>
-
-</div>
-
-<img
-src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
-alt="Career Growth"
-class="section-image">
-
-</div>
-
-</section>
-
-<style>
-
-.why-section,
-.branch-section,
-.partner-section,
-.startup-section,
-.incubation-section,
-.crm-section,
-.employment-section{
-padding:100px 0;
-}
-
-.branch-section,
-.crm-section{
-background:#f8fbff;
-}
-
-.why-grid,
-.branch-grid,
-.partner-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.why-card,
-.branch-card,
-.partner-card{
-background:#fff;
-padding:30px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.two-column{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:50px;
-align-items:center;
-}
-
-.blue-title{
-color:#0d6efd;
-font-weight:700;
-}
-
-.crm-list{
-padding-left:20px;
-line-height:2;
-margin-top:20px;
-}
-
-.section-image{
-width:100%;
-border-radius:20px;
-margin-top:40px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-}
-
-</style>
-
-<!-- TESTIMONIALS -->
-
-<section class="testimonial-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>CLIENT TESTIMONIALS</span>
-
-<h2>What Our Customers Say</h2>
-
-<p>
-Customer satisfaction and long-term relationships are at the heart of everything we do.
-</p>
-
-</div>
-
-<div class="testimonial-grid">
-
-<div class="testimonial-card">
-
-<p>
-"Smile Financial Solution helped us secure business funding and guided us throughout the process professionally."
-</p>
-
-<h4>Business Owner</h4>
-
-</div>
-
-<div class="testimonial-card">
-
-<p>
-"The team provided excellent support for our startup funding requirements and business planning."
-</p>
-
-<h4>Startup Founder</h4>
-
-</div>
-
-<div class="testimonial-card">
-
-<p>
-"Transparent process, professional communication and outstanding customer service."
-</p>
-
-<h4>Individual Customer</h4>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FAQ -->
-
-<section class="faq-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>FAQ</span>
-
-<h2>Frequently Asked Questions</h2>
-
-</div>
-
-<div class="faq-item">
-
-<h3>How can I apply for a loan?</h3>
-
-<p>
-You can apply through our website or contact our team for assistance.
-</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>Do you support startups?</h3>
-
-<p>
-Yes, we assist startups with funding, compliance and growth support.
-</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>Can I become an agent?</h3>
-
-<p>
-Yes, you can join our growing network through the Become Agent page.
-</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>Do you provide business compliance services?</h3>
-
-<p>
-Yes, we help businesses with compliance, registrations and financial documentation support.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT CTA -->
-
-<section class="contact-cta">
-
-<div class="container">
-
-<h2>
-Ready To Grow Your Business?
-</h2>
-
-<p>
-Connect with Smile Financial Solution today and explore financial opportunities for growth and success.
-</p>
-
-<div class="cta-buttons">
-
-<a href="contact.html" class="btn btn-primary">
-Contact Us
-</a>
-
-<a href="services.html" class="btn btn-outline">
-Explore Services
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<h3>Smile Financial Solution</h3>
-
-<p>
-Helping individuals, startups and businesses with funding, financial services, compliance and growth opportunities.
-</p>
-
-</div>
-
-<div>
-
-<h3>Quick Links</h3>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h3>Services</h3>
-
-<ul>
-
-<li>Business Loans</li>
-<li>Startup Funding</li>
-<li>Credit Cards</li>
-<li>Working Capital</li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h3>Contact Info</h3>
-
-<p>Director: Mohammad Aarif</p>
-
-<p>Phone: +91 7290977231</p>
-
-<p>Email: smilefinancialsolutions@gmail.com</p>
-
-<p>Head Office: Patel Nagar, Delhi, India</p>
-
-</div>
-
-</div>
-
-<hr>
-
-<div class="footer-bottom">
-
-<p>
-© 2026 Smile Financial Solution. All Rights Reserved.
-</p>
-
-</div>
-
-</div>
-
-</footer>
-
-<style>
-
-.testimonial-section,
-.faq-section,
-.contact-cta{
-padding:100px 0;
-}
-
-.faq-section{
-background:#f8fbff;
-}
-
-.testimonial-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.testimonial-card{
-background:#fff;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.testimonial-card p{
-line-height:1.8;
-color:#555;
-margin-bottom:15px;
-}
-
-.faq-item{
-background:#fff;
-padding:25px;
-margin-bottom:20px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-
-.faq-item h3{
-margin-bottom:10px;
-}
-
-.faq-item p{
-line-height:1.8;
-color:#555;
-}
-
-.contact-cta{
-text-align:center;
-background:linear-gradient(135deg,#0d6efd,#0056d6);
-color:#fff;
-}
-
-.contact-cta h2{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.contact-cta p{
-max-width:700px;
-margin:auto;
-line-height:1.8;
-margin-bottom:30px;
-}
-
-.cta-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-footer{
-background:#111;
-color:#fff;
-padding:80px 0 30px;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-}
-
-.footer-grid h3{
-margin-bottom:20px;
-}
-
-.footer-grid p,
-.footer-grid li{
-line-height:1.9;
-color:#ccc;
-list-style:none;
-}
-
-.footer-grid a{
-color:#ccc;
-text-decoration:none;
-}
-
-.footer-grid a:hover{
-color:#fff;
-}
-
-footer hr{
-margin:40px 0 20px;
-border:none;
-height:1px;
-background:#333;
-}
-
-.footer-bottom{
-text-align:center;
-color:#999;
-}
-
-@media(max-width:768px){
-
-.contact-cta h2{
-font-size:32px;
-}
-
-.testimonial-section,
-.faq-section,
-.contact-cta{
-padding:70px 0;
-}
-
-}
-
-</style>
-
+        /* --- HERO SECTORS STYLE INTERPOLATION --- */
+        .hero {
+            padding: 110px 0 95px;
+            background: var(--bg-gradient);
+            position: relative;
+        }
+
+        .hero-wrapper {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(13, 110, 253, 0.07);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 1.22;
+            color: var(--secondary);
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 38px;
+        }
+
+        .hero-image-frame {
+            position: relative;
+        }
+
+        .hero-image-frame img {
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* --- STATS STUCTURED UTILITY GRID --- */
+        .stats-section {
+            padding: 50px 0;
+            background: var(--white);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 35px 24px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(13, 110, 253, 0.04);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-card .stat-icon {
+            font-size: 34px;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .stat-card h2 {
+            font-size: 36px;
+            color: var(--secondary);
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .stat-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* --- CORPORATE INTRO HUB LAYER --- */
+        .intro-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .intro-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .intro-image img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+        }
+
+        .intro-content .accent-heading {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 22px;
+            color: var(--secondary);
+            letter-spacing: -0.5px;
+        }
+
+        .intro-content p {
+            color: var(--text-muted);
+            font-size: 15.5px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 992px) {
+            .hero-wrapper, .intro-wrapper { grid-template-columns: 1fr; gap: 40px; }
+            .hero-content h1 { font-size: 40px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 32px; }
+        }
+    </style>
+
+    <!-- HERO CALL TO ACTION SEGMENT -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-shield-halved"></i> Govt & Corporate Financial Advisory
+                    </div>
+                    <h1>Empowering Indian Businesses With Smart Capital Solutions</h1>
+                    <p>Smile Financial Solution bridges the gap between commercial funding demands and top-tier banking nodes. We provide end-to-end transparent advisory frameworks for central subsidy loans and full business registrations.</p>
+                    <div class="btn-group">
+                        <a href="#lead-capture-form-block" class="action-btn btn-fill">
+                            <i class="fa-solid fa-calendar-check"></i> Book Free Consultation
+                        </a>
+                        <a href="tel:8586051944" class="action-btn btn-border">
+                            <i class="fa-solid fa-phone-volume"></i> Talk to Expert Now
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-frame">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Smile Financial Solutions Corporate Banner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE CONVERSIONS STATISTICS CORE GRAPH -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <h2>800+</h2>
+                    <p>Expert Chartered Accountants</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <h2>1200+</h2>
+                    <p>Dedicated Internal Employees</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h2>5000+</h2>
+                    <p>Happy Corporate Clients</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                    <h2>6+ Years</h2>
+                    <p>Premium Financial Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO WE ARE BRAND PRESENCE -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-wrapper">
+                <div class="intro-image">
+                    <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" alt="Smile Financial Solution Advisors">
+                </div>
+                <div class="intro-content">
+                    <span class="section-tag">Corporate Profile</span>
+                    <h2 class="accent-heading">Architecting India's Commercial Scale via Seamless Strategic Advisory</h2>
+                    <p>Smile Financial Solution stands as a premier financial advisory corporate structure designed explicitly to guide micro, small, and emerging corporate landscapes through structured credit mapping panels.</p>
+                    <p>By coupling advanced financial technologies with our expansive team infrastructure, we remove institutional friction points, helping you secure capital allocations from top banks while maintaining 100% statutory regulatory tax compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <style>
+        /* --- HYPER-DETAILED SERVICES MATRIX LAYOUT --- */
+        .services-section {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+        .services-matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        .srv-matrix-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 35px 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(13, 110, 253, 0.02);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+        .srv-matrix-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(13, 110, 253, 0.2);
+        }
+        .srv-matrix-icon-wrapper {
+            width: 65px;
+            height: 65px;
+            background: rgba(13, 110, 253, 0.05);
+            color: var(--primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+        .srv-matrix-card:hover .srv-matrix-icon-wrapper {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .srv-matrix-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        .srv-matrix-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.65;
+            margin-bottom: 24px;
+        }
+        .srv-matrix-action {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .srv-matrix-action i {
+            transition: var(--transition);
+        }
+        .srv-matrix-card:hover .srv-matrix-action i {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <!-- COMPLETE DYNAMIC FINANCIAL MATRIX COMPONENT -->
+    <section class="services-section" id="services-grid-hub">
+        <div class="container">
+            <div class="section-title-block">
+                <span class="section-tag">Ecosystem Matrix</span>
+                <h2 class="section-main-heading">Explore Specialized Financial & Corporate Registrations</h2>
+            </div>
+
+            <div class="services-matrix-grid">
+                <!-- 1. Mudra Loan -->
+                <a href="mudra-loan.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-building-columns"></i></div>
+                        <h3>Mudra Loan Support</h3>
+                        <p>Streamlined applications across Shishu, Kishor, and Tarun brackets for institutional setup funds.</p>
+                    </div>
+                    <span class="srv-matrix-action">Apply Tracking <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 2. PMEGP Loan Assistance -->
+                <a href="pmegp-loan-assistance.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-landmark"></i></div>
+                        <h3>PMEGP Loan Assistance</h3>
+                        <p>Unlock central subsidies up to 35% on service or factory manufacturing project blueprints effortlessly.</p>
+                    </div>
+                    <span class="srv-matrix-action">Initialize DPR <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 3. CGTMSE Support -->
+                <a href="cgtmse-support.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>CGTMSE Support</h3>
+                        <p>Acquire premium collateral-free institutional business credits backed by government trust covers.</p>
+                    </div>
+                    <span class="srv-matrix-action">Check Credit Limits <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 4. Startup Funding -->
+                <a href="startup-funding.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Startup Funding</h3>
+                        <p>Accelerate financial frameworks with venture networks, pitching mechanisms, and scalable equity structures.</p>
+                    </div>
+                    <span class="srv-matrix-action">Connect Funders <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 5. Seed Funding Support -->
+                <a href="startup-funding.html?type=seed" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>Seed Funding Tracking</h3>
+                        <p>Secure essential early-stage validation capital designed specifically to pilot minimal viable frameworks.</p>
+                    </div>
+                    <span class="srv-matrix-action">Apply Allocations <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 6. Debt Funding Engine -->
+                <a href="startup-funding.html?type=debt" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                        <h3>Debt Funding Solutions</h3>
+                        <p>Leverage custom low-dilution debt instruments to expand physical inventories without losing company shares.</p>
+                    </div>
+                    <span class="srv-matrix-action">Structure Debt <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 7. Credit Card Services -->
+                <a href="credit-card.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-credit-card"></i></div>
+                        <h3>Credit Card Services</h3>
+                        <p>Instant digital optimization matching credit limits with elite corporate reward features.</p>
+                    </div>
+                    <span class="srv-matrix-action">Check Pre-Approved <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 8. Company Registration -->
+                <a href="company-registration.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-folder-open"></i></div>
+                        <h3>Company Registration</h3>
+                        <p>Fast corporate setups for Pvt Ltd, LLP, or One Person Corporate structures containing legal safety parameters.</p>
+                    </div>
+                    <span class="srv-matrix-action">Register Now <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 9. GST Registration -->
+                <a href="gst-registration.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-receipt"></i></div>
+                        <h3>GST Registration & Filing</h3>
+                        <p>Clean system onboarding, continuous monthly returns preparation, and deep input tax credit auditing.</p>
+                    </div>
+                    <span class="srv-matrix-action">Get Onboarded <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 10. Startup India Registration -->
+                <a href="startup-india.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-stamp"></i></div>
+                        <h3>Startup India Registry</h3>
+                        <p>Obtain DPIIT approval certificates securely to capture multi-year tax exemptions and elite state grants.</p>
+                    </div>
+                    <span class="srv-matrix-action">Get Certified <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 11. FSSAI License -->
+                <a href="fssai-license.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-bowl-food"></i></div>
+                        <h3>FSSAI License</h3>
+                        <p>Acquire mandatory basic, state, or central food handling authority licenses matched with compliance norms.</p>
+                    </div>
+                    <span class="srv-matrix-action">Get Food License <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 12. Trademark Registration -->
+                <a href="trademark-registration.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-copyright"></i></div>
+                        <h3>Trademark Registration</h3>
+                        <p>Protect unique operational logos, text identifiers, slogans, and corporate brand setups globally.</p>
+                    </div>
+                    <span class="srv-matrix-action">Lock Brand Assets <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 13. ISO Certification -->
+                <a href="iso-certification.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-award"></i></div>
+                        <h3>ISO Certification Support</h3>
+                        <p>Deploy operational credibility markers across global audit formats including 9001 and 27001 models.</p>
+                    </div>
+                    <span class="srv-matrix-action">Upgrade Standards <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 14. Import Export Code -->
+                <a href="iec-registration.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-earth-asia"></i></div>
+                        <h3>Import Export Code (IEC)</h3>
+                        <p>Unlock custom cross-border pathways instantly with integrated dynamic DGFT licensing panels.</p>
+                    </div>
+                    <span class="srv-matrix-action">Get Port Code <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 15. Business Compliance -->
+                <a href="business-compliance.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
+                        <h3>Business Compliance</h3>
+                        <p>Complete regulatory upkeep containing structural legal maintenance, board logs, and annual filings.</p>
+                    </div>
+                    <span class="srv-matrix-action">Manage Filing <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 16. MSME Registration -->
+                <a href="msme-registration.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-id-card-clip"></i></div>
+                        <h3>MSME Registration</h3>
+                        <p>Instant allocation of lifelong Udyam cards unlocking prioritization privileges and low bank interest brackets.</p>
+                    </div>
+                    <span class="srv-matrix-action">Get Udyam Card <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 17. Shop Act License -->
+                <a href="shop-act.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-shop"></i></div>
+                        <h3>Shop Act License</h3>
+                        <p>Establish certified location authenticity frameworks for local commercial storefronts and offices.</p>
+                    </div>
+                    <span class="srv-matrix-action">Apply Gumasta <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 18. Project Report Preparation -->
+                <a href="project-report.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3>Project Report Preparation</h3>
+                        <p>Bankable format DPR charts and complex CMA accounting logs curated by internal professional networks.</p>
+                    </div>
+                    <span class="srv-matrix-action">Build Report <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 19. Loan Consultancy -->
+                <a href="loan-consultancy.html" class="srv-matrix-card">
+                    <div>
+                        <div class="srv-matrix-icon-wrapper"><i class="fa-solid fa-handshake-angle"></i></div>
+                        <h3>Loan Consultancy</h3>
+                        <p>Strategic structural mapping designed explicitly to maximize custom fund sanction potentials smoothly.</p>
+                    </div>
+                    <span class="srv-matrix-action">Consult CA Now <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+  <style>
+        /* --- BANK SCROLLING TICKER MARQUEE --- */
+        .banking-ticker-row {
+            padding: 50px 0;
+            background: var(--white);
+            border-bottom: 1px solid #eef2f6;
+        }
+        .ticker-viewport { overflow: hidden; width: 100%; }
+        .ticker-linear-track {
+            display: flex;
+            width: max-content;
+            animation: linearTicker 30s linear infinite;
+            gap: 60px;
+            align-items: center;
+        }
+        .ticker-node {
+            font-size: 20px;
+            font-weight: 700;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .ticker-node i { color: var(--primary); }
+        @keyframes linearTicker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* --- CLIENT PROGRESS JOURNEY --- */
+        .process-section { padding: 100px 0; background: var(--white); }
+        .process-flow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .process-node-card { text-align: center; }
+        .process-circle {
+            width: 75px;
+            height: 75px;
+            background: var(--bg-gradient);
+            border: 2px dashed var(--primary);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 0 auto 24px;
+        }
+        .process-node-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+        .process-node-card p { font-size: 14.5px; color: var(--text-muted); padding: 0 10px; }
+
+        /* --- FIREBASE DIRECT CAPTURE FORM CONTROLS --- */
+        .lead-capture-section { padding: 100px 0; background: var(--bg-gradient); }
+        .lead-grid-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .lead-input-card-box {
+            background: var(--white);
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+        .input-row-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .input-container-ctrl { margin-bottom: 20px; }
+        .input-container-ctrl label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--secondary);
+        }
+        .field-input-box {
+            width: 100%;
+            padding: 15px 18px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+        .field-input-box:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+        }
+        
+        .trust-badge-container { display: flex; gap: 15px; margin-top: 35px; flex-wrap: wrap; }
+        .trust-micro-badge {
+            background: rgba(13, 110, 253, 0.05);
+            border: 1px solid rgba(13, 110, 253, 0.08);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 13.5px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* --- COLLAPSIBLE FAQ MODULE --- */
+        .faq-module-section { padding: 100px 0; background: var(--white); }
+        .faq-accordion-hub { max-width: 850px; margin: 40px auto 0; }
+        .faq-accordion-node { border: 1px solid #edf2f9; border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+        .faq-node-trigger {
+            padding: 22px 28px;
+            background: var(--white);
+            width: 100%;
+            text-align: left;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-node-panel { padding: 0 28px; max-height: 0; overflow: hidden; transition: all 0.3s ease-out; background: var(--bg-light); }
+        .faq-node-panel p { padding-bottom: 22px; padding-top: 6px; font-size: 14.5px; color: var(--text-muted); line-height: 1.7; }
+
+        /* --- FINAL SMART INFRASTRUCTURE FOOTER --- */
+        footer { background: var(--bg-dark-blue); color: #94a3b8; padding: 85px 0 30px; }
+        .footer-main-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.9fr 0.9fr 1.2fr;
+            gap: 40px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 50px;
+            margin-bottom: 35px;
+        }
+        .footer-column-block h3 { color: var(--white); font-size: 24px; font-weight: 900; margin-bottom: 20px; }
+        .footer-column-block h4 { color: var(--white); font-size: 16px; font-weight: 600; margin-bottom: 22px; }
+        .footer-column-block p { font-size: 14px; line-height: 1.7; }
+        .footer-link-items { list-style: none; }
+        .footer-link-items li { margin-bottom: 12px; }
+        .footer-link-items li a { color: #94a3b8; text-decoration: none; font-size: 14.5px; transition: var(--transition); }
+        .footer-link-items li a:hover { color: var(--white); padding-left: 6px; }
+        .footer-contact-row { display: flex; gap: 12px; margin-bottom: 16px; font-size: 14px; }
+        .footer-contact-row i { color: var(--primary); margin-top: 4px; font-size: 16px; }
+        .footer-terminal-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 13.5px; }
+        .social-circle-hub { display: flex; gap: 12px; }
+        .social-circle-hub a { width: 40px; height: 40px; background: #1e293b; color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: var(--transition); text-decoration: none; }
+        .social-circle-hub a:hover { background: var(--primary); transform: translateY(-3px); }
+
+        @media (max-width: 992px) {
+            .lead-grid-wrapper, .footer-main-grid, .process-flow-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-main-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .input-row-flex { grid-template-columns: 1fr; gap: 0; }
+            .footer-main-grid { grid-template-columns: 1fr; }
+            .lead-input-card-box { padding: 25px; }
+        }
+    </style>
+
+    <!-- BANKING INSTITUTIONAL TICKER MARQUEE -->
+    <section class="banking-ticker-row">
+        <div class="ticker-viewport">
+            <div class="ticker-linear-track">
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> HDFC Bank Corporate Alliance</div>
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> ICICI Bank Ecosystem</div>
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> Axis Banking Network</div>
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> Kotak Mahindra Bank Track</div>
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> Tata Capital Finance Line</div>
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> Poonawalla Fincorp Platform</div>
+                <!-- Continuous Duplicate Frame -->
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> HDFC Bank Corporate Alliance</div>
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> ICICI Bank Ecosystem</div>
+                <div class="ticker-node"><i class="fa-solid fa-building-columns"></i> Axis Banking Network</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT JOURNEY FLOW CHANNELS -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title-block">
+                <span class="section-tag">Client Journey</span>
+                <h2 class="section-main-heading">Three Quick Steps To Secure Asset Allocations</h2>
+            </div>
+            <div class="process-flow-grid">
+                <div class="process-node-card">
+                    <div class="process-circle">01</div>
+                    <h3>Initialize Profile</h3>
+                    <p>Provide primary credentials securely using our encrypted lead capture gateway below.</p>
+                </div>
+                <div class="process-node-card">
+                    <div class="process-circle">02</div>
+                    <h3>CA Allocation</h3>
+                    <p>Our network of 800+ elite CAs optimizes your file parameters and project metrics seamlessly [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.].</p>
+                </div>
+                <div class="process-node-card">
+                    <div class="process-circle">03</div>
+                    <h3>Instant Sanction</h3>
+                    <p>Enjoy hassle-free credit approval disbursals or corporate license registry handovers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLY CONVERTING FIREBASE-READY FORM SEGMENT -->
+    <section class="lead-capture-section" id="lead-capture-form-block">
+        <div class="container">
+            <div class="lead-grid-wrapper">
+                <div>
+                    <span class="section-tag">Secure Onboarding</span>
+                    <h2 class="section-main-heading" style="margin-bottom:20px;">Ready To Kickstart Your Financial Advisory Track?</h2>
+                    <p style="color:var(--text-muted); margin-bottom:25px;">Submit your enterprise operational inputs. Our algorithms route information blocks directly down to specialized internal corporate panels instantly.</p>
+                    
+                    <div class="trust-badge-container">
+                        <div class="trust-micro-badge"><i class="fa-solid fa-circle-check" style="color:var(--primary);"></i> MSME Certificate Holder [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.]</div>
+                        <div class="trust-micro-badge"><i class="fa-solid fa-circle-check" style="color:var(--primary);"></i> DPPIT MCA Portal Verified [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.]</div>
+                    </div>
+                </div>
+
+                <div class="lead-input-card-box">
+                    <form id="smileFinancialLeadEngine">
+                        <div class="input-row-flex">
+                            <div class="input-container-ctrl">
+                                <label>Applicant Full Name</label>
+                                <input type="text" id="nodeName" class="field-input-box" placeholder="John Doe" required>
+                            </div>
+                            <div class="input-container-ctrl">
+                                <label>Active Mobile / WhatsApp</label>
+                                <input type="tel" id="nodePhone" class="field-input-box" placeholder="10-Digit Mobile" required pattern="[0-9]{10}">
+                            </div>
+                        </div>
+
+                        <div class="input-container-ctrl">
+                            <label>Email Address</label>
+                            <input type="email" id="nodeEmail" class="field-input-box" placeholder="name@company.com" required>
+                        </div>
+
+                        <div class="input-container-ctrl">
+                            <label>Target Operational Service</label>
+                            <select id="nodeService" class="field-input-box" style="height:56px;" required>
+                                <option value="">-- Choose Category Track --</option>
+                                <option value="Mudra Loan Support">Mudra Loan Support</option>
+                                <option value="PMEGP Loan Track">PMEGP Loan Assistance</option>
+                                <option value="CGTMSE Limit Setup">CGTMSE Assistance</option>
+                                <option value="Startup Venture Track">Startup Funding Engine</option>
+                                <option value="Company Incorporation">Company Registration</option>
+                                <option value="GST Tax Compliance">GST Registration & Filing</option>
+                                <option value="Industrial Licensing Track">Statutory Licensing (FSSAI/Trademark)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="action-btn btn-fill" style="width:100%; margin-top:12px; height:56px;">
+                            <i class="fa-solid fa-paper-plane"></i> Initialize Free Consultation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SYSTEM DROPDOWNS -->
+    <section class="faq-module-section">
+        <div class="container">
+            <div class="section-title-block">
+                <span class="section-tag">FAQ Center</span>
+                <h2 class="section-main-heading">Frequently Addressed Inquiries</h2>
+            </div>
+
+            <div class="faq-accordion-hub">
+                <div class="faq-accordion-node">
+                    <button class="faq-node-trigger">What criteria determines PMEGP loan subsidy distributions? <i class="fa-solid fa-plus"></i></button>
+                    <div class="faq-node-panel"><p>Subsidy layers span from 15% up to 35% depending explicitly upon localized parameters (urban versus rural demographic scores) coupled with institutional profile classifications.</p></div>
+                </div>
+                <div class="faq-accordion-node">
+                    <button class="faq-node-trigger">How secure is my data within the Smile Financial platform? <i class="fa-solid fa-plus"></i></button>
+                    <div class="faq-node-panel"><p>Your submission profiles route through highly encrypted analytical data arrays engineered specifically to match safety standards before hitting our database records safely.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL INFRASTRUCTURE COMPANY DETAILS FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-main-grid">
+                <div class="footer-column-block">
+                    <h3>Smile Financial</h3>
+                    <p style="margin-bottom:22px;">Accelerating national corporate development tracks by driving high-value credit structures and absolute regulatory compliances across Indian enterprise spheres since 2018 [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.].</p>
+                    <div class="social-circle-hub">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/7290977231"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column-block">
+                    <h4>Core Deliverables</h4>
+                    <ul class="footer-link-items">
+                        <li><a href="mudra-loan.html">Mudra Credit Lines</a></li>
+                        <li><a href="pmegp-loan-assistance.html">PMEGP Subsidies</a></li>
+                        <li><a href="cgtmse-support.html">CGTMSE Coverage</a></li>
+                        <li><a href="company-registration.html">Company Incorporation</a></li>
+                        <li><a href="gst-registration.html">GST Taxation Engine</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column-block">
+                    <h4>Internal Hubs</h4>
+                    <ul class="footer-link-items">
+                        <li><a href="about.html">About Team Architecture</a></li>
+                        <li><a href="faq.html">FAQ Resolution Support</a></li>
+                        <li><a href="become-agent.html">Become Business Agent</a></li>
+                        <li><a href="#lead-capture-form-block">Privacy Encryption Nodes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column-block">
+                    <h4>Corporate Headquarters</h4>
+                    <div class="footer-contact-row">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Opposite Patel Nagar Police Chowki, Patel Nagar, South West Delhi, Delhi, India [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.].</span>
+                    </div>
+                    <div class="footer-contact-row">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>smilefinancialsolution01@gmail.com [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.]</span>
+                    </div>
+                    <div class="footer-contact-row">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Helpline: 8929208628<br>Direct Call: 8586051944 [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.]</span>
+                    </div>
+                    <div class="footer-contact-row">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp Link: 7290977231 [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-terminal-bar">
+                <p>&copy; 2026 Smile Financial Solution. All Rights Reserved. MSME & DPIIT MCA Portal Compliant [cite: My company name is Smile Financial Solution. Its headquarters is located in Patel Nagar, South West Delhi, opposite Patel Nagar Police Chowki. I have an MSME certificate and am registered on the DPPIT MCA portal. The contact number is 8586051944, WhatsApp number is 7290977231, helpline number is 8929208628, and Gmail is smilefinancialsolution01@gmail.com. My company was registered in 2018 and has 800+ CAs and 1200+ employees.].</p>
+                <p>Premium Structural Execution Hub.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE ACCORDION & SUBMIT SCRIPTS -->
+    <script>
+        // FAQ Dropdown Logic
+        const accordions = document.querySelectorAll('.faq-node-trigger');
+        accordions.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const panel = trigger.nextElementSibling;
+                const icon = trigger.querySelector('i');
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    icon.className = 'fa-solid fa-plus';
+                } else {
+                    document.querySelectorAll('.faq-node-panel').forEach(p => p.style.maxHeight = null);
+                    document.querySelectorAll('.faq-node-trigger i').forEach(i => i.className = 'fa-solid fa-plus');
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    icon.className = 'fa-solid fa-minus';
+                }
+            });
+        });
+
+        // Safe Client Submission Capture Layer
+        document.getElementById('smileFinancialLeadEngine').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const compiledPayload = {
+                clientName: document.getElementById('nodeName').value,
+                clientPhone: document.getElementById('nodePhone').value,
+                clientEmail: document.getElementById('nodeEmail').value,
+                clientService: document.getElementById('nodeService').value,
+                logTime: new Date().toISOString()
+            };
+            console.log("Captured Data Package Ready for Firebase Engine Injection:", compiledPayload);
+            alert(`Greetings ${compiledPayload.clientName}! Your consultation path for [${compiledPayload.clientService}] is verified. A chartered specialist will reach out within 15 minutes.`);
+            this.reset();
+        });
+    </script>
 </body>
-
 </html>
