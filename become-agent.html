@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Become An Agent | Smile Financial Solution</title>
-
-<meta name="description"
-content="Join Smile Financial Solution and build your financial services career with training, CRM, AI support and multiple earning opportunities.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+```html
+<!-- ===================================== -->
+<!-- BECOME AN AGENT V2 - PART 01 -->
+<!-- HERO + OFFER + QUICK ACTIONS -->
+<!-- ===================================== -->
 
 <style>
 
@@ -21,197 +12,521 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
-body{
+.agent-v2{
+background:#f5f8ff;
+padding:20px 15px 40px;
 font-family:'Poppins',sans-serif;
-background:#ffffff;
-color:#222;
-overflow-x:hidden;
+overflow:hidden;
 }
 
-.container{
-width:100%;
-max-width:1200px;
-margin:auto;
-padding:0 20px;
+/* HEADER */
+
+.agent-header{
+background:#fff;
+border-radius:18px;
+padding:14px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 4px 20px rgba(0,0,0,.06);
+margin-bottom:15px;
 }
 
-/* TOP SLIDER */
+.agent-logo{
+font-size:18px;
+font-weight:700;
+color:#0d6efd;
+}
 
-.top-slider{
+.agent-login{
 background:#0d6efd;
 color:#fff;
-overflow:hidden;
-height:50px;
-display:flex;
-align-items:center;
-white-space:nowrap;
-}
-
-.slider-track{
-display:inline-block;
-padding-left:100%;
-animation:scrollText 30s linear infinite;
+padding:10px 18px;
+border-radius:10px;
+text-decoration:none;
+font-size:14px;
 font-weight:600;
 }
 
-.slider-track span{
-margin-right:80px;
+/* OFFER BAR */
+
+.offer-bar{
+background:linear-gradient(135deg,#0d6efd,#0048b3);
+color:#fff;
+padding:12px;
+border-radius:15px;
+overflow:hidden;
+margin-bottom:15px;
 }
 
-@keyframes scrollText{
-0%{
-transform:translateX(0);
+.offer-scroll{
+white-space:nowrap;
+animation:offerMove 18s linear infinite;
+font-size:14px;
+font-weight:500;
 }
-100%{
-transform:translateX(-100%);
-}
+
+@keyframes offerMove{
+0%{transform:translateX(100%);}
+100%{transform:translateX(-100%);}
 }
 
 /* HERO */
 
-.agent-hero{
-padding:90px 0;
-background:linear-gradient(135deg,#eef5ff,#f8fbff);
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:50px;
-align-items:center;
+.hero-box{
+background:#fff;
+border-radius:25px;
+padding:25px;
+box-shadow:0 5px 25px rgba(0,0,0,.06);
+margin-bottom:20px;
 }
 
 .hero-tag{
 display:inline-block;
-background:#dbeafe;
+background:#eaf2ff;
 color:#0d6efd;
-padding:10px 18px;
+padding:8px 15px;
 border-radius:30px;
-font-size:14px;
-font-weight:700;
-margin-bottom:20px;
-}
-
-.hero-content h1{
-font-size:58px;
-line-height:1.2;
-margin-bottom:20px;
-font-weight:800;
-}
-
-.hero-content p{
-font-size:17px;
-line-height:1.9;
-color:#555;
-margin-bottom:30px;
-}
-
-.hero-points{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-margin-bottom:30px;
-}
-
-.point-box{
-background:#fff;
-padding:15px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+font-size:12px;
 font-weight:600;
+margin-bottom:15px;
 }
 
-.hero-buttons{
+.hero-box h1{
+font-size:32px;
+line-height:1.3;
+margin-bottom:15px;
+color:#222;
+}
+
+.hero-box p{
+font-size:15px;
+line-height:1.8;
+color:#666;
+margin-bottom:20px;
+}
+
+.hero-btns{
 display:flex;
-gap:15px;
+gap:12px;
 flex-wrap:wrap;
 }
 
-.primary-btn{
-padding:14px 28px;
+.join-btn{
 background:#0d6efd;
 color:#fff;
+padding:14px 24px;
+border-radius:12px;
 text-decoration:none;
-border-radius:10px;
 font-weight:600;
 }
 
-.secondary-btn{
-padding:14px 28px;
+.demo-btn{
 border:2px solid #0d6efd;
 color:#0d6efd;
+padding:14px 24px;
+border-radius:12px;
 text-decoration:none;
-border-radius:10px;
 font-weight:600;
+}
+
+.hero-image{
+margin-top:25px;
 }
 
 .hero-image img{
 width:100%;
-height:auto;
 display:block;
 border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
+height:auto;
 }
 
-/* TRUST BAR */
+/* STATS */
 
-.trust-bar{
-padding:70px 0;
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-bottom:20px;
+}
+
+.stat-card{
 background:#fff;
+padding:18px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
+
+.stat-card h3{
+font-size:26px;
+color:#0d6efd;
+margin-bottom:6px;
+}
+
+.stat-card p{
+font-size:13px;
+color:#666;
+}
+
+/* QUICK MENU */
+
+.quick-title{
+font-size:20px;
+font-weight:700;
+margin-bottom:15px;
+padding-left:5px;
+}
+
+.quick-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.quick-card{
+background:#fff;
+padding:18px 10px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+text-decoration:none;
+color:#222;
+}
+
+.quick-card span{
+font-size:28px;
+display:block;
+margin-bottom:10px;
+}
+
+.quick-card h4{
+font-size:13px;
+line-height:1.4;
+}
+
+/* FLOATING BUTTON */
+
+.floating-join{
+position:fixed;
+bottom:18px;
+right:18px;
+background:#0d6efd;
+color:#fff;
+padding:14px 20px;
+border-radius:50px;
+font-size:14px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(13,110,253,.4);
+z-index:999;
+}
+
+</style>
+
+<section class="agent-v2">
+
+<div class="agent-header">
+
+<div class="agent-logo">
+Smile Agent
+</div>
+
+<a href="#" class="agent-login">
+Login
+</a>
+
+</div>
+
+<div class="offer-bar">
+
+<div class="offer-scroll">
+
+🔥 Limited Time Joining Offer •
+🎁 Refer & Earn Program •
+🚀 Double Commission Campaign •
+💼 New Business Funding Opportunities •
+
+</div>
+
+</div>
+
+<div class="hero-box">
+
+<span class="hero-tag">
+WORK FROM HOME • EARN • GROW
+</span>
+
+<h1>
+Build Your Career & Create Unlimited Growth Opportunities
+</h1>
+
+<p>
+
+Join Smile Financial Solution and access
+financial products, insurance, business services,
+technology solutions and professional support
+through one powerful platform.
+
+</p>
+
+<div class="hero-btns">
+
+<a href="#membership" class="join-btn">
+Join Now
+</a>
+
+<a href="#video" class="demo-btn">
+Watch Demo
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg">
+
+</div>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h3>2000+</h3>
+<p>Agent Network</p>
+</div>
+
+<div class="stat-card">
+<h3>1200+</h3>
+<p>CA Network</p>
+</div>
+
+<div class="stat-card">
+<h3>5+</h3>
+<p>Branches</p>
+</div>
+
+<div class="stat-card">
+<h3>Pan India</h3>
+<p>Coverage</p>
+</div>
+
+</div>
+
+<h2 class="quick-title">
+Quick Access
+</h2>
+
+<div class="quick-grid">
+
+<a href="#" class="quick-card">
+<span>💳</span>
+<h4>Membership</h4>
+</a>
+
+<a href="#" class="quick-card">
+<span>💼</span>
+<h4>Products</h4>
+</a>
+
+<a href="#" class="quick-card">
+<span>🎓</span>
+<h4>Training</h4>
+</a>
+
+<a href="#" class="quick-card">
+<span>💰</span>
+<h4>Earnings</h4>
+</a>
+
+<a href="#" class="quick-card">
+<span>🤝</span>
+<h4>Partners</h4>
+</a>
+
+<a href="#" class="quick-card">
+<span>📞</span>
+<h4>Support</h4>
+</a>
+
+</div>
+
+<a href="#membership" class="floating-join">
+Join Now
+</a>
+
+</section>
+```
+
+
+```html
+<!-- ===================================== -->
+<!-- BECOME AN AGENT V2 - PART 02 -->
+<!-- VIDEO + BENEFITS + TRUST -->
+<!-- Paste Below Part 01 -->
+<!-- ===================================== -->
+
+<style>
+
+.agent-section{
+padding:25px 15px;
+background:#f5f8ff;
+}
+
+.section-head{
+text-align:center;
+margin-bottom:25px;
+}
+
+.section-tag{
+display:inline-block;
+background:#eaf2ff;
+color:#0d6efd;
+padding:8px 16px;
+border-radius:30px;
+font-size:12px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.section-head h2{
+font-size:28px;
+color:#222;
+margin-bottom:10px;
+}
+
+.section-head p{
+font-size:15px;
+line-height:1.8;
+color:#666;
+max-width:650px;
+margin:auto;
+}
+
+/* VIDEO SECTION */
+
+.video-card{
+background:#fff;
+padding:18px;
+border-radius:22px;
+box-shadow:0 5px 25px rgba(0,0,0,.06);
+margin-bottom:25px;
+}
+
+.video-frame{
+width:100%;
+height:230px;
+border:none;
+border-radius:16px;
+overflow:hidden;
+}
+
+.video-points{
+margin-top:20px;
+display:grid;
+gap:12px;
+}
+
+.video-point{
+background:#f8fbff;
+padding:14px;
+border-radius:12px;
+font-size:14px;
+font-weight:500;
+color:#444;
+}
+
+/* BENEFITS */
+
+.benefits-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:20px;
+}
+
+.benefit-box{
+background:#fff;
+padding:18px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.benefit-icon{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.benefit-box h3{
+font-size:16px;
+margin-bottom:8px;
+color:#222;
+}
+
+.benefit-box p{
+font-size:13px;
+line-height:1.7;
+color:#666;
+}
+
+/* OFFER CARD */
+
+.special-offer{
+margin-top:25px;
+background:linear-gradient(135deg,#0d6efd,#0047b0);
+padding:25px;
+border-radius:22px;
+color:#fff;
+text-align:center;
+}
+
+.special-offer h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.special-offer p{
+font-size:15px;
+line-height:1.8;
+margin-bottom:18px;
+}
+
+.offer-btn{
+display:inline-block;
+background:#fff;
+color:#0d6efd;
+padding:14px 24px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+}
+
+/* TRUST SECTION */
 
 .trust-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:25px;
 }
 
 .trust-card{
 background:#fff;
-padding:35px;
-text-align:center;
+padding:20px;
 border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
 .trust-card h3{
-font-size:40px;
+font-size:26px;
 color:#0d6efd;
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 .trust-card p{
-color:#555;
-font-weight:500;
-}
-
-/* SECTION TITLE */
-
-.section-title{
-text-align:center;
-margin-bottom:60px;
-}
-
-.section-title span{
-color:#0d6efd;
-font-weight:700;
-letter-spacing:1px;
-}
-
-.section-title h2{
-font-size:42px;
-margin-top:15px;
-margin-bottom:15px;
-}
-
-.section-title p{
-max-width:800px;
-margin:auto;
-line-height:1.9;
+font-size:13px;
 color:#666;
 }
 
@@ -219,2103 +534,1572 @@ color:#666;
 
 @media(max-width:768px){
 
-.hero-content h1{
-font-size:38px;
-}
-
-.hero-points{
+.benefits-grid{
 grid-template-columns:1fr;
 }
 
-.hero-buttons{
-flex-direction:column;
+.trust-grid{
+grid-template-columns:1fr 1fr;
 }
 
-.primary-btn,
-.secondary-btn{
-text-align:center;
-width:100%;
-}
-
-.section-title h2{
-font-size:32px;
-}
-
-.trust-card h3{
-font-size:30px;
+.video-frame{
+height:220px;
 }
 
 }
 
 </style>
 
-</head>
+<section class="agent-section" id="video">
 
-<body>
+<div class="section-head">
 
-<!-- TOP ANNOUNCEMENT -->
-
-<div class="top-slider">
-
-<div class="slider-track">
-
-<span>🎉 Agent Hiring Drive Open Across India</span>
-
-<span>🏦 Banking & NBFC Ecosystem Support</span>
-
-<span>🚀 Startup Funding & Compliance Services</span>
-
-<span>💼 Work From Home Opportunity</span>
-
-<span>📈 Training + CRM + AI Support Included</span>
-
-<span>🎯 Build Your Own Team & Network</span>
-
-<span>💰 Multiple Earning Opportunities</span>
-
-</div>
-
-</div>
-
-<!-- HERO -->
-
-<section class="agent-hero">
-
-<div class="container">
-
-<div class="hero-grid">
-
-<div class="hero-content">
-
-<span class="hero-tag">
-BECOME AN AGENT
+<span class="section-tag">
+WATCH & LEARN
 </span>
 
-<h1>
-Build Your Financial Services Career With Smile Financial Solution
-</h1>
+<h2>
+See How Smile Agent Program Works
+</h2>
 
 <p>
 
-Join a growing ecosystem of financial services,
-insurance, compliance, startup support,
-website development, AI solutions and digital marketing.
-
-Access training, CRM tools, AI assistance,
-lead management and business growth opportunities
-through one integrated platform.
+Understand how membership, training,
+lead generation, earnings, team building
+and career growth work inside the platform.
 
 </p>
 
-<div class="hero-points">
-
-<div class="point-box">
-✔ Work From Home
 </div>
 
-<div class="point-box">
-✔ Professional Training
+<div class="video-card">
+
+<iframe
+class="video-frame"
+src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+allowfullscreen>
+</iframe>
+
+<div class="video-points">
+
+<div class="video-point">
+✅ Step-by-Step Agent Onboarding Process
 </div>
 
-<div class="point-box">
-✔ Dedicated RM Support
+<div class="video-point">
+✅ Product Training & Sales Guidance
 </div>
 
-<div class="point-box">
-✔ Multiple Income Sources
+<div class="video-point">
+✅ Lead Management & Tracking System
+</div>
+
+<div class="video-point">
+✅ Wallet, Earnings & Referral Income
+</div>
+
+<div class="video-point">
+✅ AI Assistant & RM Support
 </div>
 
 </div>
 
-<div class="hero-buttons">
+</div>
 
-<a href="#membership" class="primary-btn">
-Join Now
+<div class="section-head">
+
+<span class="section-tag">
+WHY JOIN US
+</span>
+
+<h2>
+Everything You Need To Grow
+</h2>
+
+</div>
+
+<div class="benefits-grid">
+
+<div class="benefit-box">
+
+<div class="benefit-icon">🎓</div>
+
+<h3>Professional Training</h3>
+
+<p>
+
+Financial products, insurance,
+compliance services, technology
+solutions and practical selling skills.
+
+</p>
+
+</div>
+
+<div class="benefit-box">
+
+<div class="benefit-icon">🤖</div>
+
+<h3>AI Business Assistant</h3>
+
+<p>
+
+Get instant help regarding products,
+documentation, customer objections
+and eligibility criteria.
+
+</p>
+
+</div>
+
+<div class="benefit-box">
+
+<div class="benefit-icon">💰</div>
+
+<h3>Multiple Income Sources</h3>
+
+<p>
+
+Earn through loans, insurance,
+technology services, compliance
+and business support products.
+
+</p>
+
+</div>
+
+<div class="benefit-box">
+
+<div class="benefit-icon">👨‍💼</div>
+
+<h3>RM Support</h3>
+
+<p>
+
+Dedicated support for product
+queries, lead processing and
+customer assistance.
+
+</p>
+
+</div>
+
+<div class="benefit-box">
+
+<div class="benefit-icon">📈</div>
+
+<h3>Career Growth</h3>
+
+<p>
+
+Become Agent, Team Leader,
+Manager and Business Partner
+through performance.
+
+</p>
+
+</div>
+
+<div class="benefit-box">
+
+<div class="benefit-icon">🌎</div>
+
+<h3>Work From Anywhere</h3>
+
+<p>
+
+Operate your business from
+home, office or anywhere
+through one dashboard.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="special-offer">
+
+<h2>
+🔥 Limited Time Joining Offer
+</h2>
+
+<p>
+
+Join today and unlock access to
+training, dashboard, AI support,
+lead management and growth tools.
+
+</p>
+
+<a href="#membership" class="offer-btn">
+View Membership Plans
 </a>
 
-<a href="#learnmore" class="secondary-btn">
-Explore Platform
-</a>
-
 </div>
 
-</div>
+<div class="section-head" style="margin-top:40px;">
 
-<div class="hero-image">
+<span class="section-tag">
+TRUST & CREDIBILITY
+</span>
 
-<img
-src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-alt="Become Agent">
-
-</div>
-
-</div>
+<h2>
+Growing Across India
+</h2>
 
 </div>
-
-</section>
-
-<!-- TRUST SECTION -->
-
-<section class="trust-bar">
-
-<div class="container">
 
 <div class="trust-grid">
 
 <div class="trust-card">
 <h3>2000+</h3>
-<p>Agent Network</p>
+<p>Agents Network</p>
 </div>
 
 <div class="trust-card">
 <h3>1200+</h3>
-<p>CA & Professional Network</p>
+<p>CA & Consultants</p>
 </div>
 
 <div class="trust-card">
 <h3>5+</h3>
-<p>Branch Locations</p>
+<p>Branches</p>
 </div>
 
 <div class="trust-card">
 <h3>Pan India</h3>
-<p>Service Coverage</p>
+<p>Coverage</p>
 </div>
 
+<div class="trust-card">
+<h3>24×7</h3>
+<p>Support System</p>
+</div>
+
+<div class="trust-card">
+<h3>Multiple</h3>
+<p>Bank & NBFC Partners</p>
 </div>
 
 </div>
 
 </section>
+```
 
-<!-- PART 01 END -->
+```html
+<!-- ===================================== -->
+<!-- BECOME AN AGENT V2 - PART 03 -->
+<!-- SELL & EARN PRODUCTS -->
+<!-- Paste Below Part 02 -->
+<!-- ===================================== -->
 
-</body>
-</html>
+<style>
 
-<!-- ========================= -->
-<!-- BECOME AGENT PART 02 -->
-<!-- WHY JOIN US + VISION -->
-<!-- ========================= -->
+.products-section{
+padding:30px 15px;
+background:#f5f8ff;
+}
 
-<section id="learnmore" style="padding:100px 0;background:#f8fbff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>WHY JOIN SMILE FINANCIAL SOLUTION</span>
-
-<h2>
-A Platform Designed For Long-Term Growth
-</h2>
-
-<p>
-
-Whether you are a student, housewife, job seeker,
-sales professional, entrepreneur or team leader,
-our platform helps you build skills, generate income
-and create your own professional network.
-
-</p>
-
-</div>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;">
-
-<div class="trust-card">
-
-<h3 style="font-size:26px;">🎓</h3>
-
-<h4 style="margin:15px 0;">
-Professional Training
-</h4>
-
-<p style="line-height:1.8;color:#666;">
-
-Get structured product training,
-sales guidance, objection handling,
-customer communication techniques
-and real business knowledge.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3 style="font-size:26px;">🤖</h3>
-
-<h4 style="margin:15px 0;">
-AI Support Assistant
-</h4>
-
-<p style="line-height:1.8;color:#666;">
-
-Need help with products,
-eligibility, documentation or
-customer queries? AI support
-will be available directly inside
-your dashboard.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3 style="font-size:26px;">📈</h3>
-
-<h4 style="margin:15px 0;">
-Growth Opportunities
-</h4>
-
-<p style="line-height:1.8;color:#666;">
-
-Build your own client base,
-create a team, become a leader
-and access multiple earning
-opportunities.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3 style="font-size:26px;">💼</h3>
-
-<h4 style="margin:15px 0;">
-Work From Anywhere
-</h4>
-
-<p style="line-height:1.8;color:#666;">
-
-Operate from home, office or
-any location while managing
-customers and leads through
-your digital dashboard.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- VISION & MISSION -->
-
-<section style="padding:100px 0;background:#fff;">
-
-<div class="container">
-
-<div class="hero-grid">
-
-<div>
-
-<img
-src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
-alt="Vision Mission"
-style="
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.10);
-">
-
-</div>
-
-<div>
-
-<div class="section-title" style="text-align:left;margin-bottom:30px;">
-
-<span>OUR VISION</span>
-
-<h2>
-Creating Opportunities Across India
-</h2>
-
-</div>
-
-<p style="
-font-size:17px;
-line-height:2;
-color:#666;
+.products-head{
+text-align:center;
 margin-bottom:25px;
-">
-
-Our vision is to build one of India's most
-accessible financial, compliance and technology
-service ecosystems where individuals can learn,
-earn and grow professionally through digital tools,
-training and support.
-
-</p>
-
-<div class="trust-card" style="margin-bottom:20px;">
-
-<h4>
-🚀 Mission
-</h4>
-
-<p style="margin-top:10px;color:#666;line-height:1.8;">
-
-Provide training, technology,
-professional support and earning
-opportunities through one integrated platform.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h4>
-🎯 Goal
-</h4>
-
-<p style="margin-top:10px;color:#666;line-height:1.8;">
-
-Empower students, housewives,
-job seekers and professionals
-to build successful careers and
-business networks.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- BENEFITS SECTION -->
-
-<section style="padding:100px 0;background:#f8fbff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>AGENT BENEFITS</span>
-
-<h2>
-Everything You Need To Succeed
-</h2>
-
-<p>
-
-A complete ecosystem designed to support
-your learning, growth, customer management
-and earning journey.
-
-</p>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
-
-<h3>📚 Training Academy</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Access professional videos,
-guides and product knowledge
-resources.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🖥 CRM Dashboard</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Manage customers, documents,
-applications and lead tracking.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>💰 Multiple Income Sources</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Loans, Insurance, Compliance,
-Technology Services and more.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🤝 Dedicated Support</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Get assistance from relationship
-managers and support teams.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🏆 Leadership Growth</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Build teams, develop leadership
-skills and expand your network.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>📱 Mobile Friendly Access</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Work from your mobile,
-tablet or desktop device.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PART 02 END -->
-
-<!-- ========================= -->
-<!-- BECOME AGENT PART 03 -->
-<!-- DASHBOARD + AI + TRAINING -->
-<!-- ========================= -->
-
-<section style="padding:100px 0;background:#ffffff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>AGENT DASHBOARD</span>
-
-<h2>
-Your Complete Business Command Center
-</h2>
-
-<p>
-
-Everything required to manage leads,
-customers, training, earnings, documents
-and team growth will be available from one
-professional dashboard.
-
-</p>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-">
-
-<div class="trust-card">
-
-<h3 style="margin-bottom:15px;">
-📊 Dashboard Overview
-</h3>
-
-<p style="line-height:1.9;color:#666;">
-
-Monitor active leads, submitted applications,
-earnings, payout status, team performance,
-customer activities and business growth from
-one central dashboard.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3 style="margin-bottom:15px;">
-👥 Lead Management
-</h3>
-
-<p style="line-height:1.9;color:#666;">
-
-Add customer details, upload documents,
-track application progress, update customer
-status and manage complete lead lifecycle
-efficiently.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3 style="margin-bottom:15px;">
-📂 Document Center
-</h3>
-
-<p style="line-height:1.9;color:#666;">
-
-Store customer documents, KYC records,
-income proofs and service-related files
-securely inside the dashboard.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- AI ASSISTANT -->
-
-<section style="padding:100px 0;background:#f8fbff;">
-
-<div class="container">
-
-<div class="hero-grid">
-
-<div>
-
-<div class="section-title" style="text-align:left;">
-
-<span>AI ASSISTANT</span>
-
-<h2>
-24×7 Smart Business Support
-</h2>
-
-</div>
-
-<p style="
-font-size:17px;
-line-height:2;
+}
+
+.products-head span{
+display:inline-block;
+background:#eaf2ff;
+color:#0d6efd;
+padding:8px 16px;
+border-radius:30px;
+font-size:12px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.products-head h2{
+font-size:28px;
+margin-bottom:10px;
+color:#222;
+}
+
+.products-head p{
+font-size:15px;
+line-height:1.8;
 color:#666;
-margin-bottom:25px;
-">
+max-width:700px;
+margin:auto;
+}
 
-The AI Assistant helps agents understand
-products, eligibility, documentation,
-customer objections, sales techniques,
-EMI calculations and service information
-instantly.
+/* PRODUCT GRID */
 
-</p>
-
-<div style="
+.product-grid{
 display:grid;
+grid-template-columns:repeat(2,1fr);
 gap:15px;
-">
+margin-top:25px;
+}
 
-<div class="point-box">
-✔ Product Information Support
-</div>
-
-<div class="point-box">
-✔ Customer Query Assistance
-</div>
-
-<div class="point-box">
-✔ Objection Handling Guidance
-</div>
-
-<div class="point-box">
-✔ Documentation Assistance
-</div>
-
-<div class="point-box">
-✔ Eligibility Understanding
-</div>
-
-</div>
-
-</div>
-
-<div>
-
-<img
-src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg"
-alt="AI Assistant"
-style="
-width:100%;
+.product-card{
+background:#fff;
 border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TRAINING CENTER -->
-
-<section style="padding:100px 0;background:#fff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>TRAINING ACADEMY</span>
-
-<h2>
-Learn Before You Earn
-</h2>
-
-<p>
-
-Every registered agent receives access to
-structured learning modules designed to
-build confidence, product knowledge and
-sales skills.
-
-</p>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
-
-<h3>🎓 Product Training</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Understand loans, insurance,
-compliance services, startup
-support and technology solutions.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🗣 Sales Communication</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Learn professional communication,
-customer handling and sales
-conversation techniques.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>📑 Documentation Guide</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Know what documents are required,
-how applications work and how
-to reduce rejection risks.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🚀 Growth Strategies</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Build your personal brand,
-customer base and team network
-for long-term growth.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- AGENT ACCESS -->
-
-<section style="padding:100px 0;background:#f8fbff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>MEMBER ACCESS</span>
-
-<h2>
-Exclusive Benefits After Registration
-</h2>
-
-<p>
-
-Upon successful onboarding, agents receive
-access to tools, resources and professional
-support systems.
-
-</p>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
-
-<h3>🪪 Digital ID Card</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Professional digital identity for
-platform access and verification.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>📄 Offer Letter</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Receive onboarding documentation
-and platform guidelines.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>👨‍💼 RM Support</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Dedicated support team to assist
-with applications and operations.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>💰 Wallet System</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Track commissions, incentives,
-rewards and payout history.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>📢 Announcements</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Stay updated with campaigns,
-offers, incentives and updates.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🏆 Leaderboard</h3>
-
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-
-Recognize top performers and
-celebrate achievements.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PART 03 END -->
-
-<!-- ========================= -->
-<!-- BECOME AGENT PART 04 -->
-<!-- PRODUCTS YOU CAN SELL -->
-<!-- ========================= -->
-
-<section style="padding:100px 0;background:#ffffff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>PRODUCT ECOSYSTEM</span>
-
-<h2>
-Multiple Services. Multiple Income Opportunities.
-</h2>
-
-<p>
-
-Unlike traditional agent programs, Smile Financial
-Solution gives you access to financial services,
-insurance, compliance solutions, startup support
-and technology services through a single platform.
-
-</p>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
-
-<!-- LOANS -->
-
-<div class="trust-card">
-
-<h3>💰 Personal Loan</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Help customers access personal loan solutions
-for education, travel, medical expenses,
-weddings and personal requirements.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🏢 Business Loan</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Support business owners with working capital,
-business expansion, machinery purchase and
-growth funding requirements.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🏠 Home Loan</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Assist customers purchasing residential
-properties, apartments, plots and dream homes.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🏘 Loan Against Property</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Funding support against eligible residential,
-commercial and industrial properties.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🚗 Vehicle Finance</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Car loans, commercial vehicle finance
-and business transport funding solutions.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>💳 Credit Cards</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Help customers choose suitable credit card
-solutions from leading banking partners.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- INSURANCE -->
-
-<section style="padding:100px 0;background:#f8fbff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>INSURANCE SERVICES</span>
-
-<h2>
-Protect Families, Assets & Businesses
-</h2>
-
-<p>
-
-Offer protection-oriented products designed
-to support customers and their families.
-
-</p>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
-
-<h3>❤️ Health Insurance</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Individual, family floater and senior citizen
-health insurance plans.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🛡 Term Insurance</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Long-term financial protection solutions
-for families and dependents.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🚘 Motor Insurance</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Car, bike and commercial vehicle
-insurance support services.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- COMPLIANCE -->
-
-<section style="padding:100px 0;background:#ffffff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>BUSINESS & COMPLIANCE</span>
-
-<h2>
-Support Entrepreneurs & Businesses
-</h2>
-
-<p>
-
-Help startups, MSMEs and growing businesses
-with registrations, compliance and advisory support.
-
-</p>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
-
-<h3>📄 GST Registration</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-GST registration, filing support
-and compliance guidance.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🏢 Company Registration</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Private Limited, LLP, OPC and
-business registration support.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>™ Trademark Registration</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Protect business brands and intellectual
-property through registration services.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🚀 Startup India Support</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Guidance for startups, registrations,
-recognitions and growth support.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🏦 Government Funding Support</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Support entrepreneurs exploring suitable
-funding and development opportunities.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>📊 Business Compliance</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Professional compliance assistance
-through expert partner networks.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TECHNOLOGY SERVICES -->
-
-<section style="padding:100px 0;background:#f8fbff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>TECHNOLOGY SERVICES</span>
-
-<h2>
-Future Ready Digital Solutions
-</h2>
-
-<p>
-
-Expand beyond financial services and offer
-digital transformation solutions to businesses.
-
-</p>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
-
-<h3>🌐 Website Development</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Business websites, landing pages,
-e-commerce stores and portals.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>📱 Mobile App Development</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Android and iOS application
-development solutions.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🤖 AI Solutions</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-AI automation, chatbots and
-business productivity tools.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>📈 Digital Marketing</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-SEO, social media marketing,
-branding and lead generation.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PRODUCT CTA -->
-
-<section style="
-padding:80px 0;
-background:linear-gradient(135deg,#0d6efd,#0056d6);
+padding:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+transition:.3s;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+}
+
+.product-card:hover{
+transform:translateY(-4px);
+}
+
+.product-icon{
+font-size:34px;
+margin-bottom:12px;
+}
+
+.product-card h3{
+font-size:16px;
+margin-bottom:8px;
+color:#222;
+}
+
+.product-card p{
+font-size:13px;
+line-height:1.7;
+color:#666;
+margin-bottom:15px;
+}
+
+.product-income{
+display:inline-block;
+background:#eef8f0;
+color:#198754;
+padding:8px 12px;
+border-radius:10px;
+font-size:12px;
+font-weight:600;
+}
+
+/* FEATURE BANNER */
+
+.agent-banner{
+margin-top:25px;
+background:linear-gradient(135deg,#0d6efd,#0047b0);
+padding:25px;
+border-radius:22px;
 color:#fff;
 text-align:center;
-">
+}
 
-<div class="container">
+.agent-banner h2{
+font-size:26px;
+margin-bottom:12px;
+}
 
-<h2 style="
-font-size:42px;
-margin-bottom:20px;
-">
+.agent-banner p{
+font-size:15px;
+line-height:1.8;
+margin-bottom:18px;
+}
 
-One Platform. Multiple Income Streams.
+.banner-btn{
+display:inline-block;
+background:#fff;
+color:#0d6efd;
+padding:14px 22px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+}
 
+/* TOP SERVICES */
+
+.top-services{
+margin-top:30px;
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.service-strip{
+background:#fff;
+padding:18px;
+border-radius:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.service-strip-left{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.service-strip-left span{
+font-size:28px;
+}
+
+.service-strip h4{
+font-size:15px;
+margin-bottom:3px;
+}
+
+.service-strip p{
+font-size:12px;
+color:#666;
+}
+
+.service-arrow{
+font-size:20px;
+color:#0d6efd;
+font-weight:bold;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.product-grid{
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.product-card{
+padding:15px;
+}
+
+.product-card h3{
+font-size:14px;
+}
+
+.product-card p{
+font-size:12px;
+}
+
+}
+
+</style>
+
+<section class="products-section" id="products">
+
+<div class="products-head">
+
+<span>SELL & EARN</span>
+
+<h2>
+Products You Can Offer
 </h2>
 
-<p style="
-max-width:850px;
-margin:auto;
-line-height:2;
-font-size:17px;
-margin-bottom:35px;
-">
+<p>
 
-Build your business by offering financial,
-insurance, compliance and technology services
-through a professional ecosystem designed for
-long-term growth.
+Access multiple earning opportunities
+through financial, insurance, compliance
+and technology services from one platform.
 
 </p>
 
-<a href="#membership"
-style="
-display:inline-block;
-padding:16px 35px;
-background:#fff;
-color:#0d6efd;
-text-decoration:none;
-border-radius:10px;
-font-weight:700;
-">
+</div>
 
-Become An Agent Today
+<div class="product-grid">
 
+<div class="product-card">
+
+<div class="product-icon">💳</div>
+
+<h3>Personal Loan</h3>
+
+<p>
+Help customers access funding
+for personal financial needs.
+</p>
+
+<div class="product-income">
+Earn Commission
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🏢</div>
+
+<h3>Business Loan</h3>
+
+<p>
+Support businesses with working
+capital and expansion funding.
+</p>
+
+<div class="product-income">
+High Demand
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🏠</div>
+
+<h3>Home Loan</h3>
+
+<p>
+Assist customers in purchasing
+or constructing homes.
+</p>
+
+<div class="product-income">
+Popular Product
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🏦</div>
+
+<h3>Loan Against Property</h3>
+
+<p>
+Funding solutions backed by
+residential or commercial property.
+</p>
+
+<div class="product-income">
+Premium Segment
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🛡️</div>
+
+<h3>Insurance</h3>
+
+<p>
+Health, Term and Motor
+insurance opportunities.
+</p>
+
+<div class="product-income">
+Recurring Business
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">📄</div>
+
+<h3>GST & Compliance</h3>
+
+<p>
+Registration, filing and
+business compliance services.
+</p>
+
+<div class="product-income">
+Business Clients
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🌐</div>
+
+<h3>Website Development</h3>
+
+<p>
+Professional websites for
+businesses and startups.
+</p>
+
+<div class="product-income">
+Tech Service
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">📱</div>
+
+<h3>App Development</h3>
+
+<p>
+Mobile application solutions
+for modern businesses.
+</p>
+
+<div class="product-income">
+High Value Service
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🤖</div>
+
+<h3>AI Solutions</h3>
+
+<p>
+AI tools, automation and
+business productivity solutions.
+</p>
+
+<div class="product-income">
+Future Ready
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🚀</div>
+
+<h3>Startup Support</h3>
+
+<p>
+Funding, registration and
+growth support services.
+</p>
+
+<div class="product-income">
+Growing Market
+</div>
+
+</div>
+
+</div>
+
+<div class="agent-banner">
+
+<h2>
+💼 One Dashboard. Multiple Income Opportunities.
+</h2>
+
+<p>
+
+Manage leads, training, customers,
+documents and earnings through
+one professional platform.
+
+</p>
+
+<a href="#membership" class="banner-btn">
+Start Your Journey
 </a>
 
 </div>
 
+<div class="top-services">
+
+<div class="service-strip">
+
+<div class="service-strip-left">
+
+<span>🔥</span>
+
+<div>
+
+<h4>Most Popular Product</h4>
+
+<p>Personal Loan & Business Loan</p>
+
+</div>
+
+</div>
+
+<div class="service-arrow">
+→
+</div>
+
+</div>
+
+<div class="service-strip">
+
+<div class="service-strip-left">
+
+<span>💰</span>
+
+<div>
+
+<h4>High Value Opportunities</h4>
+
+<p>Home Loan & Loan Against Property</p>
+
+</div>
+
+</div>
+
+<div class="service-arrow">
+→
+</div>
+
+</div>
+
+<div class="service-strip">
+
+<div class="service-strip-left">
+
+<span>🚀</span>
+
+<div>
+
+<h4>Future Growth Services</h4>
+
+<p>Technology & AI Solutions</p>
+
+</div>
+
+</div>
+
+<div class="service-arrow">
+→
+</div>
+
+</div>
+
+</div>
+
 </section>
+```
 
-<!-- PART 04 END -->
+```html
+<!-- ===================================== -->
+<!-- BECOME AN AGENT V2 - PART 04 -->
+<!-- EARNINGS + CAREER GROWTH + REFERRAL -->
+<!-- Paste Below Part 03 -->
+<!-- ===================================== -->
 
-<!-- ========================= -->
-<!-- BECOME AGENT PART 05 -->
-<!-- PARTNER NETWORK & TRUST -->
-<!-- ========================= -->
+<style>
 
-<section style="padding:100px 0;background:#ffffff;">
+.earnings-section{
+padding:30px 15px;
+background:#f5f8ff;
+}
 
-<div class="container">
+.earnings-head{
+text-align:center;
+margin-bottom:25px;
+}
 
-<div class="section-title">
+.earnings-head span{
+display:inline-block;
+background:#eaf2ff;
+color:#0d6efd;
+padding:8px 16px;
+border-radius:30px;
+font-size:12px;
+font-weight:600;
+margin-bottom:10px;
+}
 
-<span>PARTNER ECOSYSTEM</span>
+.earnings-head h2{
+font-size:28px;
+margin-bottom:10px;
+color:#222;
+}
+
+.earnings-head p{
+font-size:15px;
+line-height:1.8;
+color:#666;
+}
+
+/* EARNING CARD */
+
+.earning-main-card{
+background:#fff;
+padding:25px;
+border-radius:22px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+margin-bottom:20px;
+text-align:center;
+}
+
+.earning-main-card h3{
+font-size:30px;
+color:#0d6efd;
+margin-bottom:10px;
+}
+
+.earning-main-card p{
+font-size:14px;
+line-height:1.8;
+color:#666;
+}
+
+/* EXAMPLE CARDS */
+
+.example-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+margin-bottom:25px;
+}
+
+.example-card{
+background:#fff;
+padding:18px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.example-card h4{
+font-size:17px;
+margin-bottom:8px;
+color:#222;
+}
+
+.example-card p{
+font-size:13px;
+line-height:1.8;
+color:#666;
+}
+
+.example-income{
+margin-top:12px;
+display:inline-block;
+background:#eef8f0;
+color:#198754;
+padding:8px 12px;
+border-radius:10px;
+font-size:12px;
+font-weight:600;
+}
+
+/* CAREER PATH */
+
+.career-path{
+margin-top:25px;
+}
+
+.path-card{
+background:#fff;
+padding:18px;
+border-radius:18px;
+margin-bottom:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.path-card h4{
+font-size:16px;
+color:#222;
+}
+
+.path-card span{
+font-size:13px;
+color:#0d6efd;
+font-weight:600;
+}
+
+/* REFERRAL */
+
+.referral-card{
+background:linear-gradient(135deg,#0d6efd,#0047b0);
+padding:25px;
+border-radius:22px;
+color:#fff;
+margin-top:25px;
+text-align:center;
+}
+
+.referral-card h3{
+font-size:26px;
+margin-bottom:12px;
+}
+
+.referral-card p{
+font-size:15px;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.ref-btn{
+display:inline-block;
+background:#fff;
+color:#0d6efd;
+padding:14px 22px;
+border-radius:12px;
+font-weight:700;
+text-decoration:none;
+}
+
+/* FEATURES */
+
+.income-features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:25px;
+}
+
+.feature-box{
+background:#fff;
+padding:18px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.feature-box h4{
+font-size:15px;
+margin-bottom:8px;
+}
+
+.feature-box p{
+font-size:12px;
+color:#666;
+line-height:1.7;
+}
+
+</style>
+
+<section class="earnings-section" id="earnings">
+
+<div class="earnings-head">
+
+<span>EARN & GROW</span>
 
 <h2>
-Built On Strong Professional Relationships
+Build Multiple Income Streams
 </h2>
 
 <p>
 
-Our ecosystem connects financial institutions,
-professional networks, compliance experts,
-technology partners and business support
-services to create growth opportunities
-across India.
+Grow your earnings through product sales,
+referrals, team building and leadership
+opportunities on one platform.
 
 </p>
 
 </div>
 
-<!-- BANKING NETWORK -->
+<div class="earning-main-card">
 
-<div style="margin-bottom:70px;">
+<h3>Unlimited Income Potential</h3>
 
-<h3 style="
-text-align:center;
-font-size:32px;
-margin-bottom:35px;
-color:#0d6efd;
-">
+<p>
 
-🏦 Banking Relationships
+There is no fixed earning limit.
+The more customers, referrals and
+business opportunities you generate,
+the more you can grow.
 
+</p>
+
+</div>
+
+<div class="example-grid">
+
+<div class="example-card">
+
+<h4>Starter Agent</h4>
+
+<p>
+
+Learn products, generate leads and
+start building your customer network.
+
+</p>
+
+<div class="example-income">
+Start Your Journey
+</div>
+
+</div>
+
+<div class="example-card">
+
+<h4>Active Agent</h4>
+
+<p>
+
+Handle multiple products and increase
+your earning opportunities through
+consistent customer acquisition.
+
+</p>
+
+<div class="example-income">
+Higher Growth Potential
+</div>
+
+</div>
+
+<div class="example-card">
+
+<h4>Team Builder</h4>
+
+<p>
+
+Create your own team and unlock
+leadership opportunities while helping
+others grow.
+
+</p>
+
+<div class="example-income">
+Leadership Benefits
+</div>
+
+</div>
+
+</div>
+
+<div class="earnings-head">
+
+<span>CAREER PATH</span>
+
+<h2>
+Grow Step By Step
+</h2>
+
+</div>
+
+<div class="career-path">
+
+<div class="path-card">
+<h4>Agent</h4>
+<span>Start Here</span>
+</div>
+
+<div class="path-card">
+<h4>Senior Agent</h4>
+<span>Performance Based</span>
+</div>
+
+<div class="path-card">
+<h4>Team Leader</h4>
+<span>Build Your Team</span>
+</div>
+
+<div class="path-card">
+<h4>Manager</h4>
+<span>Lead Multiple Teams</span>
+</div>
+
+<div class="path-card">
+<h4>Business Partner</h4>
+<span>Long-Term Growth</span>
+</div>
+
+</div>
+
+<div class="referral-card">
+
+<h3>
+🤝 Refer & Build Your Network
 </h3>
 
-<div style="
+<p>
+
+Invite new agents, help them succeed
+and create a growing professional network
+within the Smile ecosystem.
+
+</p>
+
+<a href="#membership" class="ref-btn">
+Explore Membership
+</a>
+
+</div>
+
+<div class="income-features">
+
+<div class="feature-box">
+
+<h4>💼 Product Income</h4>
+
+<p>
+Earn through financial, insurance
+and business services.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h4>👥 Team Growth</h4>
+
+<p>
+Expand your network and unlock
+leadership opportunities.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h4>🎯 Referral Rewards</h4>
+
+<p>
+Share opportunities and build
+a larger community.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h4>🚀 Career Development</h4>
+
+<p>
+Training, support and growth
+focused ecosystem.
+</p>
+
+</div>
+
+</div>
+
+</section>
+```
+
+```html
+<!-- ===================================== -->
+<!-- BECOME AN AGENT V2 - PART 05 -->
+<!-- PARTNERS • NETWORK • TRUST -->
+<!-- Paste Below Part 04 -->
+<!-- ===================================== -->
+
+<style>
+
+.partner-section{
+padding:30px 15px;
+background:#f7f9fc;
+}
+
+.partner-heading{
+text-align:center;
+margin-bottom:25px;
+}
+
+.partner-tag{
+display:inline-block;
+padding:8px 16px;
+background:#eaf2ff;
+color:#0d6efd;
+font-size:12px;
+font-weight:600;
+border-radius:30px;
+margin-bottom:10px;
+}
+
+.partner-heading h2{
+font-size:28px;
+color:#222;
+margin-bottom:10px;
+}
+
+.partner-heading p{
+font-size:15px;
+line-height:1.8;
+color:#666;
+max-width:700px;
+margin:auto;
+}
+
+/* TRUST BANNER */
+
+.trust-banner{
+background:linear-gradient(135deg,#0d6efd,#0048b3);
+color:#fff;
+padding:25px;
+border-radius:22px;
+margin-bottom:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(13,110,253,.20);
+}
+
+.trust-banner h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.trust-banner p{
+font-size:15px;
+line-height:1.8;
+opacity:.95;
+}
+
+/* PARTNER CATEGORY */
+
+.partner-category{
+margin-bottom:25px;
+}
+
+.partner-category h3{
+font-size:20px;
+margin-bottom:15px;
+color:#222;
+}
+
+.partner-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-">
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
 
-<div class="trust-card">
+.partner-card{
+background:#fff;
+padding:18px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.partner-card:hover{
+transform:translateY(-3px);
+}
+
+.partner-card h4{
+font-size:15px;
+color:#222;
+margin-bottom:5px;
+}
+
+.partner-card p{
+font-size:12px;
+color:#666;
+line-height:1.6;
+}
+
+/* NETWORK STATS */
+
+.network-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.network-card{
+background:#fff;
+padding:20px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.network-card h3{
+font-size:28px;
+color:#0d6efd;
+margin-bottom:8px;
+}
+
+.network-card p{
+font-size:13px;
+color:#666;
+}
+
+/* WHY TRUST */
+
+.why-trust{
+margin-top:30px;
+}
+
+.why-card{
+background:#fff;
+padding:18px;
+border-radius:18px;
+margin-bottom:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.why-card h4{
+font-size:16px;
+margin-bottom:8px;
+color:#222;
+}
+
+.why-card p{
+font-size:13px;
+line-height:1.8;
+color:#666;
+}
+
+@media(max-width:768px){
+
+.partner-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.network-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+</style>
+
+<section class="partner-section" id="partners">
+
+<div class="partner-heading">
+
+<span class="partner-tag">
+TRUSTED NETWORK
+</span>
+
+<h2>
+Strong Industry Connections
+</h2>
+
+<p>
+
+Access opportunities through banks,
+NBFCs, aggregators, consultants and
+business support networks across India.
+
+</p>
+
+</div>
+
+<div class="trust-banner">
+
+<h3>
+🤝 Professional Partner Ecosystem
+</h3>
+
+<p>
+
+Helping individuals, businesses and
+entrepreneurs through financial,
+insurance, compliance and technology
+solutions.
+
+</p>
+
+</div>
+
+<!-- BANKS -->
+
+<div class="partner-category">
+
+<h3>🏦 Banking Partners</h3>
+
+<div class="partner-grid">
+
+<div class="partner-card">
 <h4>HDFC Bank</h4>
-<p>Banking Solutions</p>
+<p>Retail & Business Solutions</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>ICICI Bank</h4>
-<p>Retail Banking Support</p>
+<p>Funding Opportunities</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>Axis Bank</h4>
 <p>Financial Services</p>
 </div>
 
-<div class="trust-card">
-<h4>Kotak Mahindra Bank</h4>
-<p>Banking Solutions</p>
-</div>
-
-<div class="trust-card">
+<div class="partner-card">
 <h4>IDFC FIRST Bank</h4>
-<p>Financial Products</p>
+<p>Banking Products</p>
 </div>
 
-<div class="trust-card">
-<h4>YES Bank</h4>
-<p>Customer Solutions</p>
+<div class="partner-card">
+<h4>Yes Bank</h4>
+<p>Business Support</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>Bank of India</h4>
-<p>Banking Network</p>
+<p>Financial Assistance</p>
 </div>
 
 </div>
 
 </div>
 
-<!-- NBFC NETWORK -->
+<!-- NBFC -->
 
-<div style="margin-bottom:70px;">
+<div class="partner-category">
 
-<h3 style="
-text-align:center;
-font-size:32px;
-margin-bottom:35px;
-color:#0d6efd;
-">
+<h3>💼 NBFC Network</h3>
 
-💰 NBFC Ecosystem
+<div class="partner-grid">
 
-</h3>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
+<div class="partner-card">
 <h4>Aditya Birla Finance</h4>
-<p>Financial Solutions</p>
+<p>Business Funding</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>L&T Finance</h4>
-<p>Lending Support</p>
+<p>Loan Solutions</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>Mahindra Finance</h4>
 <p>Financial Products</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>IIFL Finance</h4>
-<p>Funding Solutions</p>
+<p>Funding Support</p>
 </div>
 
-<div class="trust-card">
-<h4>IndoStar Finance</h4>
-<p>Business Support</p>
+<div class="partner-card">
+<h4>IndoStar</h4>
+<p>Business Opportunities</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>Shree Shyam Finance</h4>
-<p>Funding Network</p>
+<p>Financial Assistance</p>
 </div>
 
 </div>
 
 </div>
 
-<!-- AGGREGATOR NETWORK -->
+<!-- AGGREGATORS -->
 
-<div style="margin-bottom:70px;">
+<div class="partner-category">
 
-<h3 style="
-text-align:center;
-font-size:32px;
-margin-bottom:35px;
-color:#0d6efd;
-">
+<h3>🚀 Aggregator Partners</h3>
 
-🚀 Aggregator Network
+<div class="partner-grid">
 
-</h3>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
+<div class="partner-card">
 <h4>My Mudra</h4>
-<p>Lead Distribution Support</p>
+<p>Lead Opportunities</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>Andromeda</h4>
-<p>Financial Marketplace</p>
+<p>Financial Distribution</p>
 </div>
 
-<div class="trust-card">
+<div class="partner-card">
 <h4>RuLoans</h4>
-<p>Lending Ecosystem</p>
+<p>Loan Marketplace</p>
+</div>
+
+<div class="partner-card">
+<h4>Business Network</h4>
+<p>Growth Opportunities</p>
 </div>
 
 </div>
 
 </div>
 
-<!-- PROFESSIONAL NETWORK -->
+<!-- STATS -->
 
-<div style="margin-bottom:70px;">
+<div class="network-grid">
 
-<h3 style="
-text-align:center;
-font-size:32px;
-margin-bottom:35px;
-color:#0d6efd;
-">
-
-👨‍💼 Professional Network
-
-</h3>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-">
-
-<div class="trust-card">
-
-<h3 style="color:#0d6efd;">
-1200+
-</h3>
-
-<h4>CA & Consultant Network</h4>
-
-<p style="margin-top:10px;line-height:1.8;color:#666;">
-
-Professional support ecosystem
-covering compliance, taxation,
-business registration and advisory services.
-
-</p>
-
+<div class="network-card">
+<h3>2000+</h3>
+<p>Agent Network</p>
 </div>
 
-<div class="trust-card">
-
-<h3 style="color:#0d6efd;">
-5+
-</h3>
-
-<h4>Branch Locations</h4>
-
-<p style="margin-top:10px;line-height:1.8;color:#666;">
-
-Growing operational presence
-with support teams and professional
-guidance.
-
-</p>
-
+<div class="network-card">
+<h3>1200+</h3>
+<p>CA Professionals</p>
 </div>
 
-<div class="trust-card">
+<div class="network-card">
+<h3>5+</h3>
+<p>Branches</p>
+</div>
 
-<h3 style="color:#0d6efd;">
-Pan India
-</h3>
-
-<h4>Service Coverage</h4>
-
-<p style="margin-top:10px;line-height:1.8;color:#666;">
-
-Serving customers, businesses
-and professionals across India.
-
-</p>
-
+<div class="network-card">
+<h3>Pan India</h3>
+<p>Coverage</p>
 </div>
 
 </div>
 
-</div>
+<!-- WHY TRUST -->
 
-</div>
+<div class="why-trust">
 
-</section>
+<div class="partner-heading" style="margin-top:35px;">
 
-<!-- WHY TRUST US -->
-
-<section style="padding:100px 0;background:#f8fbff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>WHY PEOPLE JOIN US</span>
+<span class="partner-tag">
+WHY TRUST US
+</span>
 
 <h2>
-More Than A Traditional Agent Program
+Built For Long-Term Growth
 </h2>
+
+</div>
+
+<div class="why-card">
+
+<h4>📈 Multiple Business Opportunities</h4>
 
 <p>
 
-Build your own customer base, create a team,
-learn professional skills and access multiple
-service categories from one platform.
+Offer financial products, insurance,
+technology services and business
+support solutions from one platform.
 
 </p>
 
 </div>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
+<div class="why-card">
 
-<div class="trust-card">
-
-<h3>👩 Housewife Friendly</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Flexible work opportunities
-with training and support.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🎓 Student Friendly</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Gain skills, practical exposure
-and earning opportunities.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>💼 Job Seekers</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Develop professional experience
-while building your network.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>👨‍💼 Team Leaders</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Build and manage your own
-growing sales organization.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>📈 Business Growth</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Access financial, compliance
-and technology opportunities.
-
-</p>
-
-</div>
-
-<div class="trust-card">
-
-<h3>🤝 Long-Term Support</h3>
-
-<p style="margin-top:15px;line-height:1.8;color:#666;">
-
-Training, RM support, CRM tools
-and business guidance.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PART 05 END -->
-
-<!-- ========================= -->
-<!-- BECOME AGENT PART 06 -->
-<!-- MEMBERSHIP PLANS -->
-<!-- ========================= -->
-
-<section id="membership" style="padding:100px 0;background:#ffffff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>MEMBERSHIP PLANS</span>
-
-<h2>
-Choose The Right Growth Plan
-</h2>
+<h4>🎓 Training & Knowledge Support</h4>
 
 <p>
 
-Select a membership plan and unlock access to
-training, CRM tools, AI support, lead management,
-earning opportunities and professional resources.
+Product guidance, documentation
+support and learning resources help
+agents build confidence.
 
 </p>
 
 </div>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-align-items:stretch;
-">
+<div class="why-card">
 
-<!-- STARTER -->
-
-<div class="trust-card" style="
-border:2px solid #e5e7eb;
-position:relative;
-">
-
-<h3 style="
-font-size:28px;
-margin-bottom:10px;
-">
-Starter
-</h3>
-
-<h2 style="
-font-size:42px;
-color:#0d6efd;
-margin-bottom:20px;
-">
-₹399
-</h2>
-
-<p style="
-margin-bottom:25px;
-color:#666;
-line-height:1.8;
-">
-
-Perfect for students, beginners,
-housewives and first-time agents.
-
-</p>
-
-<ul style="
-list-style:none;
-line-height:2.2;
-color:#444;
-">
-
-<li>✔ Agent Dashboard Access</li>
-<li>✔ Basic Training Modules</li>
-<li>✔ CRM Access</li>
-<li>✔ AI Support Access</li>
-<li>✔ Offer Letter</li>
-<li>✔ Digital ID Card</li>
-<li>✔ RM Support</li>
-<li>✔ Community Access</li>
-
-</ul>
-
-<a href="#register"
-style="
-display:block;
-text-align:center;
-margin-top:30px;
-padding:14px;
-background:#0d6efd;
-color:#fff;
-text-decoration:none;
-border-radius:10px;
-font-weight:600;
-">
-Choose Starter
-</a>
-
-</div>
-
-<!-- PROFESSIONAL -->
-
-<div class="trust-card" style="
-border:3px solid #0d6efd;
-position:relative;
-transform:scale(1.03);
-">
-
-<div style="
-position:absolute;
-top:-15px;
-left:50%;
-transform:translateX(-50%);
-background:#0d6efd;
-color:#fff;
-padding:8px 18px;
-border-radius:30px;
-font-size:13px;
-font-weight:700;
-">
-MOST POPULAR
-</div>
-
-<h3 style="
-font-size:28px;
-margin-bottom:10px;
-">
-Professional
-</h3>
-
-<h2 style="
-font-size:42px;
-color:#0d6efd;
-margin-bottom:20px;
-">
-₹799
-</h2>
-
-<p style="
-margin-bottom:25px;
-color:#666;
-line-height:1.8;
-">
-
-Designed for serious professionals
-who want to build a long-term career.
-
-</p>
-
-<ul style="
-list-style:none;
-line-height:2.2;
-color:#444;
-">
-
-<li>✔ Everything In Starter</li>
-<li>✔ Advanced Training Academy</li>
-<li>✔ Priority RM Support</li>
-<li>✔ Product Certification</li>
-<li>✔ Advanced CRM Features</li>
-<li>✔ Sales Scripts</li>
-<li>✔ Objection Handling Training</li>
-<li>✔ Business Growth Resources</li>
-<li>✔ Premium Community Access</li>
-
-</ul>
-
-<a href="#register"
-style="
-display:block;
-text-align:center;
-margin-top:30px;
-padding:14px;
-background:#0d6efd;
-color:#fff;
-text-decoration:none;
-border-radius:10px;
-font-weight:600;
-">
-Choose Professional
-</a>
-
-</div>
-
-<!-- LEADERSHIP -->
-
-<div class="trust-card" style="
-border:2px solid #e5e7eb;
-position:relative;
-">
-
-<h3 style="
-font-size:28px;
-margin-bottom:10px;
-">
-Leadership
-</h3>
-
-<h2 style="
-font-size:42px;
-color:#0d6efd;
-margin-bottom:20px;
-">
-₹1499
-</h2>
-
-<p style="
-margin-bottom:25px;
-color:#666;
-line-height:1.8;
-">
-
-Built for team leaders and network
-builders aiming for larger growth.
-
-</p>
-
-<ul style="
-list-style:none;
-line-height:2.2;
-color:#444;
-">
-
-<li>✔ Everything In Professional</li>
-<li>✔ Team Building Tools</li>
-<li>✔ Referral Income Access</li>
-<li>✔ Team Dashboard</li>
-<li>✔ Leadership Training</li>
-<li>✔ Team Performance Reports</li>
-<li>✔ Priority Announcements</li>
-<li>✔ Special Campaign Access</li>
-<li>✔ Leadership Recognition</li>
-
-</ul>
-
-<a href="#register"
-style="
-display:block;
-text-align:center;
-margin-top:30px;
-padding:14px;
-background:#0d6efd;
-color:#fff;
-text-decoration:none;
-border-radius:10px;
-font-weight:600;
-">
-Choose Leadership
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MEMBERSHIP BENEFITS -->
-
-<section style="padding:100px 0;background:#f8fbff;">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>WHAT YOU GET</span>
-
-<h2>
-Membership Benefits
-</h2>
+<h4>🤖 Technology Driven Platform</h4>
 
 <p>
 
-Every membership plan is designed to provide
-tools, training and support required for growth.
+Dashboard, lead management,
+tracking tools and future AI support
+within one ecosystem.
 
 </p>
 
 </div>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-">
+<div class="why-card">
 
-<div class="trust-card">
-<h3>🎓 Training Academy</h3>
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-Structured learning and practical guidance.
-</p>
-</div>
+<h4>🌍 Work From Anywhere</h4>
 
-<div class="trust-card">
-<h3>🤖 AI Assistant</h3>
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-Instant support for products and customer queries.
-</p>
-</div>
+<p>
 
-<div class="trust-card">
-<h3>📊 CRM Access</h3>
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-Lead tracking and customer management tools.
-</p>
-</div>
+Students, housewives, professionals,
+freelancers and entrepreneurs can
+grow using the platform.
 
-<div class="trust-card">
-<h3>👨‍💼 RM Support</h3>
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-Dedicated guidance from support teams.
 </p>
-</div>
-
-<div class="trust-card">
-<h3>📄 Offer Letter</h3>
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-Professional onboarding documentation.
-</p>
-</div>
-
-<div class="trust-card">
-<h3>🪪 Digital ID Card</h3>
-<p style="margin-top:15px;color:#666;line-height:1.8;">
-Identity verification and platform access.
-</p>
-</div>
 
 </div>
 
 </div>
 
 </section>
-
-<!-- JOIN CTA -->
-
-<section style="
-padding:90px 0;
-background:linear-gradient(135deg,#0d6efd,#004fc4);
-color:#fff;
-text-align:center;
-">
-
-<div class="container">
-
-<h2 style="
-font-size:44px;
-margin-bottom:20px;
-">
-
-Start Your Professional Journey Today
-
-</h2>
-
-<p style="
-max-width:850px;
-margin:auto;
-line-height:2;
-font-size:17px;
-margin-bottom:35px;
-">
-
-Join a growing ecosystem of financial services,
-insurance, compliance and technology professionals.
-Learn, grow and create opportunities through one platform.
-
-</p>
-
-<a href="#register"
-style="
-display:inline-block;
-padding:16px 40px;
-background:#fff;
-color:#0d6efd;
-font-weight:700;
-text-decoration:none;
-border-radius:10px;
-">
-
-Join Now
-
-</a>
-
-</div>
-
-</section>
-
-<!-- PART 06 END -->
+```
