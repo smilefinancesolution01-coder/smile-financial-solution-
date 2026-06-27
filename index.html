@@ -410,5 +410,680 @@ NEXT : PART 01B
 
 </head>
 
+<!-- =======================================================
+SMILE FINANCIAL SOLUTION
+PART 01B-1
+Government Top Bar + Premium Header
+======================================================= -->
+
+<style>
+
+/*==================================================
+09. TOP GOVERNMENT BAR
+==================================================*/
+
+.topbar{
+
+background:#082b63;
+
+color:#ffffff;
+
+padding:10px 0;
+
+font-size:14px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.topbar-wrapper{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.topbar-left{
+
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.topbar-left span{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+font-weight:500;
+
+}
+
+.topbar-left i{
+
+color:#ffd54f;
+
+}
+
+.topbar-right{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.topbar-right a{
+
+width:36px;
+
+height:36px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+color:#ffffff;
+
+font-size:15px;
+
+transition:.35s;
+
+}
+
+.topbar-right a:hover{
+
+background:#0d6efd;
+
+transform:translateY(-3px);
+
+}
+
+
+/*==================================================
+10. HEADER
+==================================================*/
+
+.header{
+
+position:sticky;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:#ffffff;
+
+z-index:99999;
+
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+
+}
+
+.header-wrapper{
+
+height:90px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:30px;
+
+}
+
+
+/*==================================================
+11. LOGO
+==================================================*/
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+text-decoration:none;
+
+}
+
+.logo-icon{
+
+width:60px;
+
+height:60px;
+
+border-radius:16px;
+
+background:linear-gradient(135deg,#0d6efd,#0056d6);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+color:#ffffff;
+
+box-shadow:0 10px 30px rgba(13,110,253,.25);
+
+}
+
+.logo-text h2{
+
+font-size:28px;
+
+margin:0;
+
+font-weight:900;
+
+line-height:1.1;
+
+color:#0d1b2a;
+
+}
+
+.logo-text p{
+
+margin:0;
+
+font-size:13px;
+
+font-weight:600;
+
+color:#777777;
+
+letter-spacing:1px;
+
+}
+
+
+/*==================================================
+12. DESKTOP MENU
+==================================================*/
+
+.main-menu{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+}
+
+.main-menu ul{
+
+display:flex;
+
+align-items:center;
+
+gap:5px;
+
+list-style:none;
+
+}
+
+.main-menu ul li{
+
+position:relative;
+
+}
+
+.main-menu ul li a{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:14px 18px;
+
+border-radius:10px;
+
+font-size:15px;
+
+font-weight:600;
+
+color:#222222;
+
+transition:.35s;
+
+}
+
+.main-menu ul li a:hover{
+
+background:#eef5ff;
+
+color:#0d6efd;
+
+}
+
+
+/*==================================================
+13. HEADER BUTTONS
+==================================================*/
+
+.header-buttons{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.search-btn{
+
+width:48px;
+
+height:48px;
+
+border-radius:12px;
+
+background:#eef5ff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:18px;
+
+color:#0d6efd;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.search-btn:hover{
+
+background:#0d6efd;
+
+color:#ffffff;
+
+}
+
+.login-btn{
+
+padding:14px 24px;
+
+border-radius:10px;
+
+font-size:15px;
+
+font-weight:700;
+
+background:#ffffff;
+
+border:2px solid #0d6efd;
+
+color:#0d6efd;
+
+transition:.35s;
+
+}
+
+.login-btn:hover{
+
+background:#0d6efd;
+
+color:#ffffff;
+
+}
+
+.apply-btn{
+
+padding:15px 28px;
+
+border-radius:10px;
+
+background:#0d6efd;
+
+color:#ffffff;
+
+font-size:15px;
+
+font-weight:700;
+
+box-shadow:0 10px 25px rgba(13,110,253,.25);
+
+transition:.35s;
+
+}
+
+.apply-btn:hover{
+
+background:#0056d6;
+
+transform:translateY(-3px);
+
+}
+
+
+/*==================================================
+14. MOBILE MENU ICON
+==================================================*/
+
+.mobile-toggle{
+
+display:none;
+
+font-size:28px;
+
+cursor:pointer;
+
+color:#0d1b2a;
+
+}
+
+
+/*==================================================
+15. RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+.main-menu{
+
+display:none;
+
+}
+
+.mobile-toggle{
+
+display:block;
+
+}
+
+.header-buttons .search-btn{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.topbar{
+
+display:none;
+
+}
+
+.logo-text h2{
+
+font-size:22px;
+
+}
+
+.logo-icon{
+
+width:50px;
+
+height:50px;
+
+font-size:22px;
+
+}
+
+.header-wrapper{
+
+height:80px;
+
+}
+
+.apply-btn{
+
+display:none;
+
+}
+
+.login-btn{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+<!--==================================================
+TOP BAR
+==================================================-->
+
+<div class="topbar">
+
+<div class="container">
+
+<div class="topbar-wrapper">
+
+<div class="topbar-left">
+
+<span>
+
+<i class="fa-solid fa-phone"></i>
+
++91 8586051944
+
+</span>
+
+<span>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+7290977231
+
+</span>
+
+<span>
+
+<i class="fa-solid fa-envelope"></i>
+
+smilefinancialsolution01@gmail.com
+
+</span>
+
+</div>
+
+<div class="topbar-right">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!--==================================================
+HEADER
+==================================================-->
+
+<header class="header">
+
+<div class="container">
+
+<div class="header-wrapper">
+
+<a href="index.html" class="logo">
+
+<div class="logo-icon">
+
+<i class="fa-solid fa-building-columns"></i>
+
+</div>
+
+<div class="logo-text">
+
+<h2>Smile Financial</h2>
+
+<p>BUSINESS GROWTH PARTNER</p>
+
+</div>
+
+</a>
+
+<nav class="main-menu">
+
+<ul>
+
+<li>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+</li>
+
+<li>
+
+<a href="about.html">
+
+About
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Services
+
+<i class="fa-solid fa-angle-down"></i>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Government Schemes
+
+<i class="fa-solid fa-angle-down"></i>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Registrations
+
+<i class="fa-solid fa-angle-down"></i>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+<div class="header-buttons">
+
+<div class="search-btn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+
+<a href="login.html" class="login-btn">
+
+Login
+
+</a>
+
+<a href="#" class="apply-btn">
+
+Apply Now
+
+</a>
+
+<div class="mobile-toggle">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ======================================================
+PART 01B-1 END
+NEXT PART : 01B-2
+(Mega Menu + Mobile Menu + Search Popup + JavaScript)
+====================================================== -->
+
+
 <body>
 
