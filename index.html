@@ -1,135 +1,199 @@
-🏢 Company Name
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Financial Solution | Professional Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .mega-menu { display: none; }
+        .has-mega:hover .mega-menu { display: grid; }
+        .app-shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-Smile Financial Solution
+    <!-- Header -->
+    <nav class="bg-white sticky top-0 z-50 app-shadow p-4 flex justify-between items-center">
+        <div class="text-xl font-bold text-blue-700">SMILE<span class="text-gray-600">FIN</span></div>
+        <button id="menu-btn" class="md:hidden"><i class="fas fa-bars text-2xl"></i></button>
+        
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex gap-8 font-medium">
+            <div class="has-mega relative cursor-pointer">
+                Services <i class="fas fa-chevron-down text-xs"></i>
+                <div class="mega-menu absolute top-full left-0 bg-white w-[600px] p-6 grid grid-cols-3 gap-6 app-shadow mt-2 rounded-lg">
+                    <div><h4 class="font-bold text-blue-700 mb-2">Financial</h4><p class="text-sm">Loans, Mudra, PMEGP</p></div>
+                    <div><h4 class="font-bold text-blue-700 mb-2">Business</h4><p class="text-sm">GST, MSME, Startup</p></div>
+                    <div><h4 class="font-bold text-blue-700 mb-2">Tech</h4><p class="text-sm">CRM, Web, AI</p></div>
+                </div>
+            </div>
+            <a href="#">Agents</a>
+            <a href="#">About</a>
+        </div>
+        <button class="bg-blue-700 text-white px-6 py-2 rounded-full font-semibold">Join Now</button>
+    </nav>
 
-Tagline (Suggested):
-"Learn • Grow • Build"
+    <!-- Hero Section -->
+    <header class="bg-white py-16 px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            Your Trusted <br><span class="text-blue-700">Financial & Business Growth</span> Partner
+        </h1>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Learn, Grow, and Build your professional journey with India's most comprehensive ecosystem.</p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <button class="bg-blue-700 text-white px-8 py-4 rounded-xl font-bold">Start Your Business</button>
+            <button class="border-2 border-blue-700 text-blue-700 px-8 py-4 rounded-xl font-bold">Explore Services</button>
+        </div>
+    </header>
 
-ya
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            alert('Mobile menu toggle logic here');
+        });
+    </script>
+</body>
+</html>
 
-"Your Trusted Financial & Business Growth Partner"
+<section class="py-12 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-10">Our Financial & Business Ecosystem</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-2xl app-shadow border border-gray-100 hover:border-blue-500 transition-all cursor-pointer">
+                <i class="fas fa-hand-holding-usd text-blue-600 text-3xl mb-4"></i>
+                <h3 class="font-bold text-lg">Financial Loans</h3>
+                <p class="text-xs text-gray-500 mt-1">Personal, Business, Home Loans</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl app-shadow border border-gray-100 hover:border-blue-500 transition-all cursor-pointer">
+                <i class="fas fa-shield-alt text-blue-600 text-3xl mb-4"></i>
+                <h3 class="font-bold text-lg">Insurance</h3>
+                <p class="text-xs text-gray-500 mt-1">Health, Term, Motor</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl app-shadow border border-gray-100 hover:border-blue-500 transition-all cursor-pointer">
+                <i class="fas fa-file-invoice-dollar text-blue-600 text-3xl mb-4"></i>
+                <h3 class="font-bold text-lg">Compliance</h3>
+                <p class="text-xs text-gray-500 mt-1">GST, MSME, Registration</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl app-shadow border border-gray-100 hover:border-blue-500 transition-all cursor-pointer">
+                <i class="fas fa-laptop-code text-blue-600 text-3xl mb-4"></i>
+                <h3 class="font-bold text-lg">Tech & AI</h3>
+                <p class="text-xs text-gray-500 mt-1">Web, App, CRM, Marketing</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-🌟 Vision
+<!-- Part 03: Agent Ecosystem Dashboard -->
+<section class="py-16 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Become a Digital Business Partner</h2>
+            <p class="text-gray-500 mt-2">Scale your income with our professional agent platform.</p>
+        </div>
 
-Smile Financial Solution ka vision hai India me ek trusted, technology-driven financial aur business ecosystem banana jahan har student, housewife, job seeker, working professional aur entrepreneur ko professional opportunities, skill development aur business growth ke tools ek hi platform par mil sakein.
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Dashboard Left: Quick Features -->
+            <div class="md:col-span-2 grid grid-cols-2 gap-4">
+                <div class="p-4 border rounded-2xl bg-blue-50 border-blue-100">
+                    <i class="fas fa-id-card text-blue-700 mb-2"></i>
+                    <h4 class="font-bold text-sm">Digital ID & Wallet</h4>
+                </div>
+                <div class="p-4 border rounded-2xl bg-blue-50 border-blue-100">
+                    <i class="fas fa-tasks text-blue-700 mb-2"></i>
+                    <h4 class="font-bold text-sm">Lead Management</h4>
+                </div>
+                <div class="p-4 border rounded-2xl bg-blue-50 border-blue-100">
+                    <i class="fas fa-robot text-blue-700 mb-2"></i>
+                    <h4 class="font-bold text-sm">AI Assistant Support</h4>
+                </div>
+                <div class="p-4 border rounded-2xl bg-blue-50 border-blue-100">
+                    <i class="fas fa-chart-line text-blue-700 mb-2"></i>
+                    <h4 class="font-bold text-sm">Real-time Payouts</h4>
+                </div>
+            </div>
 
-Hum aisa platform banana chahte hain jahan log sirf financial services hi nahi, balki apna career aur business bhi build kar saken.
+            <!-- Dashboard Right: Call to Action/Progress -->
+            <div class="bg-gray-900 text-white p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Ready to Start?</h3>
+                    <p class="text-gray-400 text-sm mb-6">Join our network of professionals and start earning today.</p>
+                </div>
+                <button class="w-full bg-blue-600 py-3 rounded-xl font-bold hover:bg-blue-500 transition">Get Started Now</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-🎯 Mission
-Financial aur business solutions ko simple aur accessible banana.
-Employment generation ko promote karna.
-Work-from-home opportunities create karna.
-Agents ko training, technology aur business tools provide karna.
-Transparent lead management aur payout system banana.
-AI aur digital technology ke through productivity badhana.
-Long-term professional growth ka ecosystem develop karna.
-💼 Services
-Financial Services
-Personal Loan
-Business Loan
-Home Loan
-Loan Against Property
-Vehicle Loan
-Education Loan
-Working Capital Loan
-Mudra Loan
-PMEGP Assistance
-Government Funding Support
-Insurance
-Health Insurance
-Term Insurance
-Motor Insurance
-Business Services
-MSME Registration
-GST Registration
-Company Registration
-Startup India Support
-DPIIT Guidance
-Business Compliance
-Project Reports
-Tax Consultancy
-Technology Services
-Website Development
-Mobile App Development
-AI Solutions
-Digital Marketing
-CRM Solutions
-🤝 Business Ecosystem
+<!-- Part 04: Impact & Trust Section -->
+<section class="py-12 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-center mb-10 text-blue-400">Our Professional Ecosystem</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <!-- Stat 1 -->
+            <div>
+                <h3 class="text-3xl font-extrabold mb-1">1200+</h3>
+                <p class="text-xs text-gray-400 uppercase tracking-widest">CA Network</p>
+            </div>
+            <!-- Stat 2 -->
+            <div>
+                <h3 class="text-3xl font-extrabold mb-1">5</h3>
+                <p class="text-xs text-gray-400 uppercase tracking-widest">Branches</p>
+            </div>
+            <!-- Stat 3 -->
+            <div>
+                <h3 class="text-3xl font-extrabold mb-1">Pan-India</h3>
+                <p class="text-xs text-gray-400 uppercase tracking-widest">Support</p>
+            </div>
+            <!-- Stat 4 -->
+            <div>
+                <h3 class="text-3xl font-extrabold mb-1">Expert</h3>
+                <p class="text-xs text-gray-400 uppercase tracking-widest">Consultancy</p>
+            </div>
+        </div>
+        
+        <!-- Trust Badge/Note -->
+        <div class="mt-12 text-center border-t border-gray-800 pt-8">
+            <p class="text-sm italic text-gray-500 italic">
+                "Empowering businesses through technology-driven financial solutions."
+            </p>
+        </div>
+    </div>
+</section>
 
-Aapke bataye anusaar:
+<!-- Part 05: Sticky Quick-Action Bar (Mobile App Style) -->
+<footer class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50">
+    <div class="flex justify-around items-center py-3">
+        <!-- Home -->
+        <a href="#" class="flex flex-col items-center text-blue-700">
+            <i class="fas fa-home text-lg"></i>
+            <span class="text-[10px] font-bold">Home</span>
+        </a>
+        <!-- Services -->
+        <a href="#" class="flex flex-col items-center text-gray-500 hover:text-blue-700">
+            <i class="fas fa-briefcase text-lg"></i>
+            <span class="text-[10px] font-bold">Services</span>
+        </a>
+        <!-- CTA (Main Action) -->
+        <a href="#" class="bg-blue-700 text-white p-3 rounded-full -mt-8 border-4 border-white shadow-lg">
+            <i class="fas fa-plus text-xl"></i>
+        </a>
+        <!-- Agent Login -->
+        <a href="#" class="flex flex-col items-center text-gray-500 hover:text-blue-700">
+            <i class="fas fa-user-circle text-lg"></i>
+            <span class="text-[10px] font-bold">Partner</span>
+        </a>
+        <!-- WhatsApp Support -->
+        <a href="#" class="flex flex-col items-center text-green-600">
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span class="text-[10px] font-bold">Help</span>
+        </a>
+    </div>
+</footer>
 
-1200+ CA Team Network
-5 Branches
-Pan India Support
-Banking & NBFC Network
-Incubation Centre Support
-Business Consultancy
-Startup Support
-🏦 Banking & NBFC Partners
-
-Aapne jin partners ka zikr kiya tha, unhe "Our Lending Network" ya "Our Financial Ecosystem" ke roop me dikhaya ja sakta hai (sirf tab jab unke logos ya naam use karne ki permission ya agreement ho).
-
-👨‍💼 Become an Agent Platform
-
-Agent ko milega:
-
-Digital ID Card
-Offer Letter
-Wallet
-Lead Management
-Lead Tracking
-Training Videos
-Product Knowledge
-Eligibility Guide
-EMI Calculator
-Document Checklist
-AI Assistant
-RM Support
-Notifications
-Commission Report
-Payout History
-Rewards
-Leaderboard
-Membership Upgrade
-Referral System
-Team Management
-👨‍💻 Admin Panel
-
-Aap control karenge:
-
-Membership Plans
-Pricing
-Offers
-Hero Banners
-Videos
-Products
-Commission Rules
-Lead Distribution
-Wallet
-Payout
-Blogs
-Notifications
-Success Stories
-Training
-Branches
-Agent Verification
-🎯 Target Audience
-Students
-Housewives
-Job Seekers
-Working Professionals
-Freelancers
-Entrepreneurs
-MSMEs
-Startups
-Business Owners
-🌍 Long-Term Goal
-300+ active agents (Phase 1)
-1000+ active agents (Phase 2)
-Pan India expansion
-AI-powered business platform
-Android & iOS App
-Complete Digital Business Ecosystem
-Ek baat jo main suggest karunga
-
-Aap "Employment Generation" ke saath-saath website par "Skill Development & Business Growth Platform" ka message bhi prominently rakhiye. Isse platform sirf earning ke liye nahi, balki learning aur professional development ke liye bhi credible lagega. Ye trust banane me madad karega aur long-term brand value ko bhi strong karega.
+<!-- Added padding to body to prevent overlap -->
+<style>
+    body { padding-bottom: 80px; }
+</style>
