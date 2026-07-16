@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#0b1a33" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b1a33'/%3E%3Ctext x='50' y='68' font-size='48' text-anchor='middle' fill='%23f5b041' font-family='sans-serif'%3E☺%3C/text%3E%3C/svg%3E" />
     <style>
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -33,7 +34,6 @@
             --navy: #132c4a;
             --gold: #f5b041;
             --gold-light: #fce5c0;
-            --glass: rgba(255, 255, 255, 0.5);
             --shadow: 0 12px 30px rgba(0, 20, 40, 0.06);
             --radius: 28px;
             --transition: 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
@@ -44,7 +44,7 @@
             padding: 0 24px;
         }
 
-        /* Gov Strip */
+        /* ===== GOV STRIP ===== */
         .gov-strip {
             background: #0b1a33;
             color: #b9c9e0;
@@ -69,7 +69,7 @@
             font-weight: 500;
         }
 
-        /* Header */
+        /* ===== HEADER ===== */
         .header {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(16px);
@@ -148,7 +148,7 @@
             position: relative;
         }
 
-        /* Mega Menu */
+        /* ===== MEGA MENU ===== */
         .mega-menu {
             display: none;
             position: absolute;
@@ -209,7 +209,7 @@
             }
         }
 
-        /* Mobile Drawer */
+        /* ===== MOBILE DRAWER ===== */
         .mobile-drawer {
             position: fixed;
             top: 0;
@@ -254,7 +254,7 @@
             cursor: pointer;
         }
 
-        /* Hero Slider */
+        /* ===== HERO SLIDER ===== */
         .hero-slider {
             position: relative;
             margin: 24px 0 20px;
@@ -393,7 +393,7 @@
             right: 16px;
         }
 
-        /* Ticker */
+        /* ===== TICKER ===== */
         .ticker-wrap {
             background: #0b1a33;
             color: #e0e8f5;
@@ -426,7 +426,7 @@
             }
         }
 
-        /* Banners Grid */
+        /* ===== BANNERS ===== */
         .banner-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -479,7 +479,7 @@
             text-decoration: none;
         }
 
-        /* Popups */
+        /* ===== POPUPS ===== */
         .popup-overlay {
             position: fixed;
             inset: 0;
@@ -549,7 +549,7 @@
             pointer-events: none;
         }
 
-        /* Sections */
+        /* ===== SECTIONS ===== */
         .section-title {
             font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 700;
@@ -592,7 +592,7 @@
             margin-bottom: 12px;
         }
 
-        /* Bank Logos */
+        /* ===== BANK SCROLL ===== */
         .bank-scroll {
             display: flex;
             gap: 30px;
@@ -616,7 +616,7 @@
             opacity: 1;
         }
 
-        /* Counters */
+        /* ===== COUNTERS ===== */
         .counter-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -638,7 +638,7 @@
             color: #4f658d;
         }
 
-        /* Pricing */
+        /* ===== PRICING ===== */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -690,7 +690,7 @@
             width: 100%;
         }
 
-        /* Agent Banner */
+        /* ===== AGENT BANNER ===== */
         .agent-banner {
             background: linear-gradient(135deg, #0b1a33 0%, #1b3555 100%);
             border-radius: 44px;
@@ -716,7 +716,7 @@
             text-decoration: none;
         }
 
-        /* Calculators */
+        /* ===== CALCULATORS ===== */
         .calc-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -759,7 +759,7 @@
             margin-top: 12px;
         }
 
-        /* Testimonial */
+        /* ===== TESTIMONIALS ===== */
         .testi-slider {
             display: flex;
             gap: 20px;
@@ -778,7 +778,7 @@
             box-shadow: var(--shadow);
         }
 
-        /* FAQ */
+        /* ===== FAQ ===== */
         .faq-item {
             background: white;
             border-radius: 20px;
@@ -801,7 +801,7 @@
             display: block;
         }
 
-        /* Footer */
+        /* ===== FOOTER ===== */
         .footer {
             background: #0b1a33;
             color: #d0daea;
@@ -825,7 +825,7 @@
             gap: 12px;
         }
 
-        /* Bottom Nav */
+        /* ===== BOTTOM NAV ===== */
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -856,7 +856,7 @@
             font-style: normal;
         }
 
-        /* Floating */
+        /* ===== FLOATING BUTTONS ===== */
         .floating {
             position: fixed;
             right: 20px;
@@ -899,7 +899,7 @@
             border-radius: 40px;
         }
 
-        /* Reveal */
+        /* ===== REVEAL ===== */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -919,7 +919,7 @@
             width: 0%;
         }
 
-        /* Scheme Slider */
+        /* ===== SCHEME SLIDER ===== */
         .scheme-slider {
             display: flex;
             gap: 20px;
@@ -983,7 +983,7 @@
             color: #0b1a33;
         }
 
-        /* Offer Cards */
+        /* ===== OFFER CARDS ===== */
         .offer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1007,7 +1007,7 @@
             display: inline-block;
         }
 
-        /* Trust Section */
+        /* ===== TRUST SECTION ===== */
         .trust-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -1026,7 +1026,7 @@
             margin-bottom: 8px;
         }
 
-        /* Loading Overlay */
+        /* ===== LOADING OVERLAY ===== */
         .loading-overlay {
             position: fixed;
             inset: 0;
@@ -1062,7 +1062,7 @@
             }
         }
 
-        /* Responsive */
+        /* ===== RESPONSIVE ===== */
         @media (max-width:480px) {
             .header-inner {
                 flex-wrap: wrap;
@@ -1099,16 +1099,16 @@
 </head>
 <body>
 
-    <!-- Loading Overlay -->
+    <!-- ===== LOADING OVERLAY ===== -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="spinner"></div>
         <p style="margin-top:16px;font-weight:500;color:#0b1a33;">Loading...</p>
     </div>
 
-    <!-- Progress Bar -->
+    <!-- ===== PROGRESS BAR ===== -->
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- Gov Strip -->
+    <!-- ===== GOV STRIP ===== -->
     <div class="gov-strip">
         <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;width:100%;">
             <span>🇮🇳 Government of India · MSME · Startup India · PMEGP</span>
@@ -1116,7 +1116,7 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- ===== HEADER ===== -->
     <header class="header" id="mainHeader">
         <div class="container header-inner">
             <div class="logo"><i>☺</i> Smile<span style="color:var(--gold);">OS</span></div>
@@ -1130,7 +1130,7 @@
                 <a href="service-details.html" class="primary-btn" style="background:var(--gold);color:#0b1a33;">Apply Loan</a>
             </div>
         </div>
-        <!-- Mega Menu -->
+        <!-- ===== MEGA MENU ===== -->
         <div class="container" style="position:relative;">
             <div class="mega-menu" id="megaMenu">
                 <a href="personal-loan.html"><i>💼</i> Personal Loan</a>
@@ -1153,7 +1153,7 @@
         </div>
     </header>
 
-    <!-- Mobile Drawer -->
+    <!-- ===== MOBILE DRAWER ===== -->
     <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
     <div class="mobile-drawer" id="mobileDrawer">
         <button class="close-btn" onclick="closeDrawer()">✕</button>
@@ -1171,9 +1171,9 @@
 
     <main class="container">
 
-        <!-- Hero Slider -->
+        <!-- ===== HERO SLIDER ===== -->
         <div class="hero-slider" id="heroSlider">
-            <!-- Slide 1 -->
+            <!-- Slide 1: Mudra -->
             <div class="slide active" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23132c4a%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
                 <div class="poster-area"><span class="badge">🔥 Limited Offer</span> PM Mudra Loan</div>
                 <h2>PM Mudra Loan – Up to ₹10 Lakh</h2>
@@ -1183,7 +1183,7 @@
                     <a href="mudra-loan.html" class="outline">Learn More</a>
                 </div>
             </div>
-            <!-- Slide 2 -->
+            <!-- Slide 2: PMEGP -->
             <div class="slide" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.6),rgba(0,0,0,0.2)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%230b1a33%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
                 <div class="poster-area"><span class="badge">🚀 Govt Scheme</span> PMEGP Loan</div>
                 <h2>PMEGP – Subsidy up to 35%</h2>
@@ -1193,7 +1193,7 @@
                     <a href="pmegp-loan-assistance.html" class="outline">Learn More</a>
                 </div>
             </div>
-            <!-- Slide 3 -->
+            <!-- Slide 3: Startup India -->
             <div class="slide" style="background-image:linear-gradient(135deg,rgba(21,45,70,0.6),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%231b3555%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
                 <div class="poster-area"><span class="badge">🌟 Startup India</span> Fund of Funds</div>
                 <h2>Startup India – Seed Fund &amp; Mentorship</h2>
@@ -1203,7 +1203,7 @@
                     <a href="government-schemes.html" class="outline">Learn More</a>
                 </div>
             </div>
-            <!-- Slide 4 -->
+            <!-- Slide 4: MSME Business -->
             <div class="slide" style="background-image:linear-gradient(135deg,rgba(10,30,50,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%230a1e32%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
                 <div class="poster-area"><span class="badge">🏢 MSME</span> Business Loan</div>
                 <h2>MSME Business Loan – Up to ₹5 Crore</h2>
@@ -1213,7 +1213,7 @@
                     <a href="business-loan.html" class="outline">Learn More</a>
                 </div>
             </div>
-            <!-- Slide 5 -->
+            <!-- Slide 5: Agriculture -->
             <div class="slide" style="background-image:linear-gradient(135deg,rgba(20,50,30,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%2314321e%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
                 <div class="poster-area"><span class="badge">🌾 Agriculture</span> KCC Loan</div>
                 <h2>Agriculture Loan – KCC &amp; Crop Finance</h2>
@@ -1223,7 +1223,7 @@
                     <a href="services.html" class="outline">Learn More</a>
                 </div>
             </div>
-            <!-- Slide 6 -->
+            <!-- Slide 6: Personal Loan -->
             <div class="slide" style="background-image:linear-gradient(135deg,rgba(40,20,50,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23281432%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
                 <div class="poster-area"><span class="badge">💳 Personal</span> Instant Loan</div>
                 <h2>Personal Loan – Up to ₹25 Lakh</h2>
@@ -1245,7 +1245,7 @@
             <button class="slider-nav next" onclick="nextSlide()">›</button>
         </div>
 
-        <!-- Ticker -->
+        <!-- ===== TICKER ===== -->
         <div class="ticker-wrap">
             <div class="ticker">
                 <span>🇮🇳 MSME Emergency Credit Scheme</span>
@@ -1257,14 +1257,14 @@
             </div>
         </div>
 
-        <!-- Offer Cards -->
+        <!-- ===== OFFER CARDS ===== -->
         <div class="offer-grid reveal">
             <div class="offer-card"><span class="ribbon">Limited Time</span><h4>💰 Cashback ₹500</h4><p>On first loan application</p></div>
             <div class="offer-card"><span class="ribbon">Festival Offer</span><h4>🎁 Free GST Filing</h4><p>For new membership signups</p></div>
             <div class="offer-card"><span class="ribbon">Agent Drive</span><h4>📈 Extra 5% Commission</h4><p>For agents onboarded this month</p></div>
         </div>
 
-        <!-- Banners -->
+        <!-- ===== BANNERS ===== -->
         <div class="banner-grid">
             <div class="banner-card" style="background-image:linear-gradient(135deg,#0b1a33,#1b3555);">
                 <div class="overlay"></div>
@@ -1322,7 +1322,7 @@
             </div>
         </div>
 
-        <!-- Trust Section -->
+        <!-- ===== TRUST SECTION ===== -->
         <div class="trust-grid reveal">
             <div class="trust-item"><div class="icon">🏦</div><div>30+ Banks</div></div>
             <div class="trust-item"><div class="icon">📊</div><div>₹2,500+ Cr Disbursed</div></div>
@@ -1330,7 +1330,7 @@
             <div class="trust-item"><div class="icon">😊</div><div>10,000+ Happy Clients</div></div>
         </div>
 
-        <!-- Government Schemes Carousel -->
+        <!-- ===== GOVERNMENT SCHEMES ===== -->
         <h2 class="section-title reveal">🇮🇳 Government Schemes</h2>
         <div class="scheme-slider reveal">
             <div class="scheme-card">
@@ -1379,7 +1379,7 @@
             </div>
         </div>
 
-        <!-- Services -->
+        <!-- ===== SERVICES ===== -->
         <h2 class="section-title reveal">Our Services</h2>
         <div class="service-grid reveal">
             <a href="personal-loan.html" class="service-card"><i>💳</i> Personal Loan</a>
@@ -1400,14 +1400,14 @@
             <a href="services.html" class="service-card"><i>📣</i> Digital Marketing</a>
         </div>
 
-        <!-- Bank Logos -->
+        <!-- ===== BANK LOGOS ===== -->
         <h2 class="section-title reveal">Partner Banks &amp; NBFC</h2>
         <div class="bank-scroll reveal">
             <span>SBI</span><span>PNB</span><span>AXIS</span><span>ICICI</span><span>HDFC</span>
             <span>BOB</span><span>Kotak</span><span>Canara</span><span>IDFC</span><span>NBFC</span>
         </div>
 
-        <!-- Why Choose Us + Counters -->
+        <!-- ===== WHY CHOOSE US + COUNTERS ===== -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:40px 0;" class="reveal">
             <div>
                 <h3>Why Smile OS</h3>
@@ -1425,7 +1425,7 @@
             </div>
         </div>
 
-        <!-- Pricing -->
+        <!-- ===== MEMBERSHIP PLANS ===== -->
         <h2 class="section-title reveal">Membership Plans</h2>
         <div class="pricing-grid reveal">
             <div class="pricing-card"><h4>Free</h4><div class="price">₹0</div><div class="perk">Basic access</div><div class="perk">Loan eligibility</div><div class="perk">Newsletter</div><button class="join-btn" onclick="openPopup('membershipPopup')">Join Now</button></div>
@@ -1434,7 +1434,7 @@
             <div class="pricing-card"><h4>Premium</h4><div class="price">₹3499</div><div class="perk">AI underwriting</div><div class="perk">Legal / ITR</div><div class="perk">24/7 support</div><button class="join-btn" onclick="openPopup('membershipPopup')">Join Now</button></div>
         </div>
 
-        <!-- Become Agent -->
+        <!-- ===== BECOME AGENT ===== -->
         <div class="agent-banner reveal">
             <div>
                 <h2>Become a Smile Agent</h2>
@@ -1448,7 +1448,7 @@
             <a href="become-agent.html">Apply Now →</a>
         </div>
 
-        <!-- Calculators -->
+        <!-- ===== CALCULATORS ===== -->
         <div class="calc-grid reveal">
             <div class="calc-box">
                 <h3>EMI Calculator</h3>
@@ -1467,7 +1467,7 @@
             </div>
         </div>
 
-        <!-- Testimonials -->
+        <!-- ===== TESTIMONIALS ===== -->
         <h2 class="section-title reveal">Testimonials</h2>
         <div class="testi-slider reveal">
             <div class="testi-item">“Smile OS made our loan process seamless.” – Ravi, Delhi</div>
@@ -1475,13 +1475,13 @@
             <div class="testi-item">“Government schemes at one place.” – Anil, Gujarat</div>
         </div>
 
-        <!-- FAQ -->
+        <!-- ===== FAQ ===== -->
         <h2 class="section-title reveal">FAQ</h2>
         <div class="faq-item"><div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">What is Smile Business OS? <span>+</span></div><div class="faq-answer">An integrated fintech platform for MSME, loans, GST, AI automation &amp; government schemes.</div></div>
         <div class="faq-item"><div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">How to apply for Mudra loan? <span>+</span></div><div class="faq-answer">Visit our loan section, fill details, and get instant approval with bank integration.</div></div>
         <div class="faq-item"><div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">Is my data secure? <span>+</span></div><div class="faq-answer">Yes, we use bank-grade encryption and are ISO 27001 certified.</div></div>
 
-        <!-- Contact -->
+        <!-- ===== CONTACT ===== -->
         <h2 class="section-title reveal">Get in Touch</h2>
         <form class="calc-box" style="max-width:600px;" id="contactForm" onsubmit="handleContact(event)">
             <input type="text" placeholder="Full Name" required id="contactName" />
@@ -1491,7 +1491,7 @@
         </form>
     </main>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container footer-grid">
             <div><h4 style="color:white;">Smile OS</h4><p>Fintech for MSME &amp; startups</p></div>
@@ -1502,7 +1502,7 @@
         <div style="text-align:center;padding-top:30px;border-top:1px solid #1c3150;margin-top:20px;">© 2025 Smile Financial Solutions · All rights reserved</div>
     </footer>
 
-    <!-- Bottom Nav -->
+    <!-- ===== BOTTOM NAV ===== -->
     <div class="bottom-nav">
         <a href="index.html" class="active"><i>🏠</i><span>Home</span></a>
         <a href="services.html"><i>📋</i><span>Services</span></a>
@@ -1511,7 +1511,7 @@
         <a href="login.html"><i>👤</i><span>Profile</span></a>
     </div>
 
-    <!-- Floating Buttons -->
+    <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating">
         <a class="whatsapp" href="#" aria-label="WhatsApp">💬</a>
         <a class="call" href="#" aria-label="Call">📞</a>
@@ -1519,7 +1519,7 @@
         <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Back to top">⬆</a>
     </div>
 
-    <!-- Popup: Welcome -->
+    <!-- ===== POPUP: WELCOME ===== -->
     <div class="popup-overlay" id="welcomePopup">
         <div class="popup-card">
             <button class="close" onclick="closePopup('welcomePopup')">✕</button>
@@ -1529,7 +1529,7 @@
         </div>
     </div>
 
-    <!-- Popup: Loan Application -->
+    <!-- ===== POPUP: LOAN APPLICATION ===== -->
     <div class="popup-overlay" id="loanPopup">
         <div class="popup-card">
             <button class="close" onclick="closePopup('loanPopup')">✕</button>
@@ -1572,7 +1572,7 @@
         </div>
     </div>
 
-    <!-- Popup: Membership -->
+    <!-- ===== POPUP: MEMBERSHIP ===== -->
     <div class="popup-overlay" id="membershipPopup">
         <div class="popup-card">
             <button class="close" onclick="closePopup('membershipPopup')">✕</button>
@@ -1597,7 +1597,7 @@
         </div>
     </div>
 
-    <!-- Popup: Notification -->
+    <!-- ===== POPUP: NOTIFICATION ===== -->
     <div class="popup-overlay" id="notificationPopup">
         <div class="popup-card">
             <button class="close" onclick="closePopup('notificationPopup')">✕</button>
@@ -1610,7 +1610,7 @@
         </div>
     </div>
 
-    <!-- Popup: Search -->
+    <!-- ===== POPUP: SEARCH ===== -->
     <div class="popup-overlay" id="searchPopup">
         <div class="popup-card">
             <button class="close" onclick="closePopup('searchPopup')">✕</button>
@@ -1621,6 +1621,26 @@
     </div>
 
     <script>
+        // ============================================================
+        // NAVIGATION HELPERS
+        // ============================================================
+        function navigateTo(url) {
+            document.getElementById('loadingOverlay').classList.add('active');
+            setTimeout(function() {
+                window.location.href = url;
+            }, 400);
+        }
+
+        // Replace all # links with real navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href="#"]').forEach(function(el) {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navigateTo('index.html');
+                });
+            });
+        });
+
         // ============================================================
         // HERO SLIDER
         // ============================================================
@@ -1645,16 +1665,18 @@
         setInterval(nextSlide, 5000);
         dots.forEach(d => d.addEventListener('click', function() { showSlide(parseInt(this.dataset.index)); }));
 
-        // Touch support for hero
+        // Touch support
         let touchStartX = 0,
             touchEndX = 0;
         const slider = document.getElementById('heroSlider');
-        slider.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
-        slider.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            let diff = touchStartX - touchEndX;
-            if (Math.abs(diff) > 40) { diff > 0 ? nextSlide() : prevSlide(); }
-        });
+        if (slider) {
+            slider.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+            slider.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                let diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 40) { diff > 0 ? nextSlide() : prevSlide(); }
+            });
+        }
 
         // ============================================================
         // COUNTER ANIMATION
@@ -1796,14 +1818,21 @@
         function openNotifications() { openPopup('notificationPopup'); }
 
         // ============================================================
-        // FORM HANDLERS (with Firebase-ready structure)
+        // FORM HANDLERS (Firebase Ready)
         // ============================================================
         function handleContact(e) {
             e.preventDefault();
-            showLoading();
+            document.getElementById('loadingOverlay').classList.add('active');
             setTimeout(() => {
-                hideLoading();
-                alert('Thank you! We will get back to you shortly.');
+                document.getElementById('loadingOverlay').classList.remove('active');
+                const data = {
+                    name: document.getElementById('contactName').value,
+                    email: document.getElementById('contactEmail').value,
+                    phone: document.getElementById('contactPhone').value,
+                    timestamp: new Date().toISOString()
+                };
+                console.log('Contact Data (Firebase Ready):', data);
+                showSuccessModal('Thank you! We will get back to you shortly.');
                 document.getElementById('contactForm').reset();
             }, 800);
         }
@@ -1814,7 +1843,6 @@
             btn.classList.add('loading');
             btn.textContent = 'Submitting...';
 
-            // Collect data
             const data = {
                 fullName: document.getElementById('loanFullName').value,
                 mobile: document.getElementById('loanMobile').value,
@@ -1829,7 +1857,6 @@
             };
             console.log('Loan Application Data (Firebase Ready):', data);
 
-            // Simulate save
             setTimeout(() => {
                 btn.classList.remove('loading');
                 btn.textContent = 'Submit Application';
@@ -1841,11 +1868,11 @@
 
         function handleMembership(e) {
             e.preventDefault();
-            showLoading();
+            document.getElementById('loadingOverlay').classList.add('active');
             setTimeout(() => {
-                hideLoading();
+                document.getElementById('loadingOverlay').classList.remove('active');
                 closePopup('membershipPopup');
-                alert('Membership activated! Check your email for details.');
+                showSuccessModal('Membership activated! Check your email for details.');
             }, 800);
         }
 
@@ -1864,25 +1891,9 @@
         }
 
         // ============================================================
-        // LOADING OVERLAY
+        // WELCOME POPUP
         // ============================================================
-        function showLoading() { document.getElementById('loadingOverlay').classList.add('active'); }
-
-        function hideLoading() { document.getElementById('loadingOverlay').classList.remove('active'); }
-
-        // Show welcome popup after 2s
         setTimeout(() => { openPopup('welcomePopup'); }, 2000);
-
-        // ============================================================
-        // NAVIGATION HELPERS (replace # links with real navigation)
-        // ============================================================
-        document.querySelectorAll('a[href="#"]').forEach(el => {
-            el.addEventListener('click', function(e) {
-                e.preventDefault();
-                showLoading();
-                setTimeout(() => { window.location.href = 'index.html'; }, 500);
-            });
-        });
 
         // ============================================================
         // FIREBASE READY STRUCTURE
