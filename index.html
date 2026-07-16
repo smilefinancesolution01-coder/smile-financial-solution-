@@ -14,6 +14,7 @@
     <link rel="manifest" href="data:application/json,{}" />
     <meta name="theme-color" content="#0b1a33" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b1a33'/%3E%3Ctext x='50' y='68' font-size='48' text-anchor='middle' fill='%23f5b041' font-family='sans-serif'%3E☺%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <style>
         /* ===== RESET & BASE ===== */
         * {
@@ -96,6 +97,7 @@
             font-size: clamp(1.3rem, 4vw, 1.9rem);
             color: #0b1a33;
             letter-spacing: -0.5px;
+            text-decoration: none;
         }
         .logo i {
             background: var(--gold);
@@ -1119,7 +1121,7 @@
     <!-- ===== HEADER ===== -->
     <header class="header" id="mainHeader">
         <div class="container header-inner">
-            <div class="logo"><i>☺</i> Smile<span style="color:var(--gold);">FS</span></div>
+            <a href="index.html" class="logo"><i>☺</i> Smile<span style="color:var(--gold);">FS</span></a>
             <div class="nav-actions">
                 <button class="mega-trigger" aria-label="Menu" onclick="openDrawer()">☰ Menu</button>
                 <button onclick="openSearch()" aria-label="Search">🔍</button>
@@ -1152,6 +1154,7 @@
                 <a href="pmegp-loan-assistance.html"><i>📈</i> PMEGP</a>
                 <a href="login.html"><i>🔐</i> Login</a>
                 <a href="register.html"><i>📝</i> Register</a>
+                <a href="leads.html"><i>📋</i> Leads</a>
             </div>
         </div>
     </header>
@@ -1171,6 +1174,7 @@
         <a href="register.html">Register</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="calculator.html">Calculator</a>
+        <a href="leads.html">Leads</a>
         <a href="personal-loan.html">Personal Loan</a>
         <a href="business-loan.html">Business Loan</a>
         <a href="home-loan.html">Home Loan</a>
@@ -1178,6 +1182,8 @@
         <a href="education-loan.html">Education Loan</a>
         <a href="mudra-loan.html">Mudra Loan</a>
         <a href="pmegp-loan-assistance.html">PMEGP</a>
+        <a href="working-capital-loan.html">Working Capital</a>
+        <a href="loan-against-property.html">LAP</a>
     </div>
 
     <main class="container">
@@ -1185,7 +1191,7 @@
         <!-- ===== HERO SLIDER ===== -->
         <div class="hero-slider" id="heroSlider">
             <!-- Slide 1: Startup India -->
-            <div class="slide active" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23132c4a%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+            <div class="slide active" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.7),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=400&fit=crop');">
                 <div class="poster-area"><span class="badge">🇮🇳 Govt Scheme</span> Startup India</div>
                 <h2>Startup India – Seed Fund &amp; Mentorship</h2>
                 <p>Get access to government-backed venture capital and expert guidance.</p>
@@ -1195,7 +1201,7 @@
                 </div>
             </div>
             <!-- Slide 2: PMEGP -->
-            <div class="slide" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.6),rgba(0,0,0,0.2)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%230b1a33%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+            <div class="slide" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.6),rgba(0,0,0,0.2)),url('https://images.unsplash.com/photo-1577906096429-f73c2c312435?w=800&h=400&fit=crop');">
                 <div class="poster-area"><span class="badge">🚀 Govt Scheme</span> PMEGP Loan</div>
                 <h2>PMEGP – Subsidy up to 35%</h2>
                 <p>Start your own micro enterprise with government-backed funding.</p>
@@ -1205,7 +1211,7 @@
                 </div>
             </div>
             <!-- Slide 3: Mudra -->
-            <div class="slide" style="background-image:linear-gradient(135deg,rgba(21,45,70,0.6),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%231b3555%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+            <div class="slide" style="background-image:linear-gradient(135deg,rgba(21,45,70,0.6),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=400&fit=crop');">
                 <div class="poster-area"><span class="badge">🔥 Popular</span> Mudra Loan</div>
                 <h2>Mudra Loan – Up to ₹10 Lakh</h2>
                 <p>Shishu, Kishor &amp; Tarun – collateral free loans for micro enterprises.</p>
@@ -1215,7 +1221,7 @@
                 </div>
             </div>
             <!-- Slide 4: MSME -->
-            <div class="slide" style="background-image:linear-gradient(135deg,rgba(10,30,50,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%230a1e32%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+            <div class="slide" style="background-image:linear-gradient(135deg,rgba(10,30,50,0.7),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop');">
                 <div class="poster-area"><span class="badge">🏢 MSME</span> Business Loan</div>
                 <h2>MSME Business Loan – Up to ₹5 Crore</h2>
                 <p>Working capital, term loans &amp; CGTMSE cover for your business.</p>
@@ -1225,7 +1231,7 @@
                 </div>
             </div>
             <!-- Slide 5: Home Loan -->
-            <div class="slide" style="background-image:linear-gradient(135deg,rgba(30,20,40,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%231e1428%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+            <div class="slide" style="background-image:linear-gradient(135deg,rgba(30,20,40,0.7),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop');">
                 <div class="poster-area"><span class="badge">🏠 Home</span> Home Loan</div>
                 <h2>Home Loan – Up to ₹2 Crore</h2>
                 <p>Dream home with flexible EMI options and low interest rates.</p>
@@ -1235,7 +1241,7 @@
                 </div>
             </div>
             <!-- Slide 6: Education -->
-            <div class="slide" style="background-image:linear-gradient(135deg,rgba(20,40,60,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%2314283c%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+            <div class="slide" style="background-image:linear-gradient(135deg,rgba(20,40,60,0.7),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=800&h=400&fit=crop');">
                 <div class="poster-area"><span class="badge">🎓 Education</span> Education Loan</div>
                 <h2>Education Loan – Fund Your Future</h2>
                 <p>Study in India or abroad with affordable education financing.</p>
@@ -1283,7 +1289,7 @@
                 <p>Up to ₹5 Cr · CGTMSE cover</p>
                 <div class="actions">
                     <a href="#" onclick="openLoanPopup();return false;">Apply</a>
-                    <a href="services.html" style="background:transparent;color:white;border:1px solid white;">Learn</a>
+                    <a href="business-loan.html" style="background:transparent;color:white;border:1px solid white;">Learn</a>
                 </div>
             </div>
             <div class="banner-card" style="background-image:linear-gradient(135deg,#1a3a5c,#0b1a33);">
@@ -1568,8 +1574,8 @@
 
     <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating">
-        <a class="whatsapp" href="#" aria-label="WhatsApp">💬</a>
-        <a class="call" href="#" aria-label="Call">📞</a>
+        <a class="whatsapp" href="https://wa.me/919999999999" target="_blank" aria-label="WhatsApp">💬</a>
+        <a class="call" href="tel:+919999999999" aria-label="Call">📞</a>
         <a class="apply-float" href="#" onclick="openLoanPopup();return false;">📝 Apply</a>
         <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Back to top">⬆</a>
     </div>
@@ -1683,11 +1689,24 @@
         // NAVIGATION HELPERS
         // ============================================================
         function navigateTo(url) {
+            if (!url || url === '#') return;
             document.getElementById('loadingOverlay').classList.add('active');
             setTimeout(function() {
                 window.location.href = url;
             }, 400);
         }
+
+        // Fix all internal links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href]').forEach(function(el) {
+                var href = el.getAttribute('href');
+                if (href && href.startsWith('#') && href.length > 1) {
+                    // Keep anchor links
+                } else if (href === '#') {
+                    el.setAttribute('href', 'javascript:void(0)');
+                }
+            });
+        });
 
         // ============================================================
         // HERO SLIDER
@@ -1828,13 +1847,32 @@
             let q = this.value.toLowerCase();
             let results = document.getElementById('searchResults');
             if (!q) { results.innerHTML = ''; return; }
-            const items = ['Personal Loan', 'Business Loan', 'Home Loan', 'Mudra Loan', 'PMEGP', 'Startup India',
+            const items = [
+                'Personal Loan', 'Business Loan', 'Home Loan', 'Mudra Loan', 'PMEGP', 'Startup India',
                 'CGTMSE', 'GST Filing', 'ITR Filing', 'Digital Marketing', 'AI Automation', 'Website Development',
-                'App Development', 'Insurance', 'Credit Card', 'Membership', 'Become Agent'
+                'App Development', 'Insurance', 'Credit Card', 'Membership', 'Become Agent', 'Dashboard',
+                'Calculator', 'About', 'Contact', 'Login', 'Register', 'Leads'
             ];
             let matches = items.filter(i => i.toLowerCase().includes(q));
-            results.innerHTML = matches.length ? matches.map(m => '<div style="padding:8px 0;border-bottom:1px solid #f0f3f8;cursor:pointer;" onclick="navigateTo(\'services.html\')">' +
-                m + '</div>').join('') : 'No results found';
+            results.innerHTML = matches.length ? matches.map(m => {
+                let url = m.toLowerCase().replace(/\s+/g, '-') + '.html';
+                if (m === 'Startup India') url = 'government-schemes.html';
+                if (m === 'CGTMSE') url = 'services.html';
+                if (m === 'GST Filing' || m === 'ITR Filing' || m === 'Digital Marketing' ||
+                    m === 'AI Automation' || m === 'Website Development' || m === 'App Development' ||
+                    m === 'Insurance' || m === 'Credit Card') url = 'services.html';
+                if (m === 'Membership') url = 'membership.html';
+                if (m === 'Become Agent') url = 'become-agent.html';
+                if (m === 'Dashboard') url = 'dashboard.html';
+                if (m === 'Calculator') url = 'calculator.html';
+                if (m === 'About') url = 'about.html';
+                if (m === 'Contact') url = 'contact.html';
+                if (m === 'Login') url = 'login.html';
+                if (m === 'Register') url = 'register.html';
+                if (m === 'Leads') url = 'leads.html';
+                return '<div style="padding:8px 0;border-bottom:1px solid #f0f3f8;cursor:pointer;" onclick="navigateTo(\'' +
+                    url + '\')">' + m + '</div>';
+            }).join('') : '<div style="padding:8px 0;color:#999;">No results found</div>';
         });
 
         // ============================================================
@@ -1952,14 +1990,5 @@
         // ============================================================
         console.log('Smile Financial Solution – Firebase Ready Structure Loaded.');
     </script>
-    <script type="module" src="assets/js/app.js"></script>
-<script type="module" src="assets/js/navigation.js"></script>
-<script type="module" src="assets/js/search.js"></script>
-<script type="module" src="assets/js/popup.js"></script>
-<script type="module" src="assets/js/auth.js"></script>
-<script type="module" src="assets/js/firestore.js"></script>
-<script type="module" src="assets/js/dashboard.js"></script>
-<script type="module" src="assets/js/notification.js"></script>
-<script type="module" src="assets/js/voice.js"></script>
 </body>
 </html>
