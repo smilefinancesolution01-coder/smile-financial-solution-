@@ -50,6 +50,7 @@
     /* hero slider */
     .hero-slider { position:relative; margin:24px 0 20px; border-radius:40px; overflow:hidden; box-shadow:var(--shadow); background:#eef2f7; min-height:340px; }
     .slide { display:none; padding:40px 36px; background-size:cover; background-position:center; min-height:340px; flex-direction:column; justify-content:center; background-blend-mode:overlay; background-color:rgba(11,26,51,0.3); color:white; }
+    .slide .poster-area { width:100%; height:200px; background:rgba(255,255,255,0.08); border-radius:20px; margin-bottom:20px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; color:rgba(255,255,255,0.7); border:1px dashed rgba(255,255,255,0.2); }
     .slide.active { display:flex; animation:slideIn 0.5s ease; }
     .slide h2 { font-size:clamp(1.8rem,5vw,3rem); font-weight:700; max-width:600px; }
     .slide p { font-size:1.1rem; opacity:0.9; max-width:500px; margin:12px 0 24px; }
@@ -60,6 +61,10 @@
     .slider-dots { position:absolute; bottom:20px; right:30px; display:flex; gap:10px; }
     .slider-dots span { width:10px; height:10px; border-radius:20px; background:rgba(255,255,255,0.4); cursor:pointer; transition:0.2s; }
     .slider-dots span.active { background:white; width:30px; }
+    .slider-nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.15); backdrop-filter:blur(4px); border:none; color:white; width:40px; height:40px; border-radius:40px; cursor:pointer; font-size:1.4rem; display:flex; align-items:center; justify-content:center; transition:0.2s; z-index:5; }
+    .slider-nav:hover { background:rgba(255,255,255,0.3); }
+    .slider-nav.prev { left:16px; }
+    .slider-nav.next { right:16px; }
     /* running news */
     .ticker-wrap { background:#0b1a33; color:#e0e8f5; padding:10px 0; border-radius:60px; margin:20px 0; overflow:hidden; white-space:nowrap; }
     .ticker { display:inline-block; padding-left:100%; animation:tickerScroll 28s linear infinite; }
@@ -101,8 +106,9 @@
     .counter-item .label { color:#4f658d; }
     /* pricing */
     .pricing-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
-    .pricing-card { background:white; border-radius:32px; padding:28px 18px; box-shadow:var(--shadow); transition:0.3s; border:1px solid #f0f3f8; text-align:center; }
+    .pricing-card { background:white; border-radius:32px; padding:28px 18px; box-shadow:var(--shadow); transition:0.3s; border:1px solid #f0f3f8; text-align:center; position:relative; }
     .pricing-card.popular { border:2px solid var(--gold); background:white; }
+    .pricing-card .offer-ribbon { position:absolute; top:-10px; right:16px; background:var(--gold); color:#0b1a33; padding:4px 14px; border-radius:40px; font-weight:700; font-size:0.7rem; }
     .pricing-card .price { font-size:2.2rem; font-weight:700; color:#0b1a33; }
     .pricing-card .perk { padding:6px 0; border-bottom:1px solid #f0f3f8; }
     .pricing-card .join-btn { background:#0b1a33; color:white; padding:10px 24px; border-radius:60px; border:none; font-weight:600; margin-top:16px; cursor:pointer; width:100%; }
@@ -150,18 +156,22 @@
     .scheme-card { flex:0 0 280px; background:white; border-radius:28px; box-shadow:var(--shadow); overflow:hidden; }
     .scheme-card .poster { height:140px; background:linear-gradient(135deg,#0b1a33,#1b3555); border-radius:28px 28px 0 0; display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1.2rem; }
     .scheme-card .body { padding:18px; }
-    .scheme-card .body .btn-group { display:flex; gap:10px; margin-top:12px; }
+    .scheme-card .body .btn-group { display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
     .scheme-card .body .btn-group a { background:#0b1a33; color:white; padding:6px 16px; border-radius:40px; text-decoration:none; font-size:0.8rem; }
     .scheme-card .body .btn-group a.outline { background:transparent; border:1px solid #0b1a33; color:#0b1a33; }
+    /* offer cards */
+    .offer-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:18px; margin:24px 0; }
+    .offer-card { background:white; border-radius:28px; padding:20px; box-shadow:var(--shadow); border-left:4px solid var(--gold); }
+    .offer-card .ribbon { background:var(--gold); color:#0b1a33; padding:2px 12px; border-radius:40px; font-size:0.7rem; font-weight:700; display:inline-block; }
     /* responsive tweaks */
-    @media (max-width:480px){ .header-inner { flex-wrap:wrap; } .mega-menu { width:100%; left:0; grid-template-columns:1fr 1fr; } .banner-grid {grid-template-columns:1fr;} .agent-banner {flex-direction:column; gap:20px; text-align:center;} .slide {padding:24px 20px;} }
+    @media (max-width:480px){ .header-inner { flex-wrap:wrap; } .mega-menu { width:100%; left:0; grid-template-columns:1fr 1fr; } .banner-grid {grid-template-columns:1fr;} .agent-banner {flex-direction:column; gap:20px; text-align:center;} .slide {padding:24px 20px;} .slider-nav {display:none;} }
     @media (min-width:768px){ .mega-menu { width:740px; } }
   </style>
 </head>
 <body>
 <div class="progress-bar" id="progressBar"></div>
 <!-- gov strip -->
-<div class="gov-strip"><div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;width:100%;"><span>🇮🇳 Government of India · MSME · Startup India · PMEGP</span><span><a href="#">Mudra</a> · <a href="#">Credit Scheme</a> · <a href="#">Agriculture</a></span></div></div>
+<div class="gov-strip"><div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;width:100%;"><span>🇮🇳 Government of India · MSME · Startup India · PMEGP</span><span><a href="mudra-loan.html">Mudra</a> · <a href="government-schemes.html">Credit Scheme</a> · <a href="services.html">Agriculture</a></span></div></div>
 
 <!-- header -->
 <header class="header" id="mainHeader">
@@ -182,8 +192,8 @@
     <div class="mega-menu" id="megaMenu">
       <a href="personal-loan.html"><i>💼</i> Personal Loan</a><a href="business-loan.html"><i>🏢</i> Business Loan</a><a href="vehicle-loan.html"><i>🚗</i> Vehicle Loan</a><a href="home-loan.html"><i>🏠</i> Home Loan</a>
       <a href="education-loan.html"><i>🎓</i> Education Loan</a><a href="loan-against-property.html"><i>🏦</i> LAP</a><a href="mudra-loan.html"><i>🌾</i> Mudra Loan</a><a href="pmegp-loan-assistance.html"><i>📈</i> PMEGP</a>
-      <a href="#"><i>💳</i> Credit Card</a><a href="#"><i>🛡️</i> Insurance</a><a href="#"><i>📊</i> GST / ITR</a><a href="#"><i>⚡</i> AI Automation</a>
-      <a href="#"><i>📱</i> App Dev</a><a href="#"><i>🌐</i> Website</a><a href="#"><i>📣</i> Digital Marketing</a><a href="#"><i>🔍</i> SEO</a>
+      <a href="services.html"><i>💳</i> Credit Card</a><a href="services.html"><i>🛡️</i> Insurance</a><a href="services.html"><i>📊</i> GST / ITR</a><a href="services.html"><i>⚡</i> AI Automation</a>
+      <a href="services.html"><i>📱</i> App Dev</a><a href="services.html"><i>🌐</i> Website</a><a href="services.html"><i>📣</i> Digital Marketing</a><a href="services.html"><i>🔍</i> SEO</a>
     </div>
   </div>
 </header>
@@ -207,14 +217,38 @@
 <main class="container">
   <!-- hero slider -->
   <div class="hero-slider" id="heroSlider">
-    <div class="slide active" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.6),rgba(0,0,0,0.2)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23132c4a%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');"><h2>MSME Business Finance</h2><p>Working capital, term loans &amp; government schemes under one roof.</p><div class="btn-group"><a href="apply-loan.html">Apply Now</a><a href="about.html" class="outline">Learn More</a></div></div>
-    <div class="slide" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.5),rgba(0,0,0,0.2)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%230b1a33%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');"><h2>Startup India · PMEGP</h2><p>Subsidies, credit guarantee &amp; mentorship for new ventures.</p><div class="btn-group"><a href="government-schemes.html">Explore</a><a href="pmegp-loan-assistance.html" class="outline">Schemes</a></div></div>
-    <div class="slide" style="background-image:linear-gradient(135deg,rgba(21,45,70,0.5),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%231b3555%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');"><h2>AI-driven Credit Assessment</h2><p>Instant eligibility, rate comparison &amp; paperless processing.</p><div class="btn-group"><a href="calculator.html">Check Eligibility</a><a href="services.html" class="outline">Learn</a></div></div>
+    <div class="slide active" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.7),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23132c4a%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+      <div class="poster-area">📊 Enterprise Finance Dashboard</div>
+      <h2>MSME Business Finance</h2>
+      <p>Working capital, term loans &amp; government schemes under one roof.</p>
+      <div class="btn-group"><a href="apply-loan.html">Apply Now</a><a href="about.html" class="outline">Learn More</a></div>
+    </div>
+    <div class="slide" style="background-image:linear-gradient(135deg,rgba(11,26,51,0.6),rgba(0,0,0,0.2)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%230b1a33%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+      <div class="poster-area">🚀 Startup India · PMEGP</div>
+      <h2>Startup India · PMEGP</h2>
+      <p>Subsidies, credit guarantee &amp; mentorship for new ventures.</p>
+      <div class="btn-group"><a href="government-schemes.html">Explore</a><a href="pmegp-loan-assistance.html" class="outline">Schemes</a></div>
+    </div>
+    <div class="slide" style="background-image:linear-gradient(135deg,rgba(21,45,70,0.6),rgba(0,0,0,0.3)),url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%231b3555%22 width=%22800%22 height=%22400%22/%3E%3C/svg%3E');">
+      <div class="poster-area">🤖 AI Credit Assessment</div>
+      <h2>AI-driven Credit Assessment</h2>
+      <p>Instant eligibility, rate comparison &amp; paperless processing.</p>
+      <div class="btn-group"><a href="calculator.html">Check Eligibility</a><a href="services.html" class="outline">Learn</a></div>
+    </div>
     <div class="slider-dots"><span class="active" data-index="0"></span><span data-index="1"></span><span data-index="2"></span></div>
+    <button class="slider-nav prev" onclick="prevSlide()">‹</button>
+    <button class="slider-nav next" onclick="nextSlide()">›</button>
   </div>
 
   <!-- running news -->
   <div class="ticker-wrap"><div class="ticker"><span>🇮🇳 MSME Emergency Credit Scheme</span><span>📈 Startup India Fund of Funds</span><span>🌾 PM Kisan &amp; Mudra Yojana</span><span>🏦 SBI, PNB, HDFC – Digital Lending</span><span>⚡ GST 2.0 &amp; E-invoicing</span><span>📱 UPI &amp; Fintech Sandbox</span></div></div>
+
+  <!-- Offer Cards -->
+  <div class="offer-grid reveal">
+    <div class="offer-card"><span class="ribbon">Limited Time</span><h4>💰 Cashback ₹500</h4><p>On first loan application</p></div>
+    <div class="offer-card"><span class="ribbon">Festival Offer</span><h4>🎁 Free GST Filing</h4><p>For new membership signups</p></div>
+    <div class="offer-card"><span class="ribbon">Agent Drive</span><h4>📈 Extra 5% Commission</h4><p>For agents onboarded this month</p></div>
+  </div>
 
   <!-- 6 banners -->
   <div class="banner-grid">
@@ -247,13 +281,13 @@
     <a href="loan-against-property.html" class="service-card"><i>🏦</i> LAP</a>
     <a href="mudra-loan.html" class="service-card"><i>🌾</i> Mudra</a>
     <a href="pmegp-loan-assistance.html" class="service-card"><i>📈</i> PMEGP</a>
-    <a href="#" class="service-card"><i>💳</i> Credit Card</a>
-    <a href="#" class="service-card"><i>🛡️</i> Insurance</a>
-    <a href="#" class="service-card"><i>📊</i> GST/ITR</a>
-    <a href="#" class="service-card"><i>⚡</i> AI Automation</a>
-    <a href="#" class="service-card"><i>📱</i> App Dev</a>
-    <a href="#" class="service-card"><i>🌐</i> Website</a>
-    <a href="#" class="service-card"><i>📣</i> Digital Marketing</a>
+    <a href="services.html" class="service-card"><i>💳</i> Credit Card</a>
+    <a href="services.html" class="service-card"><i>🛡️</i> Insurance</a>
+    <a href="services.html" class="service-card"><i>📊</i> GST/ITR</a>
+    <a href="services.html" class="service-card"><i>⚡</i> AI Automation</a>
+    <a href="services.html" class="service-card"><i>📱</i> App Dev</a>
+    <a href="services.html" class="service-card"><i>🌐</i> Website</a>
+    <a href="services.html" class="service-card"><i>📣</i> Digital Marketing</a>
   </div>
 
   <!-- bank logos -->
@@ -272,10 +306,10 @@
   <!-- pricing -->
   <h2 class="section-title reveal">Membership Plans</h2>
   <div class="pricing-grid reveal">
-    <div class="pricing-card"><h4>Free</h4><div class="price">₹0</div><div class="perk">Basic access</div><div class="perk">Loan eligibility</div><div class="perk">Newsletter</div><button class="join-btn" onclick="openPopup('membership')">Join Now</button></div>
-    <div class="pricing-card popular"><h4>Basic</h4><div class="price">₹999</div><div class="perk">All loans</div><div class="perk">EMI calculator</div><div class="perk">Chat support</div><button class="join-btn" onclick="openPopup('membership')">Join Now</button></div>
-    <div class="pricing-card"><h4>Gold</h4><div class="price">₹1499</div><div class="perk">Priority processing</div><div class="perk">Dedicated RM</div><div class="perk">Dashboard</div><button class="join-btn" onclick="openPopup('membership')">Join Now</button></div>
-    <div class="pricing-card"><h4>Premium</h4><div class="price">₹3499</div><div class="perk">AI underwriting</div><div class="perk">Legal / ITR</div><div class="perk">24/7 support</div><button class="join-btn" onclick="openPopup('membership')">Join Now</button></div>
+    <div class="pricing-card"><h4>Free</h4><div class="price">₹0</div><div class="perk">Basic access</div><div class="perk">Loan eligibility</div><div class="perk">Newsletter</div><button class="join-btn" onclick="openPopup('membershipPopup')">Join Now</button></div>
+    <div class="pricing-card popular"><span class="offer-ribbon">Most Popular</span><h4>Basic</h4><div class="price">₹999</div><div class="perk">All loans</div><div class="perk">EMI calculator</div><div class="perk">Chat support</div><button class="join-btn" onclick="openPopup('membershipPopup')">Join Now</button></div>
+    <div class="pricing-card"><h4>Gold</h4><div class="price">₹1499</div><div class="perk">Priority processing</div><div class="perk">Dedicated RM</div><div class="perk">Dashboard</div><button class="join-btn" onclick="openPopup('membershipPopup')">Join Now</button></div>
+    <div class="pricing-card"><h4>Premium</h4><div class="price">₹3499</div><div class="perk">AI underwriting</div><div class="perk">Legal / ITR</div><div class="perk">24/7 support</div><button class="join-btn" onclick="openPopup('membershipPopup')">Join Now</button></div>
   </div>
 
   <!-- become agent -->
@@ -323,10 +357,11 @@
 <script>
   // Hero slider
   let slideIndex = 0, slides = document.querySelectorAll('.slide'), dots = document.querySelectorAll('.slider-dots span');
-  function showSlide(i){ slides.forEach(s=>s.classList.remove('active')); dots.forEach(d=>d.classList.remove('active')); slides[i].classList.add('active'); dots[i].classList.add('active'); }
-  function nextSlide(){ slideIndex=(slideIndex+1)%slides.length; showSlide(slideIndex); }
+  function showSlide(i){ if(i<0) i=slides.length-1; if(i>=slides.length) i=0; slides.forEach(s=>s.classList.remove('active')); dots.forEach(d=>d.classList.remove('active')); slides[i].classList.add('active'); dots[i].classList.add('active'); slideIndex=i; }
+  function nextSlide(){ showSlide(slideIndex+1); }
+  function prevSlide(){ showSlide(slideIndex-1); }
   setInterval(nextSlide, 5000);
-  dots.forEach(d=>d.addEventListener('click',function(){ slideIndex=parseInt(this.dataset.index); showSlide(slideIndex); }));
+  dots.forEach(d=>d.addEventListener('click',function(){ showSlide(parseInt(this.dataset.index)); }));
 
   // Counter animation
   function animateCounter(el, target, duration=2000){ let start=0, step=Math.ceil(target/60), interval=Math.floor(duration/60); let timer=setInterval(()=>{ start+=step; if(start>=target){ el.innerText=target; clearInterval(timer); }else el.innerText=start; }, interval); }
