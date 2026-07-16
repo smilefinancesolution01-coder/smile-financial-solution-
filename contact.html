@@ -351,52 +351,96 @@
             margin: 48px 0 24px;
             letter-spacing: -0.02em;
         }
-        .section-subtitle {
-            color: #4f658d;
-            font-size: 1.05rem;
-            max-width: 650px;
-            margin-bottom: 30px;
-            line-height: 1.7;
-        }
 
-        /* ===== CONTACT GRID ===== */
-        .contact-grid {
+        /* ===== CONTACT WRAPPER ===== */
+        .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             margin: 30px 0;
         }
-        .contact-info {
+
+        /* ===== LEFT SECTION ===== */
+        .contact-left {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 20px;
         }
-        .contact-info .info-card {
+        .contact-left .info-card {
             background: white;
             border-radius: 28px;
             padding: 24px 28px;
             box-shadow: var(--shadow);
             border: 1px solid rgba(0, 0, 0, 0.02);
+            transition: var(--transition);
         }
-        .contact-info .info-card .icon {
-            font-size: 2rem;
-            margin-bottom: 8px;
+        .contact-left .info-card:hover {
+            transform: translateY(-2px);
         }
-        .contact-info .info-card h4 {
+        .contact-left .info-card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+        }
+        .contact-left .info-card h4 {
             font-size: 1rem;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
+            color: #0b1a33;
         }
-        .contact-info .info-card p {
+        .contact-left .info-card p,
+        .contact-left .info-card a {
             color: #4f658d;
             font-size: 0.95rem;
-        }
-        .contact-info .info-card a {
-            color: #0b1a33;
             text-decoration: none;
-            font-weight: 500;
         }
-        .contact-info .info-card a:hover {
+        .contact-left .info-card a:hover {
             color: var(--gold);
+        }
+
+        /* ===== RIGHT SECTION ===== */
+        .contact-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .map-container {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            position: relative;
+            background: #eef2f7;
+            min-height: 340px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 340px;
+            border: none;
+            display: block;
+        }
+        .map-container .map-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.04);
+            pointer-events: none;
+            border-radius: 24px;
+        }
+        .map-btn-wrap {
+            text-align: center;
+            margin-top: 12px;
+        }
+        .map-btn-wrap a {
+            background: #0b1a33;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+        .map-btn-wrap a:hover {
+            background: #1c3150;
+            transform: scale(0.97);
         }
 
         /* ===== CONTACT FORM ===== */
@@ -406,6 +450,7 @@
             padding: 32px 28px;
             box-shadow: var(--shadow);
             border: 1px solid rgba(0, 0, 0, 0.02);
+            margin: 30px 0;
         }
         .contact-form-wrap h3 {
             font-size: 1.4rem;
@@ -421,6 +466,14 @@
             margin: 8px 0;
             font-size: 1rem;
             font-family: inherit;
+            transition: var(--transition);
+        }
+        .contact-form-wrap input:focus,
+        .contact-form-wrap select:focus,
+        .contact-form-wrap textarea:focus {
+            border-color: #0b1a33;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(11, 26, 51, 0.08);
         }
         .contact-form-wrap textarea {
             border-radius: 20px;
@@ -455,6 +508,36 @@
             pointer-events: none;
         }
 
+        /* ===== QUICK CONTACT ===== */
+        .quick-contact {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .quick-contact a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 40px;
+            background: white;
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: #0b1a33;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            flex: 1 1 auto;
+        }
+        .quick-contact a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+        }
+        .quick-contact a .icon {
+            font-size: 1.4rem;
+        }
+
         /* ===== QUICK SERVICES ===== */
         .quick-services {
             display: grid;
@@ -485,20 +568,6 @@
         }
         .quick-service-card h4 {
             font-size: 0.9rem;
-        }
-
-        /* ===== MAP PLACEHOLDER ===== */
-        .map-placeholder {
-            background: #eef2f7;
-            border-radius: 32px;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            color: #8a9aa8;
-            border: 1px dashed #dde3ed;
-            margin: 30px 0;
         }
 
         /* ===== WHY CONTACT ===== */
@@ -824,11 +893,14 @@
                 min-height: 160px;
                 width: 100%;
             }
-            .contact-grid {
+            .contact-wrapper {
                 grid-template-columns: 1fr;
             }
             .quick-services {
                 grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+            .map-container iframe {
+                height: 260px;
             }
         }
         @media (max-width: 480px) {
@@ -850,8 +922,11 @@
             .cta-banner .btn-group {
                 justify-content: center;
             }
-            .contact-info .info-card {
-                padding: 18px;
+            .quick-contact {
+                flex-direction: column;
+            }
+            .quick-contact a {
+                justify-content: center;
             }
         }
         @media (min-width: 768px) {
@@ -925,563 +1000,4 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="government-schemes.html">Govt Schemes</a>
-        <a href="membership.html">Membership</a>
-        <a href="become-agent.html">Become Agent</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="leads.html">Leads</a>
-        <a href="personal-loan.html">Personal Loan</a>
-        <a href="business-loan.html">Business Loan</a>
-        <a href="home-loan.html">Home Loan</a>
-        <a href="vehicle-loan.html">Vehicle Loan</a>
-        <a href="education-loan.html">Education Loan</a>
-        <a href="mudra-loan.html">Mudra Loan</a>
-        <a href="pmegp-loan-assistance.html">PMEGP</a>
-        <a href="working-capital-loan.html">Working Capital</a>
-        <a href="loan-against-property.html">LAP</a>
-    </div>
-
-    <main class="container">
-
-        <!-- ===== BREADCRUMB ===== -->
-        <div class="breadcrumb">
-            <a href="index.html">Home</a>
-            <span>›</span>
-            <span>Contact Us</span>
-        </div>
-
-        <!-- ===== HERO BANNER ===== -->
-        <section class="contact-hero">
-            <div class="content">
-                <h1>Contact Smile Financial Solution</h1>
-                <p>We are here to help you with loans, government schemes and business services.</p>
-                <div class="btn-group">
-                    <a href="#" onclick="openLoanPopup();return false;">Apply Now</a>
-                    <a href="become-agent.html" class="outline">Become Agent</a>
-                </div>
-            </div>
-            <div class="image-area"></div>
-        </section>
-
-        <!-- ===== CONTACT GRID ===== -->
-        <div class="contact-grid reveal">
-            <div class="contact-info">
-                <div class="info-card">
-                    <div class="icon">🏢</div>
-                    <h4>Company Name</h4>
-                    <p>Smile Financial Solution</p>
-                </div>
-                <div class="info-card">
-                    <div class="icon">📞</div>
-                    <h4>Customer Support</h4>
-                    <p><a href="tel:7290977231">7290977231</a></p>
-                </div>
-                <div class="info-card">
-                    <div class="icon">💬</div>
-                    <h4>WhatsApp</h4>
-                    <p><a href="https://wa.me/917290977231" target="_blank">7290977231</a></p>
-                </div>
-                <div class="info-card">
-                    <div class="icon">✉️</div>
-                    <h4>Email</h4>
-                    <p><a href="mailto:support@smilefinancialsolution.com">support@smilefinancialsolution.com</a></p>
-                </div>
-                <div class="info-card">
-                    <div class="icon">🕐</div>
-                    <h4>Business Hours</h4>
-                    <p>Monday – Saturday<br />9 AM – 7 PM</p>
-                </div>
-            </div>
-            <div class="contact-form-wrap">
-                <h3>Send a Message</h3>
-                <form id="contactForm" onsubmit="handleContactForm(event)">
-                    <label>Full Name *</label>
-                    <input type="text" id="contactName" required placeholder="Enter your full name" />
-                    <label>Mobile Number *</label>
-                    <input type="tel" id="contactMobile" required placeholder="10-digit mobile number" />
-                    <label>Email</label>
-                    <input type="email" id="contactEmail" placeholder="Enter your email" />
-                    <label>State</label>
-                    <input type="text" id="contactState" placeholder="Enter your state" />
-                    <label>City</label>
-                    <input type="text" id="contactCity" placeholder="Enter your city" />
-                    <label>Service Required</label>
-                    <select id="contactService">
-                        <option value="">Select a service</option>
-                        <option>Business Loan</option>
-                        <option>Personal Loan</option>
-                        <option>Home Loan</option>
-                        <option>Vehicle Loan</option>
-                        <option>Education Loan</option>
-                        <option>Mudra Loan</option>
-                        <option>PMEGP</option>
-                        <option>Working Capital</option>
-                        <option>Insurance</option>
-                        <option>Digital Marketing</option>
-                        <option>Website Development</option>
-                        <option>GST Registration</option>
-                        <option>ITR Filing</option>
-                        <option>Other</option>
-                    </select>
-                    <label>Message</label>
-                    <textarea id="contactMessage" placeholder="Tell us how we can help..."></textarea>
-                    <button class="btn" type="submit" id="contactSubmitBtn">Send Message</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- ===== QUICK SERVICES ===== -->
-        <h2 class="section-title reveal">Quick Services</h2>
-        <div class="quick-services reveal">
-            <a href="business-loan.html" class="quick-service-card"><span class="icon">🏢</span><h4>Business Loan</h4></a>
-            <a href="personal-loan.html" class="quick-service-card"><span class="icon">💳</span><h4>Personal Loan</h4></a>
-            <a href="home-loan.html" class="quick-service-card"><span class="icon">🏠</span><h4>Home Loan</h4></a>
-            <a href="vehicle-loan.html" class="quick-service-card"><span class="icon">🚗</span><h4>Vehicle Loan</h4></a>
-            <a href="working-capital-loan.html" class="quick-service-card"><span class="icon">⚙️</span><h4>Working Capital</h4></a>
-            <a href="mudra-loan.html" class="quick-service-card"><span class="icon">🌾</span><h4>Mudra Loan</h4></a>
-            <a href="pmegp-loan-assistance.html" class="quick-service-card"><span class="icon">📈</span><h4>PMEGP</h4></a>
-            <a href="services.html" class="quick-service-card"><span class="icon">🛡️</span><h4>Insurance</h4></a>
-            <a href="services.html" class="quick-service-card"><span class="icon">🌐</span><h4>Website Development</h4></a>
-            <a href="services.html" class="quick-service-card"><span class="icon">📣</span><h4>Digital Marketing</h4></a>
-        </div>
-
-        <!-- ===== GOOGLE MAP SECTION ===== -->
-        <h2 class="section-title reveal">Find Us</h2>
-        <div class="map-placeholder reveal">
-            <div style="text-align:center;">
-                <div style="font-size:3rem;margin-bottom:8px;">📍</div>
-                <p>Google Map will be embedded here</p>
-                <p style="font-size:0.85rem;color:#b0bccd;">Smile Financial Solution, India</p>
-            </div>
-        </div>
-
-        <!-- ===== WHY CONTACT US ===== -->
-        <h2 class="section-title reveal">Why Contact Us</h2>
-        <div class="why-grid reveal">
-            <div class="why-card">
-                <div class="icon">⚡</div>
-                <h4>Fast Response</h4>
-                <p>We reply within 24 hours to all queries.</p>
-            </div>
-            <div class="why-card">
-                <div class="icon">👨‍💼</div>
-                <h4>Dedicated RM</h4>
-                <p>Get a dedicated relationship manager for assistance.</p>
-            </div>
-            <div class="why-card">
-                <div class="icon">🔒</div>
-                <h4>Secure Process</h4>
-                <p>Your data is safe with bank-grade encryption.</p>
-            </div>
-            <div class="why-card">
-                <div class="icon">🇮🇳</div>
-                <h4>Pan India Support</h4>
-                <p>Serving customers across all states of India.</p>
-            </div>
-        </div>
-
-        <!-- ===== FAQ ===== -->
-        <h2 class="section-title reveal">Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">How quickly can I get a response? <span>+</span></div>
-            <div class="faq-answer">We typically respond within 24 hours. For urgent queries, you can call us directly at 7290977231.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">What services do you offer? <span>+</span></div>
-            <div class="faq-answer">We offer business loans, personal loans, home loans, vehicle loans, education loans, Mudra, PMEGP, insurance, GST registration, ITR filing, digital marketing, website development, and more.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">How can I become a Smile agent? <span>+</span></div>
-            <div class="faq-answer">Click on the 'Become Agent' button on our website, fill the form, and our team will onboard you.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">Do you offer pan-India services? <span>+</span></div>
-            <div class="faq-answer">Yes, we serve customers across all states and union territories of India.</div>
-        </div>
-
-        <!-- ===== FINAL CTA ===== -->
-        <section class="cta-banner reveal">
-            <div>
-                <h2>Need Immediate Help?</h2>
-                <p>Call us now or send a WhatsApp message for quick assistance.</p>
-            </div>
-            <div class="btn-group">
-                <a href="tel:7290977231">📞 Call Now</a>
-                <a href="https://wa.me/917290977231" target="_blank" class="outline">💬 WhatsApp</a>
-                <a href="#" onclick="openLoanPopup();return false;" class="outline">Apply Loan</a>
-                <a href="become-agent.html" class="outline">Become Agent</a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div><h4 style="color:white;">Smile Financial Solution</h4><p>Fintech for MSME &amp; startups</p></div>
-            <div><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a><a href="become-agent.html">Become Agent</a></div>
-            <div><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="blogs.html">Blog</a><a href="faq.html">FAQ</a></div>
-            <div><a href="personal-loan.html">Personal Loan</a><a href="business-loan.html">Business Loan</a><a href="home-loan.html">Home Loan</a><a href="vehicle-loan.html">Vehicle Loan</a></div>
-            <div class="social"><span>📱</span><span>🐦</span><span>📷</span><span>💼</span></div>
-        </div>
-        <div style="text-align:center;padding-top:30px;border-top:1px solid #1c3150;margin-top:20px;">© 2025 Smile Financial Solution · All rights reserved</div>
-    </footer>
-
-    <!-- ===== BOTTOM NAV ===== -->
-    <div class="bottom-nav">
-        <a href="index.html"><i>🏠</i><span>Home</span></a>
-        <a href="services.html"><i>📋</i><span>Services</span></a>
-        <a href="#" onclick="openLoanPopup();return false;"><i>💰</i><span>Loans</span></a>
-        <a href="dashboard.html"><i>📊</i><span>Dashboard</span></a>
-        <a href="login.html"><i>👤</i><span>Profile</span></a>
-    </div>
-
-    <!-- ===== FLOATING BUTTONS ===== -->
-    <div class="floating">
-        <a class="whatsapp" href="https://wa.me/917290977231" target="_blank" aria-label="WhatsApp">💬</a>
-        <a class="call" href="tel:7290977231" aria-label="Call">📞</a>
-        <a class="ai-assist" href="#" onclick="alert('AI Assistant coming soon!')" aria-label="AI Assistant">🤖</a>
-        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Back to top">⬆</a>
-    </div>
-
-    <!-- ===== POPUPS ===== -->
-
-    <!-- ===== POPUP: WELCOME ===== -->
-    <div class="popup-overlay" id="welcomePopup">
-        <div class="popup-card">
-            <button class="close" onclick="closePopup('welcomePopup')">✕</button>
-            <h2>👋 Welcome to Smile Financial</h2>
-            <p>Get ₹500 cashback on first loan application!</p>
-            <button class="btn" onclick="closePopup('welcomePopup')">Grab Offer</button>
-        </div>
-    </div>
-
-    <!-- ===== POPUP: LOAN APPLICATION ===== -->
-    <div class="popup-overlay" id="loanPopup">
-        <div class="popup-card">
-            <button class="close" onclick="closePopup('loanPopup')">✕</button>
-            <h2>📋 Apply for Loan</h2>
-            <form id="loanForm" onsubmit="handleLoan(event)">
-                <label>Full Name *</label>
-                <input type="text" id="loanFullName" required placeholder="Enter your full name" />
-                <label>Mobile Number *</label>
-                <input type="tel" id="loanMobile" required placeholder="10-digit mobile number" />
-                <label>Email *</label>
-                <input type="email" id="loanEmail" required placeholder="Enter your email" />
-                <label>State *</label>
-                <input type="text" id="loanState" required placeholder="Enter your state" />
-                <label>City *</label>
-                <input type="text" id="loanCity" required placeholder="Enter your city" />
-                <label>Loan Type *</label>
-                <select id="loanType" required>
-                    <option value="">Select Loan Type</option>
-                    <option>Personal Loan</option>
-                    <option>Business Loan</option>
-                    <option>Home Loan</option>
-                    <option>Vehicle Loan</option>
-                    <option>Education Loan</option>
-                    <option>Mudra Loan</option>
-                    <option>PMEGP</option>
-                    <option>Working Capital</option>
-                    <option>Loan Against Property</option>
-                </select>
-                <label>Loan Amount (₹) *</label>
-                <input type="number" id="loanAmountInput" required placeholder="Enter loan amount" />
-                <label>Nature of Business</label>
-                <input type="text" id="loanBusiness" placeholder="e.g. Manufacturing, Retail, Service" />
-                <label>Business Age (Years)</label>
-                <input type="number" id="loanBusinessAge" placeholder="Enter business age in years" />
-                <label>Monthly Income (₹)</label>
-                <input type="number" id="loanMonthlyIncome" placeholder="Enter monthly income" />
-                <div class="consent">
-                    <input type="checkbox" id="loanConsent" required />
-                    <label for="loanConsent">I agree to the terms &amp; privacy policy *</label>
-                </div>
-                <button class="btn" type="submit" id="loanSubmitBtn">Submit Application</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- ===== POPUP: NOTIFICATION ===== -->
-    <div class="popup-overlay" id="notificationPopup">
-        <div class="popup-card">
-            <button class="close" onclick="closePopup('notificationPopup')">✕</button>
-            <h2>🔔 Notifications</h2>
-            <ul style="list-style:none;padding:0;">
-                <li style="padding:12px 0;border-bottom:1px solid #f0f3f8;">📢 New Government Scheme: PM Vishwakarma</li>
-                <li style="padding:12px 0;border-bottom:1px solid #f0f3f8;">🎉 Festival Offer: 0% processing fee on loans</li>
-                <li style="padding:12px 0;">📈 Your eligibility for Business Loan increased</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- ===== POPUP: SEARCH ===== -->
-    <div class="popup-overlay" id="searchPopup">
-        <div class="popup-card">
-            <button class="close" onclick="closePopup('searchPopup')">✕</button>
-            <h2>🔍 Search</h2>
-            <input type="text" id="searchInput" placeholder="Search loans, schemes, services..." style="margin-top:12px;" />
-            <div id="searchResults" style="margin-top:12px;font-size:0.9rem;color:#4f658d;"></div>
-        </div>
-    </div>
-
-    <!-- ===== POPUP: MEMBERSHIP ===== -->
-    <div class="popup-overlay" id="membershipPopup">
-        <div class="popup-card">
-            <button class="close" onclick="closePopup('membershipPopup')">✕</button>
-            <h2>Choose Membership</h2>
-            <p>Select a plan and get started</p>
-            <form id="membershipForm" onsubmit="handleMembership(event)">
-                <label>Full Name *</label>
-                <input type="text" required placeholder="Enter your name" />
-                <label>Email *</label>
-                <input type="email" required placeholder="Enter your email" />
-                <label>Phone *</label>
-                <input type="tel" required placeholder="Enter your phone" />
-                <label>Plan *</label>
-                <select required>
-                    <option>Free</option>
-                    <option>Basic ₹999</option>
-                    <option>Gold ₹1499</option>
-                    <option>Premium ₹3499</option>
-                </select>
-                <button class="btn" type="submit">Join Now</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // ============================================================
-        // NAVIGATION HELPERS
-        // ============================================================
-        function navigateTo(url) {
-            if (!url || url === '#') return;
-            document.getElementById('loadingOverlay').classList.add('active');
-            setTimeout(function() {
-                window.location.href = url;
-            }, 400);
-        }
-
-        // Fix internal links
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('a[href]').forEach(function(el) {
-                var href = el.getAttribute('href');
-                if (href === '#') {
-                    el.setAttribute('href', 'javascript:void(0)');
-                }
-            });
-        });
-
-        // ============================================================
-        // REVEAL ON SCROLL
-        // ============================================================
-        const revealObs = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-        // ============================================================
-        // MOBILE DRAWER
-        // ============================================================
-        function openDrawer() {
-            document.getElementById('mobileDrawer').classList.add('open');
-            document.getElementById('drawerOverlay').classList.add('open');
-        }
-
-        function closeDrawer() {
-            document.getElementById('mobileDrawer').classList.remove('open');
-            document.getElementById('drawerOverlay').classList.remove('open');
-        }
-        document.querySelector('.mega-trigger')?.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (window.innerWidth < 768) openDrawer();
-        });
-        document.addEventListener('click', function(e) {
-            let mega = document.getElementById('megaMenu');
-            if (!e.target.closest('.mega-trigger') && !e.target.closest('.mega-menu')) mega.classList.remove('open');
-        });
-
-        // ============================================================
-        // POPUP SYSTEM
-        // ============================================================
-        function openPopup(id) { document.getElementById(id).classList.add('open'); }
-
-        function closePopup(id) { document.getElementById(id).classList.remove('open'); }
-
-        function openLoanPopup() { openPopup('loanPopup'); }
-
-        // ============================================================
-        // SEARCH
-        // ============================================================
-        function openSearch() { openPopup('searchPopup');
-            setTimeout(() => { document.getElementById('searchInput').focus(); }, 300); }
-        document.getElementById('searchInput')?.addEventListener('input', function() {
-            let q = this.value.toLowerCase();
-            let results = document.getElementById('searchResults');
-            if (!q) { results.innerHTML = ''; return; }
-            const items = [
-                'Personal Loan', 'Business Loan', 'Home Loan', 'Mudra Loan', 'PMEGP', 'Startup India',
-                'CGTMSE', 'GST Filing', 'ITR Filing', 'Digital Marketing', 'AI Automation', 'Website Development',
-                'App Development', 'Insurance', 'Credit Card', 'Membership', 'Become Agent', 'Dashboard',
-                'Calculator', 'About', 'Contact', 'Login', 'Register', 'Leads', 'Working Capital',
-                'Loan Against Property', 'Education Loan', 'Vehicle Loan'
-            ];
-            let matches = items.filter(i => i.toLowerCase().includes(q));
-            results.innerHTML = matches.length ? matches.map(m => {
-                let url = m.toLowerCase().replace(/\s+/g, '-') + '.html';
-                if (m === 'Startup India') url = 'government-schemes.html';
-                if (m === 'CGTMSE') url = 'services.html';
-                if (m === 'GST Filing' || m === 'ITR Filing' || m === 'Digital Marketing' ||
-                    m === 'AI Automation' || m === 'Website Development' || m === 'App Development' ||
-                    m === 'Insurance' || m === 'Credit Card') {
-                    if (m === 'Working Capital') url = 'working-capital-loan.html';
-                    else if (m === 'Loan Against Property') url = 'loan-against-property.html';
-                    else if (m === 'Education Loan') url = 'education-loan.html';
-                    else if (m === 'Vehicle Loan') url = 'vehicle-loan.html';
-                    else url = 'services.html';
-                }
-                if (m === 'Membership') url = 'membership.html';
-                if (m === 'Become Agent') url = 'become-agent.html';
-                if (m === 'Dashboard') url = 'dashboard.html';
-                if (m === 'Calculator') url = 'calculator.html';
-                if (m === 'About') url = 'about.html';
-                if (m === 'Contact') url = 'contact.html';
-                if (m === 'Login') url = 'login.html';
-                if (m === 'Register') url = 'register.html';
-                if (m === 'Leads') url = 'leads.html';
-                if (m === 'Personal Loan') url = 'personal-loan.html';
-                if (m === 'Business Loan') url = 'business-loan.html';
-                if (m === 'Home Loan') url = 'home-loan.html';
-                if (m === 'Mudra Loan') url = 'mudra-loan.html';
-                if (m === 'PMEGP') url = 'pmegp-loan-assistance.html';
-                return '<div style="padding:8px 0;border-bottom:1px solid #f0f3f8;cursor:pointer;" onclick="navigateTo(\'' +
-                    url + '\')">' + m + '</div>';
-            }).join('') : '<div style="padding:8px 0;color:#999;">No results found</div>';
-        });
-
-        // ============================================================
-        // VOICE SEARCH
-        // ============================================================
-        function startVoiceSearch() {
-            if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-                alert('Voice search not supported in this browser. Please use Chrome or Edge.');
-                return;
-            }
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            const recognition = new SpeechRecognition();
-            recognition.lang = 'en-IN';
-            recognition.start();
-            recognition.onresult = function(event) {
-                const transcript = event.results[0][0].transcript;
-                openSearch();
-                setTimeout(() => {
-                    document.getElementById('searchInput').value = transcript;
-                    document.getElementById('searchInput').dispatchEvent(new Event('input'));
-                }, 300);
-            };
-            recognition.onerror = function() {
-                alert('Voice search failed. Please try again or type your query.');
-            };
-        }
-
-        // ============================================================
-        // NOTIFICATIONS
-        // ============================================================
-        function openNotifications() { openPopup('notificationPopup'); }
-
-        // ============================================================
-        // FORM HANDLERS (Firebase Ready)
-        // ============================================================
-        function handleContactForm(e) {
-            e.preventDefault();
-            const btn = document.getElementById('contactSubmitBtn');
-            btn.classList.add('loading');
-            btn.textContent = 'Submitting...';
-
-            const data = {
-                name: document.getElementById('contactName').value,
-                mobile: document.getElementById('contactMobile').value,
-                email: document.getElementById('contactEmail').value,
-                state: document.getElementById('contactState').value,
-                city: document.getElementById('contactCity').value,
-                service: document.getElementById('contactService').value,
-                message: document.getElementById('contactMessage').value,
-                timestamp: new Date().toISOString()
-            };
-            console.log('Contact Form Data (Firebase Ready):', data);
-
-            setTimeout(() => {
-                btn.classList.remove('loading');
-                btn.textContent = 'Send Message';
-                document.getElementById('contactForm').reset();
-                showSuccessModal('Thank you! We will get back to you within 24 hours.');
-            }, 1200);
-        }
-
-        function handleLoan(e) {
-            e.preventDefault();
-            const btn = document.getElementById('loanSubmitBtn');
-            btn.classList.add('loading');
-            btn.textContent = 'Submitting...';
-
-            const data = {
-                fullName: document.getElementById('loanFullName').value,
-                mobile: document.getElementById('loanMobile').value,
-                email: document.getElementById('loanEmail').value,
-                state: document.getElementById('loanState').value,
-                city: document.getElementById('loanCity').value,
-                loanType: document.getElementById('loanType').value,
-                loanAmount: document.getElementById('loanAmountInput').value,
-                business: document.getElementById('loanBusiness').value,
-                businessAge: document.getElementById('loanBusinessAge').value,
-                monthlyIncome: document.getElementById('loanMonthlyIncome').value,
-                timestamp: new Date().toISOString()
-            };
-            console.log('Loan Application Data (Firebase Ready):', data);
-
-            setTimeout(() => {
-                btn.classList.remove('loading');
-                btn.textContent = 'Submit Application';
-                closePopup('loanPopup');
-                document.getElementById('loanForm').reset();
-                showSuccessModal('Thank you. Our Relationship Manager will contact you shortly.');
-            }, 1500);
-        }
-
-        function handleMembership(e) {
-            e.preventDefault();
-            document.getElementById('loadingOverlay').classList.add('active');
-            setTimeout(() => {
-                document.getElementById('loadingOverlay').classList.remove('active');
-                closePopup('membershipPopup');
-                showSuccessModal('Membership activated! Check your email for details.');
-            }, 800);
-        }
-
-        function showSuccessModal(message) {
-            const overlay = document.createElement('div');
-            overlay.className = 'popup-overlay open';
-            overlay.innerHTML = `
-                <div class="popup-card">
-                    <button class="close" onclick="this.closest('.popup-overlay').remove()">✕</button>
-                    <h2 style="color:#0b1a33;">✅ Success</h2>
-                    <p style="font-size:1.1rem;margin:16px 0;">${message}</p>
-                    <button class="btn" onclick="this.closest('.popup-overlay').remove()">OK</button>
-                </div>
-            `;
-            document.body.appendChild(overlay);
-        }
-
-        // ============================================================
-        // WELCOME POPUP
-        // ============================================================
-        setTimeout(() => { openPopup('welcomePopup'); }, 2000);
-
-        console.log('Contact page loaded – Smile Financial Solution');
-    </script>
-</body>
-</html>
+        <a href="government-s
